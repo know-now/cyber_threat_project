@@ -1,9 +1,16 @@
+import os
+import sys
+from dotenv import load_dotenv
+load_dotenv(override = True)
 import pandas as pd
 from sqlalchemy import create_engine
+import chromadb
+
+
 
 #Block Extract(E): creation of raw test data about threats
 
-raw data = {
+raw_data = {
     "timestamp": [
         "2026-09-14 10:00:00",
         "2026-09-14 10:05:00",
@@ -22,12 +29,6 @@ raw data = {
         "Phishing",
         "Brute Force"    
     ],
-    "attack_type": [
-        "DDoS",
-        "SQL Injection",
-        "Phishing",
-        "Brute Force"    
-    ],
     "severity":[2, 3, 10, 14]
 }
 
@@ -38,17 +39,26 @@ df["timestamp"] = pd.to_datetime(df["timestamp"])
 
 # Block Load (L): connection to PostgreSQL and data writing
 
-DB_USER = os.getenv.("POSTGRES_USER")
+DB_USER = os.getenv("POSTGRES_USER")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-DB_HOST = "localhost"
+DB_HOST = "postgres_db"
 DB_PORT = "5432"
-DB_NAME = os.getenv("POSTGRES_DB", "cyber_threat_db")
+DB_NAME = os.getenv("POSTGRES_DB") or "cyber_threat_db"
 
-# Connection
+# Guard Clause
+if not all([DB_USER, DB_PASSWORD, DB_NAME]):
+    raise ValueError("CRITICAL: Змінні середовища не завантажені! Перевірте наявність файлу .env та його вміст.")
+
+
+# Connection postgreSQL
 connection_url = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 #SQLAlchemy
 engine = create_engine(connection_url)
+
+#Connecting to Chroma in Docker
+chroma_client = chromadb.HttpClient(host='chroma_app', port=8000)
+collection = chroma_client.get_or_create_collection(name="threat_logs_vectors")
 
 # Writing DataFrame in a data base (threat_logs)
 df.to_sql("threat_logs", con = engine, if_exists = "replace", index = False)
