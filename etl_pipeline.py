@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from dotenv import load_dotenv
 load_dotenv(override = True)
 import pandas as pd
@@ -62,5 +63,16 @@ collection = chroma_client.get_or_create_collection(name="threat_logs_vectors")
 
 # Writing DataFrame in a data base (threat_logs)
 df.to_sql("threat_logs", con = engine, if_exists = "replace", index = False)
+
+#Create mock OSINT-data
+collection.add(
+    documents = ["A zero-day exploit compromised the cloud infrastructure of a major logistics firm.", "State-sponsored hackers deployed ransomware across municipal power grids.", "A sophisticated spear-phishing attack breached the internal corporate database.", "Botnets executed a massive DDoS campaign, disrupting financial trading platforms." ],
+    ids = ["doc1", "doc2", "doc3", "doc4"]
+)
+results = collection.query(
+    query_texts = ["How do hackers steal bank credentials?"], 
+    n_results = 1
+)
+print("Result of the search in Chroma DB:", results)
 
 print("Success! Data is added to PostgreSQL in a table 'threat_logs'.")

@@ -9,6 +9,8 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5433:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
 
   chroma_app:
     image: chromadb/chroma:latest
@@ -28,3 +30,15 @@ services:
       - chroma_app
     env_file:
       - .env
+    volumes:
+      - .:/app
+  ml_app:
+    build: .
+    container_name: cyber_ml_app
+    depends_on:
+      - postgres_db
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: ["python", "ml_predictor.py"]
