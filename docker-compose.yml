@@ -42,3 +42,25 @@ services:
     volumes:
       - .:/app
     command: ["python", "ml_predictor.py"]
+  redis_db:
+    image: redis:7-alpine
+    container_name: cyber_redis
+    ports:
+      - "6380:6379"
+    restart: always
+  scraper_app:
+    build: .
+    container_name: cyber_scraper_app
+    depends_on:
+      - redis_db
+    volumes:
+      - .:/app
+    command: ["python", "osint_scraper.py"]
+  redis_consumer:
+    build: .
+    container_name: cyber_redis_app
+    depends_on:
+      - redis_db
+    volumes:
+      - .:/app
+    command: ["python", "redis_consumer.py"]

@@ -5,3 +5,7 @@ psycopg2-binary
 python-dotenv
 chromadb
 scikit-learn
+redis
+requests
+beautifulsoup4
+feedparser
