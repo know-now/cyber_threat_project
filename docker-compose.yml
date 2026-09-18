@@ -56,3 +56,11 @@ services:
     volumes:
       - .:/app
     command: ["python", "osint_scraper.py"]
+  redis_consumer:
+    build: .
+    container_name: cyber_redis_app
+    depends_on:
+      - redis_db
+    volumes:
+      - .:/app
+    command: ["python", "redis_consumer.py"]
