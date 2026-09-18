@@ -1,15 +1,14 @@
 import requests
-from bs4 import BeautifulSoup
 import redis
 import feedparser
+import json
 
 print("===OSINT Scraper (Collector) is running.===")
 
 # Redis connection.
 cache = redis.Redis(host='redis_db', port=6379, decode_responses=True)
-
-#Using RSS instead of HTML
 url = "https://feeds.feedburner.com/TheHackersNews"
+
 print(f"[*] Collecting raw data from: {url}")
 
 try:
@@ -19,9 +18,12 @@ try:
         print("[-] Headlines are not found. Feed might be unavaliable.")
     else:
         print("[+] Found attacks:")
-        for entry in feed.entries[:5]:
+        for entry in feed.entries[:3]:
             title = entry.title
-            cache.lpush('threat_queue', title)
+            summary =  entry.summary if 'summary' in entry else title
+            # packing into JSON object
+            threat_data = json.dumps({"title":title, "summary":summary})
+            cache.lpush('threat_queue', threat_data)
             print(f" - {title}")
             
     queue_length = cache.llen('threat_queue')
