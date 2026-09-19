@@ -59,32 +59,49 @@ while True:
             
             print(f"\n[!] Analysis of the new threat: {threat_title}")
             
-            # RAG: semantic search using the whole article
+            # RAG: semantic search using the whole article with a check of halucinations
             # Sending text to ChromaDB network, to find similar historical data
             results = collection.query(query_texts=[threat_summary], n_results = 1)
             
             if results['documents'] and results['documents'][0]:
                 closest_historic_doc = results['documents'][0][0].lower()
+                semantic_distance = results['distances'][0][0]
                 
-                #mapping on the basis of found semantic context
-                if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
-                    detected_type = "Phishing"
-                elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
-                    detected_type = "SQL Injection"
-                elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
-                    detected_type = "DDoS"
+                #Protection if the text is too far from cybersecurity topic
+                DISTANCE_THRESHOLD = 1.5
+                
+                if semantic_distance > DISTANCE_THRESHOLD:
+                    print(f"[?] ATTENTION: text is not recognised as a cybersecurity topic")
+                    detected_type = "Unknown / Review Needed"
                 else:
-                    detected_type = "Brute Force"
+                    #mapping on the basis of found semantic context
+                    if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
+                        detected_type = "Phishing"
+                    elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
+                        detected_type = "SQL Injection"
+                    elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
+                        detected_type = "DDoS"
+                    else:
+                        detected_type = "Brute Force"
             else:
-                detected_type = "Brute Force"
+                detected_type = "Unknown / Review Needed"
                 
-            #=== ML: Prognosis by Desision Tree ===
-            encoded_val = encoder.transform([detected_type])[0]
-            new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
-            prediction = model.predict(new_data)
+            #=== ML: Prognosis by Desision Tree with a Confidence Score ===
+            if detected_type == "Unknown / Review Needed":
+                print(" > Classifying: no automatic prognosis (not enough data)")
+                print(" > Prognostic level of threat: attention of tht specialist is needed")
+            else:
+                encoded_val = encoder.transform([detected_type])[0]
+                new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
+                #obtaining of prognosis and probabilities (Confidence)
+                prediction = model.predict(new_data)
+                probabilities = model.predict_proba(new_data)[0]
+                confidence = max(probabilities) * 100
             
-            print(f" > Classificatior detected type: {detected_type} ")
-            print(f" > Prognostic range of threat (Severity): {prediction[0]}/14")
+                print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
+                print(f" > Prognostic range of threat (Severity): {prediction[0]}/14")
+                print(f" > Confidence of the AI model: {confidence:.1f}%")
+                
             print("[*] Continue to monitor...")
     except Exception as e:
         print(f"[-] Network pause or error. Retrying...{e}")
