@@ -11,3 +11,8 @@ env/
 __pycache__/
 *.pyc
 config.yaml
+
+# Databases
+chroma_data/
+postgres_data/
+
