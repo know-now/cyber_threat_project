@@ -61,6 +61,10 @@ services:
     container_name: cyber_redis_app
     depends_on:
       - redis_db
+      - postgres_db
+      - chroma_app
+    env_file:
+      - .env
     volumes:
       - .:/app
-    command: ["python", "redis_consumer.py"]
+    command: ["python", "-u", "redis_consumer.py"]
