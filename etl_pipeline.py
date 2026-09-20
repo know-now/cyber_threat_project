@@ -10,31 +10,35 @@ import chromadb
 
 
 #Block Extract(E): creation of raw test data about threats
+# reading knowledge base from the text file
+with open("kb.txt", "r", encoding="utf-8") as f:
+    historic_documents = [line.strip() for line in f.readlines() if line.strip()]
 
-raw_data = {
-    "timestamp": [
-        "2026-09-14 10:00:00",
-        "2026-09-14 10:05:00",
-        "2026-09-14 10:10:00",
-        "2026-09-14 10:15:00"    
-    ],
+raw_data = {"timestamp": pd.date_range(start="2026-09-14 10:00:00", periods=19, freq="5min").astype(str).tolist(),
     "source_ip": [
-        "192.168.1.15",
-        "10.0.0.42",
-        "172.16.0.8",
-        "192.168.1.100"    
+        "192.168.1.15", "192.168.1.16", "192.168.1.17", "192.168.1.18",  # Phishing
+        "10.0.0.42", "10.0.0.43", "10.0.0.44", "10.0.0.45",              # Ransomware
+        "172.16.0.8", "172.16.0.9", "172.16.0.10", "172.16.0.11",        # DDoS
+        "192.168.1.100", "192.168.1.101", "192.168.1.102", "192.168.1.103",# SQL Injection
+        "10.1.1.5", "10.1.1.6", "10.1.1.7"                               # Insider Threat
     ],
     "attack_type": [
-        "DDoS",
-        "SQL Injection",
-        "Phishing",
-        "Brute Force"    
+        "Phishing", "Phishing", "Phishing", "Phishing",
+        "Ransomware", "Ransomware", "Ransomware", "Ransomware",
+        "DDoS", "DDoS", "DDoS", "DDoS",
+        "SQL Injection", "SQL Injection", "SQL Injection", "SQL Injection",
+        "Insider Threat", "Insider Threat", "Insider Threat"
     ],
-    "severity":[2, 3, 10, 14]
+    "severity": [
+        10, 10, 10, 10,  # Phishing
+        14, 14, 14, 14,  # Ransomware
+        3, 3, 3, 3,      # DDoS
+        12, 12, 12, 12,  # SQL Injection
+        8, 8, 8          # Insider
+    ]
 }
 
 df = pd.DataFrame(raw_data)
-
 # Block Transform (T):Convert data types
 df["timestamp"] = pd.to_datetime(df["timestamp"])
 
@@ -57,18 +61,25 @@ connection_url = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_
 #SQLAlchemy
 engine = create_engine(connection_url)
 
+#Writing DataFrame into a database (threat_logs)
+df.to_sql("threat_logs", con = engine, if_exists = "replace", index = False)
+print("[+] Data is successfully uploaded into PostgreSQL in a table 'threat_logs'.")
+
 #Connecting to Chroma in Docker
 chroma_client = chromadb.HttpClient(host='chroma_app', port=8000)
 collection = chroma_client.get_or_create_collection(name="threat_logs_vectors")
 
-# Writing DataFrame in a data base (threat_logs)
-df.to_sql("threat_logs", con = engine, if_exists = "replace", index = False)
-
-#Create mock OSINT-data
+#Sync writing texts to a vector database
 collection.add(
-    documents = ["A zero-day exploit compromised the cloud infrastructure of a major logistics firm.", "State-sponsored hackers deployed ransomware across municipal power grids.", "A sophisticated spear-phishing attack breached the internal corporate database.", "Botnets executed a massive DDoS campaign, disrupting financial trading platforms." ],
-    ids = ["doc1", "doc2", "doc3", "doc4"]
+    documents=historic_documents,
+    metadatas=[{"type":t} for t in raw_data['attack_type']],
+    ids=[f"doc{i}" for i in range(len(historic_documents))]
 )
+print("[+] Vector database Chroma DB is successfully updated with data from kb.txt")
+
+# Writing DataFrame in a data base (threat_logs)
+
+
 results = collection.query(
     query_texts = ["How do hackers steal bank credentials?"], 
     n_results = 1
