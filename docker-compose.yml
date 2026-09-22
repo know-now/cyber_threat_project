@@ -84,3 +84,17 @@ services:
         condition: service_started
       chroma_app:
         condition: service_started
+  reporter_app:
+    build: .
+    container_name: cyber_reporter_app
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./reports:/app/reports
+    command: ["python", "-u", "reporter_app.py"]
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      etl_app:
+        condition: service_completed_successfully

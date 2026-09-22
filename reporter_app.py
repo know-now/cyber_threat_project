@@ -4,6 +4,7 @@ from datetime import datetime
 import pandas as pd
 from sqlalchemy import create_engine
 from reportlab.lib.pagesizes import letter 
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib import colors 
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -21,7 +22,7 @@ def generate_pdf_report():
     
     try:
         # Extracting top-15 most critical incidents
-        query = "SELECT timestamp, sourse_ip, attack_type, severity FROM threat_logs ORDER BY severity DESC LIMIT 15"
+        query = "SELECT timestamp, source_ip, attack_type, severity FROM threat_logs ORDER BY severity DESC LIMIT 15"
         df = pd.read_sql(query, engine)
         
         if df.empty:
@@ -41,11 +42,11 @@ def generate_pdf_report():
         title_style.alignment = 1
         elements.append(Paragraph("Executive Cyber Threat Intelligence Report", title_style))
         elements.append(Spacer(1,12))
-        elements.append(Paragraph(f"<b>Generated on: <b> {datetime.now().strftime(%Y-%m-%d %H:%M)}", styles['Normal']))
+        elements.append(Paragraph(f"<b>Generated on: </b> {datetime.now().strftime('%Y-%m-%d %H:%M')}", styles['Normal']))
         elements.append(Spacer(1, 24))
 
         #Preparing data for the table
-        table_data = [["Timestamp", "Source IP", "Trreat Classification", "Severity"]]
+        table_data = [["Timestamp", "Source IP", "Threat Classification", "Severity"]]
         for index, row in df.iterrows():
             short_time = str(row['timestamp']).split('.')[0]
             table_data.append([short_time, str(row['source_ip']), str(row['attack_type']), str(row['severity'])])
@@ -73,8 +74,8 @@ if __name__ == "__main__":
     
     generate_pdf_report()
     #Set up the schedule
-    schedule = BackgroundScheduler()
-    scheduler.add_job(generate_pdf_report, 'cron', hour = 8, minute = 0)
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(generate_pdf_report, 'cron', hour=8, minute=0)
     scheduler.start()
     
     #Infinite loop of working of the microservice
