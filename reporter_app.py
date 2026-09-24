@@ -22,7 +22,7 @@ def generate_pdf_report():
     
     try:
         # Extracting top-15 most critical incidents
-        query = "SELECT timestamp, source_ip, attack_type, severity FROM threat_logs ORDER BY severity DESC LIMIT 15"
+        query = "SELECT timestamp, source_ip, attack_type, severity, confidence FROM threat_logs ORDER BY timestamp DESC LIMIT 15"
         df = pd.read_sql(query, engine)
         
         if df.empty:
@@ -46,13 +46,16 @@ def generate_pdf_report():
         elements.append(Spacer(1, 24))
 
         #Preparing data for the table
-        table_data = [["Timestamp", "Source IP", "Threat Classification", "Severity"]]
+        table_data = [["Timestamp", "Source IP", "Threat Classification", "Severity", "Accuracy"]]
         for index, row in df.iterrows():
             short_time = str(row['timestamp']).split('.')[0]
-            table_data.append([short_time, str(row['source_ip']), str(row['attack_type']), str(row['severity'])])
+            
+            accuracy_str = f"{row['confidence']}%" if 'confidence' in row and pd.notnull(row['confidence']) else "N/A"
+            
+            table_data.append([short_time, str(row['source_ip']), str(row['attack_type']), str(row['severity']), accuracy_str])
             
         #Format table
-        t = Table(table_data, colWidths=[120, 100, 150, 70])
+        t = Table(table_data, colWidths=[110, 90, 130, 60, 70])
         t.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),

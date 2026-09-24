@@ -30,12 +30,13 @@ raw_data = {"timestamp": pd.date_range(start="2026-09-14 10:00:00", periods=19, 
         "Insider Threat", "Insider Threat", "Insider Threat"
     ],
     "severity": [
-        10, 10, 10, 10,  # Phishing
-        14, 14, 14, 14,  # Ransomware
-        3, 3, 3, 3,      # DDoS
-        12, 12, 12, 12,  # SQL Injection
-        8, 8, 8          # Insider
-    ]
+        10.0, 10.0, 10.0, 10.0,  # Phishing
+        14.0, 14.0, 14.0, 14.0,  # Ransomware
+        3.0, 3.0, 3.0, 3.0,      # DDoS
+        12.0, 12.0, 12.0, 12.0,  # SQL Injection
+        8.0, 8.0, 8.0            # Insider
+    ],
+    "confidence": [100.0] * 19
 }
 
 df = pd.DataFrame(raw_data)
@@ -52,7 +53,7 @@ DB_NAME = os.getenv("POSTGRES_DB") or "cyber_threat_db"
 
 # Guard Clause
 if not all([DB_USER, DB_PASSWORD, DB_NAME]):
-    raise ValueError("CRITICAL: Змінні середовища не завантажені! Перевірте наявність файлу .env та його вміст.")
+    raise ValueError("CRITICAL: Variables are not found, check .env.")
 
 
 # Connection postgreSQL

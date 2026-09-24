@@ -70,50 +70,62 @@ while True:
             
             #Protection if the text is too far from cybersecurity topic
             DISTANCE_THRESHOLD = 1.5
-            
-            if semantic_distance > DISTANCE_THRESHOLD:
-                print(f"[?] ATTENTION: text is not recognised as a cybersecurity topic")
-                detected_type = "Unknown / Review Needed"
-            else:
-                #mapping on the basis of found semantic context
-                if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
-                    detected_type = "Phishing"
-                elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
-                    detected_type = "SQL Injection"
-                elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
-                    detected_type = "DDoS"
-                else:
-                    detected_type = "Ransomware"
-        else:
-            detected_type = "Unknown / Review Needed"
+            if results['documents'] and results['documents'][0]:
+                closest_historic_doc = results['documents'][0][0].lower()
+                semantic_distance = results['distances'][0][0]
                 
-        #=== ML: Prognosis by Desision Tree with a Confidence Score ===
-        if detected_type == "Unknown / Review Needed":
-            print(" > Classifying: no automatic prognosis (not enough data)")
-            print(" > Prognostic level of threat: attention of tht specialist is needed")
-        else:
-            encoded_val = encoder.transform([detected_type])[0]
-            new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
-            #obtaining of prognosis and probabilities (Confidence)
-            prediction = model.predict(new_data)
-            probabilities = model.predict_proba(new_data)[0]
-            confidence = max(probabilities) * 100
-            final_severity = prediction[0]
+                if semantic_distance > DISTANCE_THRESHOLD:
+                    print(f"[?] ATTENTION: text is not recognised as a cybersecurity topic")
+                    detected_type = "Unknown / Review Needed"
+                else:
+                    #mapping on the basis of found semantic context
+                    if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
+                        detected_type = "Phishing"
+                    elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
+                        detected_type = "SQL Injection"
+                    elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
+                        detected_type = "DDoS"
+                    else:
+                        detected_type = "Ransomware"
+            else:
+                detected_type = "Unknown / Review Needed"
+                
+            #=== ML: Prognosis by Desision Tree with a Confidence Score ===
+            if detected_type == "Unknown / Review Needed":
+                print(" > Classifying: no automatic prognosis (not enough data)")
+                print(" > Prognostic level of threat: attention of tht specialist is needed")
+                final_severity = 0.0
+                calculated_confidence = 0.0
+            else:
+                encoded_val = encoder.transform([detected_type])[0]
+                new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
+                base_severity = model.predict(new_data)[0]
+                # Calculation of real variativity
+                # 1. Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
+                calculated_confidence = round(max(0, ((DISTANCE_THRESHOLD - semantic_distance) / DISTANCE_THRESHOLD)*100), 1)
+                # 2. Dynamic threat: basic threat multiplied on the % of precisiness
+                #obtaining of prognosis and probabilities (Confidence)
+                prediction = model.predict(new_data)
+                probabilities = model.predict_proba(new_data)[0]
+                confidence = max(probabilities) * 100
+                final_severity = prediction[0]
+                
+                print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
+                print(f" > Dynamic Severity: {final_severity}/14 (Base: {base_severity})")
+                print(f" > Prognostic range of threat (Severity): {prediction[0]}/14")
+                print(f" > Calculated Accuracy: {calculated_confidence}%")
+            # Writing a new threat to PostgreSQL
+            new_record = pd.DataFrame({
+                "timestamp": [datetime.now().strftime('%Y-%m-%d %H:%M:%S')],
+                "source_ip": ["OSINT (Web RSS)"],
+                "attack_type": [detected_type],
+                "severity": [final_severity],
+                "confidence": [calculated_confidence]
+            })
+            new_record.to_sql("threat_logs", con=engine, if_exists="append", index=False)
+            print(" [*] Live data appended to PostgreSQL for Reports!")
             
-            print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
-            print(f" > Prognostic range of threat (Severity): {prediction[0]}/14")
-            print(f" > Confidence of the AI model: {confidence:.1f}%")
-        # Writing a new threat to PostgreSQL
-        new_record = pd.DataFrame({
-            "timestamp": [datetime.now().strftime('%Y-%m-%d %H:%M:%S')],
-            "source_ip": ["OSINT (Web RSS)"],
-            "attack_type": [detected_type],
-            "severity": [final_severity]
-        })
-        new_record.to_sql("threat_logs", con=engine, if_exists="append", index=False)
-        print(" [*] Live data appended to PostgreSQL for Reports!")
-        
-        print("[*] Continue to monitor...")
+            print("[*] Continue to monitor...")
     except Exception as e:
         print(f"[-] Network pause or error. Retrying...{e}")
         time.sleep(3)
