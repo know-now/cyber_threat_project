@@ -99,20 +99,20 @@ while True:
             else:
                 encoded_val = encoder.transform([detected_type])[0]
                 new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
-                base_severity = model.predict(new_data)[0]
-                # Calculation of real variativity
-                # 1. Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
+                base_severity = float(model.predict(new_data)[0])
+                
+                # Calculating RAG confidence (0 to 1)
+                rag_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance)/DISTANCE_THRESHOLD))
+                
+                # Calculations of dynamic severity = Historical severity * coeficient RAG
+                final_severity = round(base_severity * (calculated_confidence / 100.0),1)
+                final_severity = max(1.0, final_severity)
+                
+                # Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
                 calculated_confidence = round(max(0, ((DISTANCE_THRESHOLD - semantic_distance) / DISTANCE_THRESHOLD)*100), 1)
-                # 2. Dynamic threat: basic threat multiplied on the % of precisiness
-                #obtaining of prognosis and probabilities (Confidence)
-                prediction = model.predict(new_data)
-                probabilities = model.predict_proba(new_data)[0]
-                confidence = max(probabilities) * 100
-                final_severity = prediction[0]
                 
                 print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
-                print(f" > Dynamic Severity: {final_severity}/14 (Base: {base_severity})")
-                print(f" > Prognostic range of threat (Severity): {prediction[0]}/14")
+                print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
                 print(f" > Calculated Accuracy: {calculated_confidence}%")
             # Writing a new threat to PostgreSQL
             new_record = pd.DataFrame({
