@@ -21,13 +21,13 @@ DB_NAME = os.getenv("POSTGRES_DB") or "cyber_threat_db"
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@postgres_db:5432/{DB_NAME}")
 
 try:
-    df = pd.read_sql("SELECT * FROM threat_logs", engine)
+    df = pd.read_sql("SELECT * FROM threat_logs WHERE source_ip NOT LIKE 'OSINT%", engine)
     encoder = LabelEncoder()
     df['attack_encoded'] = encoder.fit_transform(df['attack_type'])
     
     model = DecisionTreeClassifier()
     model.fit(df[['attack_encoded']], df['severity'])
-    print("[+] AI model (Decision Tree) is successfully trained in the memory")
+    print("[+] AI model (Decision Tree) is successfully trained only historical baseline.")
 except Exception as e:
     print(f"[-] Error of access to PostgreSQL. Check if etl_app is working correctly. Details: {e}")
     exit(1)
@@ -70,25 +70,22 @@ while True:
             
             #Protection if the text is too far from cybersecurity topic
             DISTANCE_THRESHOLD = 1.5
-            if results['documents'] and results['documents'][0]:
-                closest_historic_doc = results['documents'][0][0].lower()
-                semantic_distance = results['distances'][0][0]
-                
-                if semantic_distance > DISTANCE_THRESHOLD:
-                    print(f"[?] ATTENTION: text is not recognised as a cybersecurity topic")
-                    detected_type = "Unknown / Review Needed"
-                else:
-                    #mapping on the basis of found semantic context
-                    if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
-                        detected_type = "Phishing"
-                    elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
-                        detected_type = "SQL Injection"
-                    elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
-                        detected_type = "DDoS"
-                    else:
-                        detected_type = "Ransomware"
-            else:
+            
+            if semantic_distance > DISTANCE_THRESHOLD:
+                print(f"[?] ATTENTION: text is not recognised as a cybersecurity topic")
                 detected_type = "Unknown / Review Needed"
+            else:
+                #mapping on the basis of found semantic context
+                if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
+                    detected_type = "Phishing"
+                elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
+                    detected_type = "SQL Injection"
+                elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
+                    detected_type = "DDoS"
+                else:
+                    detected_type = "Ransomware"
+        else:
+            detected_type = "Unknown / Review Needed"
                 
             #=== ML: Prognosis by Desision Tree with a Confidence Score ===
             if detected_type == "Unknown / Review Needed":
@@ -105,11 +102,11 @@ while True:
                 rag_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance)/DISTANCE_THRESHOLD))
                 
                 # Calculations of dynamic severity = Historical severity * coeficient RAG
-                final_severity = round(base_severity * (calculated_confidence / 100.0),1)
+                final_severity = round(base_severity * rag_confidence, 1)
                 final_severity = max(1.0, final_severity)
                 
                 # Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
-                calculated_confidence = round(max(0, ((DISTANCE_THRESHOLD - semantic_distance) / DISTANCE_THRESHOLD)*100), 1)
+                calculated_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance) / DISTANCE_THRESHOLD))
                 
                 print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
                 print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
