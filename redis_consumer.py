@@ -21,12 +21,14 @@ DB_NAME = os.getenv("POSTGRES_DB") or "cyber_threat_db"
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@postgres_db:5432/{DB_NAME}")
 
 try:
-    df = pd.read_sql("SELECT * FROM threat_logs WHERE source_ip NOT LIKE 'OSINT%", engine)
+    df = pd.read_sql("threat logs", con = engine)
+    train_df = df[~df['source_ip'].str.contains("OSINT")].copy()
+    
     encoder = LabelEncoder()
-    df['attack_encoded'] = encoder.fit_transform(df['attack_type'])
+    train_df['attack_encoded'] = encoder.fit_transform(train_df['attack_type'])
     
     model = DecisionTreeClassifier()
-    model.fit(df[['attack_encoded']], df['severity'])
+    model.fit(df[['attack_encoded']], train_df['severity'])
     print("[+] AI model (Decision Tree) is successfully trained only historical baseline.")
 except Exception as e:
     print(f"[-] Error of access to PostgreSQL. Check if etl_app is working correctly. Details: {e}")
@@ -106,7 +108,7 @@ while True:
                 final_severity = max(1.0, final_severity)
                 
                 # Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
-                calculated_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance) / DISTANCE_THRESHOLD))
+                calculated_confidence = round(rag_confidence * 100.0, 1)
                 
                 print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
                 print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
