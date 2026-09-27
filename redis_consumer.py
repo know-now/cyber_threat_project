@@ -67,52 +67,37 @@ while True:
         results = collection.query(query_texts=[threat_summary], n_results = 1)
         
         if results['documents'] and results['documents'][0]:
-            closest_historic_doc = results['documents'][0][0].lower()
             semantic_distance = results['distances'][0][0]
             
-            #Protection if the text is too far from cybersecurity topic
-            DISTANCE_THRESHOLD = 1.5
+            #Taking class from the matadata of example
+            detected_type = results['metadatas'][0][0]['type']
             
-            if semantic_distance > DISTANCE_THRESHOLD:
-                print(f"[?] ATTENTION: text is not recognised as a cybersecurity topic")
+            # Adaptation of maths to a geometry of space MiniLM
+            DISTANCE_MAX = 1.41
+            rag_confidence_raw = max(0.0, ((DISTANCE_MAX - semantic_distance) / DISTANCE_MAX))
+            calculated_confidence = round(rag_confidence_raw * 100.0, 1)
+            
+            MIN_CONFIDENCE = 25.0
+            if calculated_confidence < MIN_CONFIDENCE: 
+                print(f'[?] ATTENTION: conficence {calculated_confidence}% is below threshold {MIN_CONFIDENCE}%. Marked for Manual Review.')
                 detected_type = "Unknown / Review Needed"
+                final_severity = 0.0
             else:
-                #mapping on the basis of found semantic context
-                if "phishing" in closest_historic_doc or "email" in closest_historic_doc:
-                    detected_type = "Phishing"
-                elif "sql" in closest_historic_doc or "database" in closest_historic_doc:
-                    detected_type = "SQL Injection"
-                elif "ddos" in closest_historic_doc or "server" in closest_historic_doc:
-                    detected_type = "DDoS"
-                else:
-                    detected_type = "Ransomware"
+                encoded_val = encoder.transform([detected_type])[0]
+                new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
+                base_severity = float(model.predict(new_data)[0])
+            
+                # Calculations of dynamic severity = Historical severity * coeficient RAG
+                final_severity = round(base_severity * rag_confidence_raw, 1)
+                final_severity = max(1.0, final_severity)
+        
+            print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
+            print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
+            print(f" > Calculated Accuracy: {calculated_confidence}%")
         else:
             detected_type = "Unknown / Review Needed"
-                
-        #=== ML: Prognosis by Desision Tree with a Confidence Score ===
-        if detected_type == "Unknown / Review Needed":
-            print(" > Classifying: no automatic prognosis (not enough data)")
-            print(" > Prognostic level of threat: attention of tht specialist is needed")
             final_severity = 0.0
             calculated_confidence = 0.0
-        else:
-            encoded_val = encoder.transform([detected_type])[0]
-            new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
-            base_severity = float(model.predict(new_data)[0])
-            
-            # Calculating RAG confidence (0 to 1)
-            rag_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance)/DISTANCE_THRESHOLD))
-            
-        # Calculations of dynamic severity = Historical severity * coeficient RAG
-        final_severity = round(base_severity * rag_confidence, 1)
-        final_severity = max(1.0, final_severity)
-        
-        # Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
-        calculated_confidence = round(rag_confidence * 100.0, 1)
-        
-        print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
-        print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
-        print(f" > Calculated Accuracy: {calculated_confidence}%")
         # Writing a new threat to PostgreSQL
         new_record = pd.DataFrame({
             "timestamp": [datetime.now().strftime('%Y-%m-%d %H:%M:%S')],
