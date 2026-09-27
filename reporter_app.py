@@ -51,18 +51,18 @@ def generate_pdf_report():
         cell_style.leading = 11
 
         #Preparing data for the table
-        table_data = [["Timestamp", "Source IP", "Threat Classification", "Severity", "Accuracy"]]
+        table_data = [["Timestamp", "Source IP", "Threat Details (Title)", "Classification", "Severity", "Accuracy"]]
         for index, row in df.iterrows():
             short_time = str(row['timestamp']).split('.')[0]
-            
             accuracy_str = f"{row['confidence']}%" if 'confidence' in row and pd.notnull(row['confidence']) else "N/A"
             title_text = str(row['threat_title'])
             title_paragraph = Paragraph(title_text, cell_style)
+            class_paragraph = Paragraph(str(row['attack_type']), cell_style)
             
-            table_data.append([short_time, str(row['source_ip']), title_paragraph, str(row['attack_type']), str(row['severity']), accuracy_str])
+            table_data.append([short_time, str(row['source_ip']), title_paragraph, class_paragraph, str(row['severity']), accuracy_str])
             
         #Format table
-        t = Table(table_data, colWidths=[90, 80, 290, 80, 50, 60])
+        t = Table(table_data, colWidths=[100, 90, 300, 80, 50, 60])
         t.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
