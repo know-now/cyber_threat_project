@@ -21,14 +21,14 @@ DB_NAME = os.getenv("POSTGRES_DB") or "cyber_threat_db"
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@postgres_db:5432/{DB_NAME}")
 
 try:
-    df = pd.read_sql("threat logs", con = engine)
+    df = pd.read_sql("threat_logs", con = engine)
     train_df = df[~df['source_ip'].str.contains("OSINT")].copy()
     
     encoder = LabelEncoder()
     train_df['attack_encoded'] = encoder.fit_transform(train_df['attack_type'])
     
     model = DecisionTreeClassifier()
-    model.fit(df[['attack_encoded']], train_df['severity'])
+    model.fit(train_df[['attack_encoded']], train_df['severity'])
     print("[+] AI model (Decision Tree) is successfully trained only historical baseline.")
 except Exception as e:
     print(f"[-] Error of access to PostgreSQL. Check if etl_app is working correctly. Details: {e}")
@@ -89,42 +89,42 @@ while True:
         else:
             detected_type = "Unknown / Review Needed"
                 
-            #=== ML: Prognosis by Desision Tree with a Confidence Score ===
-            if detected_type == "Unknown / Review Needed":
-                print(" > Classifying: no automatic prognosis (not enough data)")
-                print(" > Prognostic level of threat: attention of tht specialist is needed")
-                final_severity = 0.0
-                calculated_confidence = 0.0
-            else:
-                encoded_val = encoder.transform([detected_type])[0]
-                new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
-                base_severity = float(model.predict(new_data)[0])
-                
-                # Calculating RAG confidence (0 to 1)
-                rag_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance)/DISTANCE_THRESHOLD))
-                
-                # Calculations of dynamic severity = Historical severity * coeficient RAG
-                final_severity = round(base_severity * rag_confidence, 1)
-                final_severity = max(1.0, final_severity)
-                
-                # Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
-                calculated_confidence = round(rag_confidence * 100.0, 1)
-                
-                print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
-                print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
-                print(f" > Calculated Accuracy: {calculated_confidence}%")
-            # Writing a new threat to PostgreSQL
-            new_record = pd.DataFrame({
-                "timestamp": [datetime.now().strftime('%Y-%m-%d %H:%M:%S')],
-                "source_ip": ["OSINT (Web RSS)"],
-                "attack_type": [detected_type],
-                "severity": [final_severity],
-                "confidence": [calculated_confidence]
-            })
-            new_record.to_sql("threat_logs", con=engine, if_exists="append", index=False)
-            print(" [*] Live data appended to PostgreSQL for Reports!")
+        #=== ML: Prognosis by Desision Tree with a Confidence Score ===
+        if detected_type == "Unknown / Review Needed":
+            print(" > Classifying: no automatic prognosis (not enough data)")
+            print(" > Prognostic level of threat: attention of tht specialist is needed")
+            final_severity = 0.0
+            calculated_confidence = 0.0
+        else:
+            encoded_val = encoder.transform([detected_type])[0]
+            new_data = pd.DataFrame({'attack_encoded':[encoded_val]})
+            base_severity = float(model.predict(new_data)[0])
             
-            print("[*] Continue to monitor...")
+            # Calculating RAG confidence (0 to 1)
+            rag_confidence = max(0, ((DISTANCE_THRESHOLD - semantic_distance)/DISTANCE_THRESHOLD))
+            
+        # Calculations of dynamic severity = Historical severity * coeficient RAG
+        final_severity = round(base_severity * rag_confidence, 1)
+        final_severity = max(1.0, final_severity)
+        
+        # Precisiness is based on the semantic distance (0 distance = 100%, 1.5 distance = 0%)
+        calculated_confidence = round(rag_confidence * 100.0, 1)
+        
+        print(f" > Classificatior detected type: {detected_type} RAG distance: {semantic_distance:2f}")
+        print(f" > Prognostic Severity: {final_severity}/14 (Base: {base_severity})")
+        print(f" > Calculated Accuracy: {calculated_confidence}%")
+        # Writing a new threat to PostgreSQL
+        new_record = pd.DataFrame({
+            "timestamp": [datetime.now().strftime('%Y-%m-%d %H:%M:%S')],
+            "source_ip": ["OSINT (Web RSS)"],
+            "attack_type": [detected_type],
+            "severity": [final_severity],
+            "confidence": [calculated_confidence]
+        })
+        new_record.to_sql("threat_logs", con=engine, if_exists="append", index=False)
+        print(" [*] Live data appended to PostgreSQL for Reports!")
+        
+        print("[*] Continue to monitor...")
     except Exception as e:
         print(f"[-] Network pause or error. Retrying...{e}")
         time.sleep(3)

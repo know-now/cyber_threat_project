@@ -36,7 +36,7 @@ def fetch_news():
                     #Sending to a queue for a consumer
                     cache.lpush("threat_queue", json.dumps(article))
                     # Writing URL in a "memory" for 24 hours (86400 seconds)
-                    cashe.setex(f"seen:{article_link}", 86400, "1")
+                    cache.set(f"seen:{article_link}", "1", ex = 86400)
                     
                     total_added += 1
                     print(f" [+] New threat:{entry.title}")
