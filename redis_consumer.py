@@ -117,6 +117,7 @@ while True:
         new_record = pd.DataFrame({
             "timestamp": [datetime.now().strftime('%Y-%m-%d %H:%M:%S')],
             "source_ip": ["OSINT (Web RSS)"],
+            "threat_title": [threat_title],
             "attack_type": [detected_type],
             "severity": [final_severity],
             "confidence": [calculated_confidence]
