@@ -22,6 +22,7 @@ raw_data = {"timestamp": pd.date_range(start="2026-09-14 10:00:00", periods=19, 
         "192.168.1.100", "192.168.1.101", "192.168.1.102", "192.168.1.103",# SQL Injection
         "10.1.1.5", "10.1.1.6", "10.1.1.7"                               # Insider Threat
     ],
+    "threat_title":["Historical Baseline Record"] * 19,
     "attack_type": [
         "Phishing", "Phishing", "Phishing", "Phishing",
         "Ransomware", "Ransomware", "Ransomware", "Ransomware",

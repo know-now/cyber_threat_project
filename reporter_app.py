@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 import pandas as pd
 from sqlalchemy import create_engine
-from reportlab.lib.pagesizes import letter 
+from reportlab.lib.pagesizes import letter, landscape
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib import colors 
@@ -22,7 +22,7 @@ def generate_pdf_report():
     
     try:
         # Extracting top-15 most critical incidents
-        query = "SELECT timestamp, source_ip, attack_type, severity, confidence FROM threat_logs ORDER BY timestamp DESC LIMIT 15"
+        query = "SELECT timestamp, source_ip, threat_title, attack_type, severity, confidence FROM threat_logs ORDER BY timestamp DESC LIMIT 15"
         df = pd.read_sql(query, engine)
         
         if df.empty:
@@ -33,7 +33,7 @@ def generate_pdf_report():
         report_filename = f"reports/Executive_CTI_Report_{datetime.now().strftime('%Y%m%d_%H%M')}.pdf"
         
         #Setting the style of PDF
-        pdf = SimpleDocTemplate(report_filename, pagesize=letter)
+        pdf = SimpleDocTemplate(report_filename, pagesize=landscape(letter))
         styles = getSampleStyleSheet()
         elements = []
 
@@ -44,22 +44,29 @@ def generate_pdf_report():
         elements.append(Spacer(1,12))
         elements.append(Paragraph(f"<b>Generated on: </b> {datetime.now().strftime('%Y-%m-%d %H:%M')}", styles['Normal']))
         elements.append(Spacer(1, 24))
+        
+        # Setting of the style for a long text in a table
+        cell_style=styles['Normal']
+        cell_style.fontSize = 9
+        cell_style.leading = 11
 
         #Preparing data for the table
-        table_data = [["Timestamp", "Source IP", "Threat Classification", "Severity", "Accuracy"]]
+        table_data = [["Timestamp", "Source IP", "Threat Details (Title)", "Classification", "Severity", "Accuracy"]]
         for index, row in df.iterrows():
             short_time = str(row['timestamp']).split('.')[0]
-            
             accuracy_str = f"{row['confidence']}%" if 'confidence' in row and pd.notnull(row['confidence']) else "N/A"
+            title_text = str(row['threat_title'])
+            title_paragraph = Paragraph(title_text, cell_style)
+            class_paragraph = Paragraph(str(row['attack_type']), cell_style)
             
-            table_data.append([short_time, str(row['source_ip']), str(row['attack_type']), str(row['severity']), accuracy_str])
+            table_data.append([short_time, str(row['source_ip']), title_paragraph, class_paragraph, str(row['severity']), accuracy_str])
             
         #Format table
-        t = Table(table_data, colWidths=[110, 90, 130, 60, 70])
+        t = Table(table_data, colWidths=[100, 90, 300, 80, 50, 60])
         t.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'), 
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), 
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
             ('BACKGROUND', (0, 1), (-1, -1), colors.aliceblue),
@@ -74,7 +81,6 @@ def generate_pdf_report():
 
 if __name__ == "__main__":
     print("===CTI Reporter Service Started===")
-    
     generate_pdf_report()
     #Set up the schedule
     scheduler = BackgroundScheduler()
