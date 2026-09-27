@@ -11,6 +11,11 @@ services:
       - "5433:5432"
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5      
 
   chroma_app:
     image: chromadb/chroma:latest
@@ -22,12 +27,20 @@ services:
     environment:
       - ALLOW_RESET=true
       - IS_PERSISTENT=true
+  redis_db:
+    image: redis:7-alpine
+    container_name: cyber_redis
+    ports:
+      - "6380:6379"
+    restart: always
   etl_app:
     build: .
     container_name: cyber_etl_app
     depends_on:
-      - postgres_db
-      - chroma_app
+      postgres_db:
+        condition: service_healthy
+      chroma_app:
+        condition: service_started
     env_file:
       - .env
     volumes:
@@ -36,35 +49,52 @@ services:
     build: .
     container_name: cyber_ml_app
     depends_on:
-      - postgres_db
+      postgres_db:
+        condition: service_healthy
     env_file:
       - .env
     volumes:
       - .:/app
     command: ["python", "ml_predictor.py"]
-  redis_db:
-    image: redis:7-alpine
-    container_name: cyber_redis
-    ports:
-      - "6380:6379"
-    restart: always
   scraper_app:
     build: .
     container_name: cyber_scraper_app
-    depends_on:
-      - redis_db
     volumes:
       - .:/app
     command: ["python", "osint_scraper.py"]
+    depends_on:
+      etl_app:
+        condition: service_completed_successfully
+      redis_db:
+        condition: service_started
   redis_consumer:
     build: .
     container_name: cyber_redis_app
-    depends_on:
-      - redis_db
-      - postgres_db
-      - chroma_app
     env_file:
       - .env
     volumes:
       - .:/app
     command: ["python", "-u", "redis_consumer.py"]
+    depends_on:
+      etl_app:
+        condition: service_completed_successfully
+      redis_db:
+        condition: service_started
+      postgres_db:
+        condition: service_started
+      chroma_app:
+        condition: service_started
+  reporter_app:
+    build: .
+    container_name: cyber_reporter_app
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./reports:/app/reports
+    command: ["python", "-u", "reporter_app.py"]
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      etl_app:
+        condition: service_completed_successfully
