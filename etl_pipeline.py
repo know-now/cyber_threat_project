@@ -10,46 +10,12 @@ import chromadb
 
 
 #Block Extract(E): creation of raw test data about threats
-# reading knowledge base from the text file
-with open("kb.txt", "r", encoding="utf-8") as f:
-    historic_documents = [line.strip() for line in f.readlines() if line.strip()]
 
-raw_data = {
-    "timestamp": pd.date_range(start="2026-09-14 10:00:00", periods=23, freq="5min").astype(str).tolist(),
-    "source_ip": [
-        "192.168.1.15", "192.168.1.16", "192.168.1.17", "192.168.1.18",  
-        "10.0.0.42", "10.0.0.43", "10.0.0.44", "10.0.0.45",              
-        "172.16.0.8", "172.16.0.9", "172.16.0.10", "172.16.0.11",        
-        "192.168.1.100", "192.168.1.101", "192.168.1.102", "192.168.1.103",
-        "10.1.1.5", "10.1.1.6", "10.1.1.7",
-        "10.2.0.1", "10.2.0.2", "10.2.0.3", "10.2.0.4"
-    ],
-    "threat_title":["Historical Baseline Record"] * 23,
-    "attack_type": [
-        "Phishing", "Phishing", "Phishing", "Phishing",
-        "Ransomware", "Ransomware", "Ransomware", "Ransomware",
-        "DDoS", "DDoS", "DDoS", "DDoS",
-        "SQL Injection", "SQL Injection", "SQL Injection", "SQL Injection",
-        "Insider Threat", "Insider Threat", "Insider Threat",
-        "RCE", "Infostealer", "Web Shell", "CSRF"
-    ],
-    "severity": [
-        10.0, 10.0, 10.0, 10.0,  
-        14.0, 14.0, 14.0, 14.0,  
-        3.0, 3.0, 3.0, 3.0,      
-        12.0, 12.0, 12.0, 12.0,  
-        8.0, 8.0, 8.0,
-        15.0, 11.0, 13.0, 7.0
-    ],
-    "confidence": [100.0] * 23
-}
-
-df = pd.DataFrame(raw_data)
+df = pd.read_csv("baseline.csv")
 # Block Transform (T):Convert data types
-df["timestamp"] = pd.to_datetime(df["timestamp"])
+df["timestamp"] = pd.date_range(start="2026-09-14 10:00:00", periods=len(df), freq="5min")
 
 # Block Load (L): connection to PostgreSQL and data writing
-
 DB_USER = os.getenv("POSTGRES_USER")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
 DB_HOST = "postgres_db"

@@ -1,0 +1,101 @@
+threat_summary,source_ip,threat_title,attack_type,severity,confidence
+"A sophisticated spear-phishing attack breached the internal corporate database.","192.168.1.15","Historical Baseline Record","Phishing",10.0,100.0
+"Employees received fraudulent emails impersonating the IT department to steal login credentials.","192.168.1.16","Historical Baseline Record","Phishing",10.0,100.0
+"A deceptive link in a message led users to a fake portal designed for credential harvesting.","192.168.1.17","Historical Baseline Record","Phishing",10.0,100.0
+"A social engineering campaign targeted high-level executives via personalized phishing messages.","192.168.1.18","Historical Baseline Record","Phishing",10.0,100.0
+"Attackers sent fake invoices containing malicious attachments to the accounting department.","192.168.1.19","Historical Baseline Record","Phishing",10.0,100.0
+"Phishing campaign uses fake Microsoft 365 login pages to steal session cookies.","192.168.1.20","Historical Baseline Record","Phishing",10.0,100.0
+"Smishing attack via SMS tricked users into downloading a malicious banking app.","192.168.1.21","Historical Baseline Record","Phishing",10.0,100.0
+"Cybercriminals use deepfake voice clones for vishing attacks on customer support.","192.168.1.22","Historical Baseline Record","Phishing",10.0,100.0
+"Mass email campaign distributes malware by claiming the user won a gift card.","192.168.1.23","Historical Baseline Record","Phishing",10.0,100.0
+"Deceptive phishing redirects users to malicious domains mimicking legitimate banks.","192.168.1.24","Historical Baseline Record","Phishing",10.0,100.0
+"State-sponsored hackers deployed ransomware across municipal power grids.","10.0.0.42","Historical Baseline Record","Ransomware",14.0,100.0
+"Malicious encryption software locked critical files and demanded a Bitcoin payment for recovery.","10.0.0.43","Historical Baseline Record","Ransomware",14.0,100.0
+"A trojan horse was discovered on the network, encrypting enterprise data and halting operations.","10.0.0.44","Historical Baseline Record","Ransomware",14.0,100.0
+"The system was infected with advanced ransomware that exfiltrated sensitive data before locking the drives.","10.0.0.45","Historical Baseline Record","Ransomware",14.0,100.0
+"Double extortion ransomware group threatens to leak stolen customer records if ransom is unpaid.","10.0.0.46","Historical Baseline Record","Ransomware",14.0,100.0
+"Healthcare provider paralyzed by ransomware attack targeting patient databases.","10.0.0.47","Historical Baseline Record","Ransomware",14.0,100.0
+"New ransomware strain uses AES encryption to lock network attached storage devices.","10.0.0.48","Historical Baseline Record","Ransomware",14.0,100.0
+"Ransomware-as-a-service (RaaS) affiliates deploy lockers via compromised RDP endpoints.","10.0.0.49","Historical Baseline Record","Ransomware",14.0,100.0
+"Hackers exploit unpatched VPN appliance to deliver payload and encrypt active directory servers.","10.0.0.50","Historical Baseline Record","Ransomware",14.0,100.0
+"Supply chain attack distributes ransomware update through legitimate software vendor.","10.0.0.51","Historical Baseline Record","Ransomware",14.0,100.0
+"Botnets executed a massive DDoS campaign, disrupting financial trading platforms.","172.16.0.8","Historical Baseline Record","DDoS",3.0,100.0
+"A distributed denial-of-service attack overwhelmed the web servers with massive traffic spikes.","172.16.0.9","Historical Baseline Record","DDoS",3.0,100.0
+"HTTP flood attacks caused a service outage, making the e-commerce website inaccessible to customers.","172.16.0.10","Historical Baseline Record","DDoS",3.0,100.0
+"An organized botnet infrastructure targeted the DNS servers, causing global connectivity issues.","172.16.0.11","Historical Baseline Record","DDoS",3.0,100.0
+"IoT devices hijacked by malware generated a 1 Tbps volumetric DDoS attack.","172.16.0.12","Historical Baseline Record","DDoS",3.0,100.0
+"UDP amplification attack targeted gaming servers, causing extreme latency and crashes.","172.16.0.13","Historical Baseline Record","DDoS",3.0,100.0
+"Application-layer DDoS attack exhausted backend database connections.","172.16.0.14","Historical Baseline Record","DDoS",3.0,100.0
+"Hacktivist group claimed responsibility for DDoS attack taking down government websites.","172.16.0.15","Historical Baseline Record","DDoS",3.0,100.0
+"TCP SYN flood overwhelmed firewalls, leaving the internal network exposed to downtime.","172.16.0.16","Historical Baseline Record","DDoS",3.0,100.0
+"Mirai variant botnet launched a coordinated denial of service attack against cloud providers.","172.16.0.17","Historical Baseline Record","DDoS",3.0,100.0
+"A zero-day exploit compromised the cloud infrastructure of a major logistics firm.","192.168.1.100","Historical Baseline Record","SQL Injection",12.0,100.0
+"An unpatched vulnerability in the web application allowed unauthorized SQL injection queries to extract user data.","192.168.1.101","Historical Baseline Record","SQL Injection",12.0,100.0
+"Attackers manipulated input fields to bypass authentication using malicious SQL commands on the backend database.","192.168.1.102","Historical Baseline Record","SQL Injection",12.0,100.0
+"Blind SQL injection discovered in the login portal allowed attackers to dump administrative hashes.","192.168.1.103","Historical Baseline Record","SQL Injection",12.0,100.0
+"Error-based SQL injection vulnerability exposed sensitive financial records in the shopping cart app.","192.168.1.104","Historical Baseline Record","SQL Injection",12.0,100.0
+"Attackers used union-based SQL injection to merge malicious queries with legitimate application traffic.","192.168.1.105","Historical Baseline Record","SQL Injection",12.0,100.0
+"Time-based blind SQLi was used to slowly exfiltrate data from a highly secured database environment.","192.168.1.106","Historical Baseline Record","SQL Injection",12.0,100.0
+"Improper sanitization of user inputs led to a massive SQL injection breach.","192.168.1.107","Historical Baseline Record","SQL Injection",12.0,100.0
+"Automated vulnerability scanners detected critical SQL injection flaws in the legacy API.","192.168.1.108","Historical Baseline Record","SQL Injection",12.0,100.0
+"Hackers injected malicious SQL queries via the search bar to drop database tables.","192.168.1.109","Historical Baseline Record","SQL Injection",12.0,100.0
+"An unauthorized user accessed the internal file share to exfiltrate proprietary source code.","10.1.1.5","Historical Baseline Record","Insider Threat",8.0,100.0
+"Sensitive customer records were leaked due to a misconfigured cloud storage bucket exposed to the public.","10.1.1.6","Historical Baseline Record","Insider Threat",8.0,100.0
+"Malicious insider activity resulted in the unauthorized transfer of classified database logs to an external IP.","10.1.1.7","Historical Baseline Record","Insider Threat",8.0,100.0
+"Disgruntled former employee used retained VPN access to delete critical server backups.","10.1.1.8","Historical Baseline Record","Insider Threat",8.0,100.0
+"Corporate espionage: an engineer copied proprietary algorithms onto a personal USB drive.","10.1.1.9","Historical Baseline Record","Insider Threat",8.0,100.0
+"An administrator abused elevated privileges to alter financial transaction logs.","10.1.1.10","Historical Baseline Record","Insider Threat",8.0,100.0
+"Accidental data leak occurred when a developer hardcoded AWS access keys in a public GitHub repository.","10.1.1.11","Historical Baseline Record","Insider Threat",8.0,100.0
+"Employee fell victim to social engineering and bypassed security protocols to share confidential IP.","10.1.1.12","Historical Baseline Record","Insider Threat",8.0,100.0
+"Insider uploaded sensitive HR records to an unauthorized third-party cloud storage service.","10.1.1.13","Historical Baseline Record","Insider Threat",8.0,100.0
+"Rogue IT staff deployed unauthorized monitoring tools to intercept executive communications.","10.1.1.14","Historical Baseline Record","Insider Threat",8.0,100.0
+"Remote Code Execution (RCE) vulnerability exploited in Citrix NetScaler allows unauthenticated attackers to execute commands.","10.2.0.1","Historical Baseline Record","RCE",15.0,100.0
+"Critical RCE flaw in Apache Struts exploited in the wild to run malicious shell scripts.","10.2.0.2","Historical Baseline Record","RCE",15.0,100.0
+"Zero-day remote code execution vulnerability discovered in Microsoft Exchange Server.","10.2.0.3","Historical Baseline Record","RCE",15.0,100.0
+"Buffer overflow in the web server allowed remote attackers to achieve arbitrary code execution.","10.2.0.4","Historical Baseline Record","RCE",15.0,100.0
+"Deserialization flaw in the Java backend leads to critical remote code execution.","10.2.0.5","Historical Baseline Record","RCE",15.0,100.0
+"Unauthenticated RCE vulnerability found in popular enterprise VPN gateway.","10.2.0.6","Historical Baseline Record","RCE",15.0,100.0
+"Hackers exploit RCE bug in WordPress plugin to take full control of hosting servers.","10.2.0.7","Historical Baseline Record","RCE",15.0,100.0
+"Exploitation of a remote code execution vulnerability provided full control over the cloud environment.","10.2.0.8","Historical Baseline Record","RCE",15.0,100.0
+"RCE in mobile device management platform allowed threat actors to push malware to all corporate devices.","10.2.0.9","Historical Baseline Record","RCE",15.0,100.0
+"Memory corruption vulnerability enables remote code execution with system level privileges.","10.2.0.10","Historical Baseline Record","RCE",15.0,100.0
+"Infostealer malware abuses system drivers to bypass security monitoring and steal browser credentials.","10.3.0.1","Historical Baseline Record","Infostealer",11.0,100.0
+"RedLine stealer distributed via fake software cracks extracts passwords and crypto wallets.","10.3.0.2","Historical Baseline Record","Infostealer",11.0,100.0
+"Vidar infostealer campaign targets gamers via Discord to harvest session tokens.","10.3.0.3","Historical Baseline Record","Infostealer",11.0,100.0
+"Malware specifically designed to steal cryptocurrency wallet private keys found on dark web.","10.3.0.4","Historical Baseline Record","Infostealer",11.0,100.0
+"Information stealing trojan logs keystrokes and exfiltrates banking details to a C2 server.","10.3.0.5","Historical Baseline Record","Infostealer",11.0,100.0
+"Raccoon stealer variants return to operation, harvesting autofill data and cookies.","10.3.0.6","Historical Baseline Record","Infostealer",11.0,100.0
+"Infostealer payload dropped by malicious macro documents to silently exfiltrate user data.","10.3.0.7","Historical Baseline Record","Infostealer",11.0,100.0
+"Malware-as-a-service infostealer bypasses antivirus using obfuscated PowerShell scripts.","10.3.0.8","Historical Baseline Record","Infostealer",11.0,100.0
+"Threat actors use infostealer logs sold on genesis market to bypass multi-factor authentication.","10.3.0.9","Historical Baseline Record","Infostealer",11.0,100.0
+"New macOS infostealer targets keychain passwords and browser extensions.","10.3.0.10","Historical Baseline Record","Infostealer",11.0,100.0
+"Attackers bypass Web Application Firewall (WAF) to exploit flaws and deploy web shells for persistent access.","10.4.0.1","Historical Baseline Record","Web Shell",13.0,100.0
+"Malicious PHP web shell uploaded via unsecured image upload directory.","10.4.0.2","Historical Baseline Record","Web Shell",13.0,100.0
+"China-nexus threat actors deployed stealthy web shells on compromised IIS servers.","10.4.0.3","Historical Baseline Record","Web Shell",13.0,100.0
+"Web shell backdoor provides attackers with persistent command line access to the compromised server.","10.4.0.4","Historical Baseline Record","Web Shell",13.0,100.0
+"Hackers hide heavily obfuscated web shell code inside legitimate WordPress core files.","10.4.0.5","Historical Baseline Record","Web Shell",13.0,100.0
+"Exploited vulnerability used to drop ASPX web shells on vulnerable mail servers.","10.4.0.6","Historical Baseline Record","Web Shell",13.0,100.0
+"Threat actors leverage web shells to pivot internally and exfiltrate databases.","10.4.0.7","Historical Baseline Record","Web Shell",13.0,100.0
+"Antivirus evasive web shell communicates via custom HTTP headers to avoid detection.","10.4.0.8","Historical Baseline Record","Web Shell",13.0,100.0
+"Incident response teams discover multiple web shells used for lateral movement after initial breach.","10.4.0.9","Historical Baseline Record","Web Shell",13.0,100.0
+"Web shell planted on unpatched proxy server enables continuous unauthorized remote access.","10.4.0.10","Historical Baseline Record","Web Shell",13.0,100.0
+"Cross-Site Request Forgery (CSRF) vulnerability allows attackers to trick administrators into clicking crafted links.","10.5.0.1","Historical Baseline Record","CSRF",7.0,100.0
+"Cross-Site Scripting (XSS) payload injected into comments section steals user session cookies.","10.5.0.2","Historical Baseline Record","XSS",7.0,100.0
+"Stored XSS vulnerability in the admin panel allows attackers to execute malicious JavaScript.","10.5.0.3","Historical Baseline Record","XSS",7.0,100.0
+"CSRF flaw in the banking application enabled unauthorized money transfers via hidden forms.","10.5.0.4","Historical Baseline Record","CSRF",7.0,100.0
+"Reflected XSS vulnerability used in targeted phishing links to hijack user sessions.","10.5.0.5","Historical Baseline Record","XSS",7.0,100.0
+"Client-side vulnerability allows attackers to bypass CSRF tokens using DOM-based XSS.","10.5.0.6","Historical Baseline Record","CSRF",7.0,100.0
+"Vulnerability in WordPress plugin allows cross-site request forgery to change admin passwords.","10.5.0.7","Historical Baseline Record","CSRF",7.0,100.0
+"Malicious script execution via XSS compromises the integrity of the user dashboard.","10.5.0.8","Historical Baseline Record","XSS",7.0,100.0
+"Missing SameSite cookie attributes facilitated widespread CSRF exploitation.","10.5.0.9","Historical Baseline Record","CSRF",7.0,100.0
+"XSS vulnerability in chat application allows attackers to redirect users to malware hosting sites.","10.5.0.10","Historical Baseline Record","XSS",7.0,100.0
+"Microsoft releases new security updates and patch Tuesday fixes for Windows and Office.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"OpenAI announces new features for enterprise AI agents focusing on privacy and security.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"Cybersecurity conference DEF CON announces schedule and call for papers for this year.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"Google Cloud introduces enhanced zero trust architecture for corporate environments.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"Cisco releases a whitepaper on the future of network security and firewall management.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"New data privacy laws implemented in the European Union regarding AI and data brokering.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"Tech giants collaborate to establish new open-source security frameworks for developers.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"Apple releases iOS update fixing minor bugs and improving battery life performance.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"Cybersecurity vendor acquires a smaller startup to expand its cloud protection portfolio.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
+"NIST publishes updated guidelines for multi-factor authentication and identity management.","0.0.0.0","Historical Baseline Record","Informational",0.0,100.0
