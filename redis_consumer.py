@@ -27,11 +27,11 @@ try:
     encoder = LabelEncoder()
     train_df['attack_encoded'] = encoder.fit_transform(train_df['attack_type'])
     
-    model = DecisionTreeClassifier()
+    model = DecisionTreeClassifier(max_depth=5)
     model.fit(train_df[['attack_encoded']], train_df['severity'])
-    print("[+] AI model (Decision Tree) is successfully trained only historical baseline.")
+    print(f"[+] AI model (Decision Tree) is successfully trained on {len(train_df)} baseline records.")
 except Exception as e:
-    print(f"[-] Error of access to PostgreSQL. Check if etl_app is working correctly. Details: {e}")
+    print(f"[-] Error of access to PostgreSQL. Details: {e}")
     exit(1)
 
 #2. Connection to Chroma DB (NLP extracting items)
@@ -57,7 +57,7 @@ while True:
             threat_title = article.get("title", "")
             threat_summary = article.get("summary", "")
         except:
-            print("[-] Got old format of dsta, I will not consider it...")
+            print("[-] Got old format of data, I will not consider it...")
             continue
             
         print(f"\n[!] Analysis of the new threat: {threat_title}")
@@ -73,11 +73,11 @@ while True:
             detected_type = results['metadatas'][0][0]['type']
             
             # Adaptation of maths to a geometry of space MiniLM
-            DISTANCE_MAX = 1.41
+            DISTANCE_MAX = 2.0
             rag_confidence_raw = max(0.0, ((DISTANCE_MAX - semantic_distance) / DISTANCE_MAX))
             calculated_confidence = round(rag_confidence_raw * 100.0, 1)
             
-            MIN_CONFIDENCE = 25.0
+            MIN_CONFIDENCE = 15.0
             if calculated_confidence < MIN_CONFIDENCE: 
                 print(f'[?] ATTENTION: conficence {calculated_confidence}% is below threshold {MIN_CONFIDENCE}%. Marked for Manual Review.')
                 detected_type = "Unknown / Review Needed"
