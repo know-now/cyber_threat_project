@@ -34,28 +34,22 @@ connection_url = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_
 engine = create_engine(connection_url)
 
 #Writing DataFrame into a database (threat_logs)
-df.to_sql("threat_logs", con = engine, if_exists = "replace", index = False)
+df_sql = df.drop(columns=['threat_summary'])
+df_sql.to_sql("threat_logs", con = engine, if_exists = "replace", index = False)
 print("[+] Data is successfully uploaded into PostgreSQL in a table 'threat_logs'.")
 
 #Connecting to Chroma in Docker
 chroma_client = chromadb.HttpClient(host='chroma_app', port=8000)
+try:
+    chroma_client.delete_collection(name="threat_logs_vectors")
+except:
+    pass
 collection = chroma_client.get_or_create_collection(name="threat_logs_vectors")
 
-#Sync writing texts to a vector database
+# Taking data from a dataFrame
 collection.add(
-    documents=historic_documents,
-    metadatas=[{"type":t} for t in raw_data['attack_type']],
-    ids=[f"doc{i}" for i in range(len(historic_documents))]
+    documents=df['threat_summary'].tolist(),
+    metadatas=[{"type":str(t)} for t in df['attack_type']],
+    ids=[f"doc{i}" for i in range(len(df))]
 )
-print("[+] Vector database Chroma DB is successfully updated with data from kb.txt")
-
-# Writing DataFrame in a data base (threat_logs)
-
-
-results = collection.query(
-    query_texts = ["How do hackers steal bank credentials?"], 
-    n_results = 1
-)
-print("Result of the search in Chroma DB:", results)
-
-print("Success! Data is added to PostgreSQL in a table 'threat_logs'.")
+print("[+] Chroma DB updated with {len(df)} semantic vectors!")
