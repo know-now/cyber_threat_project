@@ -11,3 +11,4 @@ beautifulsoup4
 feedparser
 apscheduler
 reportlab
+google-genai
