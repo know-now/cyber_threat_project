@@ -23,9 +23,10 @@ engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@postgres_db:5432/{
 try:
     df = pd.read_sql("threat_logs", con = engine)
     train_df = df[~df['source_ip'].str.contains("OSINT")].copy()
-    
+    train_df = train_df.dropna(subset = ['attack_type', 'severity'])
     encoder = LabelEncoder()
     train_df['attack_encoded'] = encoder.fit_transform(train_df['attack_type'])
+    
     
     model = DecisionTreeClassifier(max_depth=5)
     model.fit(train_df[['attack_encoded']], train_df['severity'])
