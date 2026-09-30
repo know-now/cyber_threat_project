@@ -1,501 +1,682 @@
 threat_summary,source_ip,threat_title,attack_type,severity,confidence
-A infostealer trojan was reported by threat intelligence.,175.187.33.197,Historical Baseline Record,Infostealer,11.0,100.0
-A iot botnet attack was mitigated by the security team.,41.113.236.212,Historical Baseline Record,DDoS,3.0,100.0
-A ceo fraud was discovered during a routine audit.,9.139.211.71,Historical Baseline Record,Phishing,10.0,100.0
-A infostealer trojan compromised cloud infrastructure.,205.172.228.24,Historical Baseline Record,Infostealer,11.0,100.0
-A csrf in admin panel targeted the financial department.,123.206.111.74,Historical Baseline Record,CSRF,7.0,100.0
-News: Microsoft patch tuesdaytargeted the financial department.,215.204.12.142,Historical Baseline Record,Informational,0.0,100.0
-A database dump via sqli compromised cloud infrastructure.,164.8.188.143,Historical Baseline Record,SQL Injection,12.0,100.0
-A backend sql manipulation was reported by threat intelligence.,40.76.67.50,Historical Baseline Record,SQL Injection,12.0,100.0
-A ryuk ransomware was reported by threat intelligence.,11.70.127.19,Historical Baseline Record,Ransomware,14.0,100.0
-A arbitrary code execution was detected on the main server.,187.196.110.150,Historical Baseline Record,RCE,15.0,100.0
-News: Zero trust architecture paperwas detected on the main server.,222.21.243.36,Historical Baseline Record,Informational,0.0,100.0
-A error-based sqli caused significant disruption.,115.75.243.37,Historical Baseline Record,SQL Injection,12.0,100.0
-A dom-based csrf compromised cloud infrastructure.,31.16.117.32,Historical Baseline Record,CSRF,7.0,100.0
-A botnet swarm was reported by threat intelligence.,184.50.215.226,Historical Baseline Record,DDoS,3.0,100.0
-A deserialization rce compromised cloud infrastructure.,63.152.162.9,Historical Baseline Record,RCE,15.0,100.0
-A malicious encryptor caused significant disruption.,120.11.163.30,Historical Baseline Record,Ransomware,14.0,100.0
-A forged http request triggered automated alerts.,38.140.27.61,Historical Baseline Record,CSRF,7.0,100.0
-A conti variant was reported by threat intelligence.,181.245.143.219,Historical Baseline Record,Ransomware,14.0,100.0
-A invoice scams caused significant disruption.,239.228.241.19,Historical Baseline Record,Phishing,10.0,100.0
-A session riding targeted the financial department.,91.173.59.17,Historical Baseline Record,CSRF,7.0,100.0
-News: Nist guidelines releasedwas detected on the main server.,144.44.200.208,Historical Baseline Record,Informational,0.0,100.0
-A unauthenticated command injection triggered automated alerts.,18.50.72.48,Historical Baseline Record,RCE,15.0,100.0
-A malicious state-changing link exploited a known vulnerability.,125.25.73.96,Historical Baseline Record,CSRF,7.0,100.0
-A internal sabotage exploited a known vulnerability.,161.8.149.59,Historical Baseline Record,Insider Threat,8.0,100.0
-A conti variant triggered automated alerts.,207.203.168.250,Historical Baseline Record,Ransomware,14.0,100.0
-A kernel level rce compromised cloud infrastructure.,110.192.88.197,Historical Baseline Record,RCE,15.0,100.0
-A rogue employee compromised cloud infrastructure.,167.123.77.43,Historical Baseline Record,Insider Threat,8.0,100.0
-A heap spray attack triggered automated alerts.,174.31.45.8,Historical Baseline Record,RCE,15.0,100.0
-A misconfigured permissions was detected on the main server.,9.240.130.145,Historical Baseline Record,Insider Threat,8.0,100.0
-A internal data theft caused significant disruption.,151.20.177.93,Historical Baseline Record,Insider Threat,8.0,100.0
-A csrf vulnerability targeted the financial department.,254.127.72.3,Historical Baseline Record,CSRF,7.0,100.0
-News: New compliance lawswas detected on the main server.,76.75.64.56,Historical Baseline Record,Informational,0.0,100.0
-A iot botnet attack affected multiple internal systems.,35.85.57.195,Historical Baseline Record,DDoS,3.0,100.0
-A c2 web interface was reported by threat intelligence.,100.163.51.164,Historical Baseline Record,Web Shell,13.0,100.0
-A exfiltration by admin exploited a known vulnerability.,142.64.16.115,Historical Baseline Record,Insider Threat,8.0,100.0
-A blind sql injection was reported by threat intelligence.,30.90.129.171,Historical Baseline Record,SQL Injection,12.0,100.0
-A sql payload in login was mitigated by the security team.,189.24.235.40,Historical Baseline Record,SQL Injection,12.0,100.0
-A time-based sqli exploited a known vulnerability.,202.30.124.113,Historical Baseline Record,SQL Injection,12.0,100.0
-A sql injection flaw was discovered during a routine audit.,172.88.5.8,Historical Baseline Record,SQL Injection,12.0,100.0
-A double extortion caused significant disruption.,82.62.176.81,Historical Baseline Record,Ransomware,14.0,100.0
-A mirai variant was reported by threat intelligence.,247.71.237.103,Historical Baseline Record,DDoS,3.0,100.0
-A spyware infection affected multiple internal systems.,250.146.244.40,Historical Baseline Record,Infostealer,11.0,100.0
-A uploaded malicious script caused significant disruption.,83.237.95.95,Historical Baseline Record,Web Shell,13.0,100.0
-A unauthorized db access via sql was reported by threat intelligence.,173.12.12.6,Historical Baseline Record,SQL Injection,12.0,100.0
-A udp flood was discovered during a routine audit.,94.50.42.124,Historical Baseline Record,DDoS,3.0,100.0
-A csrf in admin panel was detected on the main server.,111.151.225.148,Historical Baseline Record,CSRF,7.0,100.0
-A infostealer trojan affected multiple internal systems.,90.162.7.56,Historical Baseline Record,Infostealer,11.0,100.0
-A vidar malware caused significant disruption.,59.128.221.231,Historical Baseline Record,Infostealer,11.0,100.0
-A webshell backdoor was discovered during a routine audit.,44.196.53.181,Historical Baseline Record,Web Shell,13.0,100.0
-A arbitrary code execution was detected on the main server.,60.223.210.210,Historical Baseline Record,RCE,15.0,100.0
-A zero-day rce targeted the financial department.,138.249.189.98,Historical Baseline Record,RCE,15.0,100.0
-News: New compliance lawsaffected multiple internal systems.,65.48.189.73,Historical Baseline Record,Informational,0.0,100.0
-A clipboard hijacking compromised cloud infrastructure.,66.75.23.141,Historical Baseline Record,Infostealer,11.0,100.0
-News: Nist guidelines releasedwas detected on the main server.,239.95.20.228,Historical Baseline Record,Informational,0.0,100.0
-News: Nist guidelines releasedexploited a known vulnerability.,68.96.131.137,Historical Baseline Record,Informational,0.0,100.0
-A rce in apache caused significant disruption.,84.219.109.137,Historical Baseline Record,RCE,15.0,100.0
-A ceo fraud was mitigated by the security team.,165.178.219.78,Historical Baseline Record,Phishing,10.0,100.0
-News: Zero trust architecture paperexploited a known vulnerability.,69.63.96.211,Historical Baseline Record,Informational,0.0,100.0
-A exfiltration by admin was detected on the main server.,87.187.165.14,Historical Baseline Record,Insider Threat,8.0,100.0
-A cross-site request forgery was discovered during a routine audit.,226.187.60.25,Historical Baseline Record,CSRF,7.0,100.0
-A network locker targeted the financial department.,225.129.234.44,Historical Baseline Record,Ransomware,14.0,100.0
-A ryuk ransomware targeted the financial department.,99.208.198.108,Historical Baseline Record,Ransomware,14.0,100.0
-A http flood targeted the financial department.,232.130.248.242,Historical Baseline Record,DDoS,3.0,100.0
-A network locker targeted the financial department.,247.235.186.211,Historical Baseline Record,Ransomware,14.0,100.0
-A crypto-locker caused significant disruption.,198.75.115.246,Historical Baseline Record,Ransomware,14.0,100.0
-A zero-day rce was discovered during a routine audit.,86.53.152.239,Historical Baseline Record,RCE,15.0,100.0
-A heap spray attack was discovered during a routine audit.,63.78.74.112,Historical Baseline Record,RCE,15.0,100.0
-A bypassed anti-csrf token was discovered during a routine audit.,155.182.232.206,Historical Baseline Record,CSRF,7.0,100.0
-A bypassed anti-csrf token triggered automated alerts.,193.190.79.202,Historical Baseline Record,CSRF,7.0,100.0
-A credential stealer targeted the financial department.,234.101.253.185,Historical Baseline Record,Infostealer,11.0,100.0
-A kernel level rce affected multiple internal systems.,133.203.140.136,Historical Baseline Record,RCE,15.0,100.0
-A unauthorized usb drive exploited a known vulnerability.,132.100.166.191,Historical Baseline Record,Insider Threat,8.0,100.0
-A malicious state-changing link compromised cloud infrastructure.,83.190.188.23,Historical Baseline Record,CSRF,7.0,100.0
-A kernel level rce triggered automated alerts.,27.67.140.250,Historical Baseline Record,RCE,15.0,100.0
-A http flood was detected on the main server.,171.57.247.109,Historical Baseline Record,DDoS,3.0,100.0
-A dom-based csrf targeted the financial department.,213.70.227.149,Historical Baseline Record,CSRF,7.0,100.0
-A ping of death was mitigated by the security team.,107.123.76.126,Historical Baseline Record,DDoS,3.0,100.0
-A arbitrary code execution was discovered during a routine audit.,165.201.222.110,Historical Baseline Record,RCE,15.0,100.0
-A conti variant was mitigated by the security team.,184.179.240.129,Historical Baseline Record,Ransomware,14.0,100.0
-A cross-site request forgery was mitigated by the security team.,197.254.211.98,Historical Baseline Record,CSRF,7.0,100.0
-A browser cookie theft targeted the financial department.,50.213.152.45,Historical Baseline Record,Infostealer,11.0,100.0
-A malicious state-changing link was discovered during a routine audit.,128.69.244.106,Historical Baseline Record,CSRF,7.0,100.0
-A ceo fraud was discovered during a routine audit.,26.186.69.50,Historical Baseline Record,Phishing,10.0,100.0
-A spear-phishing compromised cloud infrastructure.,99.102.136.160,Historical Baseline Record,Phishing,10.0,100.0
-A database dump via sqli affected multiple internal systems.,113.28.189.81,Historical Baseline Record,SQL Injection,12.0,100.0
-A aes-256 locker affected multiple internal systems.,178.246.138.254,Historical Baseline Record,Ransomware,14.0,100.0
-A database dump via sqli targeted the financial department.,3.35.167.111,Historical Baseline Record,SQL Injection,12.0,100.0
-A sql injection flaw caused significant disruption.,77.8.174.123,Historical Baseline Record,SQL Injection,12.0,100.0
-A smishing attacks was detected on the main server.,69.86.47.66,Historical Baseline Record,Phishing,10.0,100.0
-News: Ios security patchcaused significant disruption.,119.157.200.225,Historical Baseline Record,Informational,0.0,100.0
-News: Company announces ai updateaffected multiple internal systems.,151.84.99.177,Historical Baseline Record,Informational,0.0,100.0
-A database dump via sqli caused significant disruption.,188.102.16.71,Historical Baseline Record,SQL Injection,12.0,100.0
-A sql payload in login was discovered during a routine audit.,47.66.174.36,Historical Baseline Record,SQL Injection,12.0,100.0
-A unauthorized db access via sql exploited a known vulnerability.,47.96.217.63,Historical Baseline Record,SQL Injection,12.0,100.0
-A crypto-locker was discovered during a routine audit.,121.137.210.213,Historical Baseline Record,Ransomware,14.0,100.0
-A stolen vpn keys caused significant disruption.,199.237.187.250,Historical Baseline Record,Insider Threat,8.0,100.0
-A browser cookie theft was detected on the main server.,190.223.197.67,Historical Baseline Record,Infostealer,11.0,100.0
-A arbitrary code execution was reported by threat intelligence.,55.117.64.87,Historical Baseline Record,RCE,15.0,100.0
-A raccoon infostealer was discovered during a routine audit.,169.178.18.91,Historical Baseline Record,Infostealer,11.0,100.0
-A bypassed anti-csrf token caused significant disruption.,157.85.155.164,Historical Baseline Record,CSRF,7.0,100.0
-A aes-256 locker compromised cloud infrastructure.,139.194.108.35,Historical Baseline Record,Ransomware,14.0,100.0
-A conti variant affected multiple internal systems.,206.172.140.20,Historical Baseline Record,Ransomware,14.0,100.0
-A arbitrary code execution affected multiple internal systems.,60.45.66.103,Historical Baseline Record,RCE,15.0,100.0
-A uploaded malicious script was mitigated by the security team.,88.54.102.143,Historical Baseline Record,Web Shell,13.0,100.0
-A phishing emails targeted the financial department.,209.45.218.124,Historical Baseline Record,Phishing,10.0,100.0
-A csrf vulnerability was detected on the main server.,253.6.19.142,Historical Baseline Record,CSRF,7.0,100.0
-A raas payload caused significant disruption.,29.79.63.120,Historical Baseline Record,Ransomware,14.0,100.0
-A blind sql injection compromised cloud infrastructure.,24.245.216.220,Historical Baseline Record,SQL Injection,12.0,100.0
-A botnet swarm compromised cloud infrastructure.,142.192.24.45,Historical Baseline Record,DDoS,3.0,100.0
-A double extortion triggered automated alerts.,96.163.228.189,Historical Baseline Record,Ransomware,14.0,100.0
-A csrf in admin panel compromised cloud infrastructure.,76.32.179.200,Historical Baseline Record,CSRF,7.0,100.0
-A ping of death was discovered during a routine audit.,63.42.104.93,Historical Baseline Record,DDoS,3.0,100.0
-A dom-based csrf was reported by threat intelligence.,195.59.126.162,Historical Baseline Record,CSRF,7.0,100.0
-A deceptive links was mitigated by the security team.,96.148.36.152,Historical Baseline Record,Phishing,10.0,100.0
-A kernel level rce was reported by threat intelligence.,252.155.68.149,Historical Baseline Record,RCE,15.0,100.0
-A kernel level rce was reported by threat intelligence.,139.165.122.153,Historical Baseline Record,RCE,15.0,100.0
-A redline stealer affected multiple internal systems.,80.109.115.228,Historical Baseline Record,Infostealer,11.0,100.0
-A tcp syn flood compromised cloud infrastructure.,86.128.37.84,Historical Baseline Record,DDoS,3.0,100.0
-A hidden shell in image directory affected multiple internal systems.,238.20.204.249,Historical Baseline Record,Web Shell,13.0,100.0
-A unauthenticated command injection was detected on the main server.,74.117.70.4,Historical Baseline Record,RCE,15.0,100.0
-A mirai variant affected multiple internal systems.,52.133.247.143,Historical Baseline Record,DDoS,3.0,100.0
-A malicious attachments caused significant disruption.,219.211.169.69,Historical Baseline Record,Phishing,10.0,100.0
-A kernel level rce compromised cloud infrastructure.,74.83.184.124,Historical Baseline Record,RCE,15.0,100.0
-A privilege abuse compromised cloud infrastructure.,98.104.50.84,Historical Baseline Record,Insider Threat,8.0,100.0
-A conti variant exploited a known vulnerability.,198.105.72.139,Historical Baseline Record,Ransomware,14.0,100.0
-A network locker was reported by threat intelligence.,148.45.241.250,Historical Baseline Record,Ransomware,14.0,100.0
-A malicious attachments was reported by threat intelligence.,185.220.234.138,Historical Baseline Record,Phishing,10.0,100.0
-A c2 web interface was reported by threat intelligence.,235.60.24.246,Historical Baseline Record,Web Shell,13.0,100.0
-A internal data theft targeted the financial department.,95.62.134.39,Historical Baseline Record,Insider Threat,8.0,100.0
-A heap spray attack was discovered during a routine audit.,160.171.193.57,Historical Baseline Record,RCE,15.0,100.0
-A crypto wallet stealer was detected on the main server.,73.163.218.85,Historical Baseline Record,Infostealer,11.0,100.0
-A vidar malware was mitigated by the security team.,148.19.90.209,Historical Baseline Record,Infostealer,11.0,100.0
-A unauthorized db access via sql caused significant disruption.,12.215.193.176,Historical Baseline Record,SQL Injection,12.0,100.0
-A lockbit encryption was reported by threat intelligence.,206.3.246.83,Historical Baseline Record,Ransomware,14.0,100.0
-A csrf in admin panel compromised cloud infrastructure.,216.113.5.121,Historical Baseline Record,CSRF,7.0,100.0
-A browser cookie theft targeted the financial department.,53.84.40.216,Historical Baseline Record,Infostealer,11.0,100.0
-A deceptive links caused significant disruption.,153.235.247.39,Historical Baseline Record,Phishing,10.0,100.0
-A hardcoded credentials leak was detected on the main server.,65.243.217.149,Historical Baseline Record,Insider Threat,8.0,100.0
-A database dump via sqli was discovered during a routine audit.,183.236.1.205,Historical Baseline Record,SQL Injection,12.0,100.0
-A heap spray attack affected multiple internal systems.,127.185.147.211,Historical Baseline Record,RCE,15.0,100.0
-A clipboard hijacking was mitigated by the security team.,54.113.145.95,Historical Baseline Record,Infostealer,11.0,100.0
-A uploaded malicious script triggered automated alerts.,218.21.178.107,Historical Baseline Record,Web Shell,13.0,100.0
-A ceo fraud was mitigated by the security team.,9.90.34.247,Historical Baseline Record,Phishing,10.0,100.0
-A one-click attack was reported by threat intelligence.,198.93.187.166,Historical Baseline Record,CSRF,7.0,100.0
-A china chopper variant targeted the financial department.,136.121.172.142,Historical Baseline Record,Web Shell,13.0,100.0
-A misconfigured permissions exploited a known vulnerability.,100.91.179.59,Historical Baseline Record,Insider Threat,8.0,100.0
-A csrf in admin panel affected multiple internal systems.,106.180.80.246,Historical Baseline Record,CSRF,7.0,100.0
-A csrf in admin panel triggered automated alerts.,209.26.39.234,Historical Baseline Record,CSRF,7.0,100.0
-A china chopper variant compromised cloud infrastructure.,6.145.55.54,Historical Baseline Record,Web Shell,13.0,100.0
-News: Software version updatetriggered automated alerts.,199.5.136.207,Historical Baseline Record,Informational,0.0,100.0
-A session riding compromised cloud infrastructure.,123.205.99.107,Historical Baseline Record,CSRF,7.0,100.0
-A deceptive links compromised cloud infrastructure.,1.0.86.109,Historical Baseline Record,Phishing,10.0,100.0
-A sql payload in login exploited a known vulnerability.,27.155.79.18,Historical Baseline Record,SQL Injection,12.0,100.0
-A hidden shell in image directory caused significant disruption.,35.227.89.106,Historical Baseline Record,Web Shell,13.0,100.0
-A csrf vulnerability was detected on the main server.,18.194.64.123,Historical Baseline Record,CSRF,7.0,100.0
-A stealthy web shell exploited a known vulnerability.,120.110.164.242,Historical Baseline Record,Web Shell,13.0,100.0
-A iis compromised shell caused significant disruption.,45.111.86.12,Historical Baseline Record,Web Shell,13.0,100.0
-A ping of death caused significant disruption.,17.53.136.79,Historical Baseline Record,DDoS,3.0,100.0
-A internal data theft compromised cloud infrastructure.,136.50.184.157,Historical Baseline Record,Insider Threat,8.0,100.0
-A php web shell was mitigated by the security team.,226.160.138.30,Historical Baseline Record,Web Shell,13.0,100.0
-A credential stealer was reported by threat intelligence.,2.21.49.249,Historical Baseline Record,Infostealer,11.0,100.0
-A ping of death was detected on the main server.,211.148.124.180,Historical Baseline Record,DDoS,3.0,100.0
-A clipboard hijacking targeted the financial department.,226.52.52.217,Historical Baseline Record,Infostealer,11.0,100.0
-News: Software version updatewas discovered during a routine audit.,102.40.133.99,Historical Baseline Record,Informational,0.0,100.0
-A uploaded malicious script was reported by threat intelligence.,124.80.216.13,Historical Baseline Record,Web Shell,13.0,100.0
-A redline stealer compromised cloud infrastructure.,168.122.176.78,Historical Baseline Record,Infostealer,11.0,100.0
-A http flood triggered automated alerts.,184.166.181.75,Historical Baseline Record,DDoS,3.0,100.0
-A iot botnet attack was discovered during a routine audit.,211.254.135.214,Historical Baseline Record,DDoS,3.0,100.0
-A deserialization rce exploited a known vulnerability.,81.190.217.190,Historical Baseline Record,RCE,15.0,100.0
-A redline stealer affected multiple internal systems.,181.193.221.40,Historical Baseline Record,Infostealer,11.0,100.0
-A kernel level rce exploited a known vulnerability.,140.31.245.205,Historical Baseline Record,RCE,15.0,100.0
-A social engineering was reported by threat intelligence.,14.63.215.127,Historical Baseline Record,Phishing,10.0,100.0
-A blind sql injection caused significant disruption.,253.186.188.29,Historical Baseline Record,SQL Injection,12.0,100.0
-News: Software version updatewas discovered during a routine audit.,51.63.10.249,Historical Baseline Record,Informational,0.0,100.0
-A union-based sqli caused significant disruption.,163.235.225.141,Historical Baseline Record,SQL Injection,12.0,100.0
-A vidar malware was detected on the main server.,154.82.230.240,Historical Baseline Record,Infostealer,11.0,100.0
-A infostealer trojan triggered automated alerts.,173.97.144.50,Historical Baseline Record,Infostealer,11.0,100.0
-A spyware infection was mitigated by the security team.,74.93.251.108,Historical Baseline Record,Infostealer,11.0,100.0
-A deceptive links was mitigated by the security team.,53.86.182.73,Historical Baseline Record,Phishing,10.0,100.0
-A spyware infection compromised cloud infrastructure.,53.32.77.249,Historical Baseline Record,Infostealer,11.0,100.0
-A php web shell compromised cloud infrastructure.,121.91.210.129,Historical Baseline Record,Web Shell,13.0,100.0
-News: Ios security patchwas mitigated by the security team.,64.49.14.96,Historical Baseline Record,Informational,0.0,100.0
-A invoice scams was reported by threat intelligence.,3.138.243.143,Historical Baseline Record,Phishing,10.0,100.0
-A deceptive links caused significant disruption.,224.183.107.198,Historical Baseline Record,Phishing,10.0,100.0
-A persistent web shell was discovered during a routine audit.,139.76.207.90,Historical Baseline Record,Web Shell,13.0,100.0
-A csrf in admin panel compromised cloud infrastructure.,203.74.88.114,Historical Baseline Record,CSRF,7.0,100.0
-News: Company announces ai updatewas reported by threat intelligence.,163.239.241.27,Historical Baseline Record,Informational,0.0,100.0
-A clipboard hijacking caused significant disruption.,237.14.217.10,Historical Baseline Record,Infostealer,11.0,100.0
-A session riding targeted the financial department.,207.249.138.214,Historical Baseline Record,CSRF,7.0,100.0
-News: Conference announcementaffected multiple internal systems.,101.36.165.96,Historical Baseline Record,Informational,0.0,100.0
-News: Microsoft patch tuesdaytargeted the financial department.,88.7.249.64,Historical Baseline Record,Informational,0.0,100.0
-A malicious sql queries triggered automated alerts.,91.76.84.111,Historical Baseline Record,SQL Injection,12.0,100.0
-A forged http request compromised cloud infrastructure.,91.184.123.164,Historical Baseline Record,CSRF,7.0,100.0
-A raas payload exploited a known vulnerability.,232.168.12.205,Historical Baseline Record,Ransomware,14.0,100.0
-A invoice scams triggered automated alerts.,123.162.101.49,Historical Baseline Record,Phishing,10.0,100.0
-A vidar malware was reported by threat intelligence.,182.12.176.176,Historical Baseline Record,Infostealer,11.0,100.0
-News: Vendor acquisitioncaused significant disruption.,27.37.19.4,Historical Baseline Record,Informational,0.0,100.0
-A botnet swarm caused significant disruption.,102.13.207.207,Historical Baseline Record,DDoS,3.0,100.0
-A one-click attack targeted the financial department.,28.28.95.84,Historical Baseline Record,CSRF,7.0,100.0
-A misconfigured permissions was mitigated by the security team.,11.246.246.77,Historical Baseline Record,Insider Threat,8.0,100.0
-A stealthy web shell caused significant disruption.,171.35.118.23,Historical Baseline Record,Web Shell,13.0,100.0
-A udp flood was reported by threat intelligence.,101.116.88.107,Historical Baseline Record,DDoS,3.0,100.0
-A csrf in admin panel caused significant disruption.,148.206.126.67,Historical Baseline Record,CSRF,7.0,100.0
-A unauthorized db access via sql caused significant disruption.,46.254.69.152,Historical Baseline Record,SQL Injection,12.0,100.0
-A blind sql injection exploited a known vulnerability.,156.155.123.247,Historical Baseline Record,SQL Injection,12.0,100.0
-A smishing attacks was mitigated by the security team.,16.95.216.105,Historical Baseline Record,Phishing,10.0,100.0
-A csrf vulnerability triggered automated alerts.,181.177.92.159,Historical Baseline Record,CSRF,7.0,100.0
-A tcp syn flood was reported by threat intelligence.,162.126.141.94,Historical Baseline Record,DDoS,3.0,100.0
-A fake login portals compromised cloud infrastructure.,96.210.118.183,Historical Baseline Record,Phishing,10.0,100.0
-A csrf vulnerability was mitigated by the security team.,186.178.230.215,Historical Baseline Record,CSRF,7.0,100.0
-A social engineering exploited a known vulnerability.,95.47.237.53,Historical Baseline Record,Phishing,10.0,100.0
-A malicious attachments targeted the financial department.,125.214.100.114,Historical Baseline Record,Phishing,10.0,100.0
-A deceptive links exploited a known vulnerability.,61.42.181.121,Historical Baseline Record,Phishing,10.0,100.0
-A udp flood exploited a known vulnerability.,125.62.67.153,Historical Baseline Record,DDoS,3.0,100.0
-A unauthenticated command injection exploited a known vulnerability.,63.187.153.14,Historical Baseline Record,RCE,15.0,100.0
-A crypto-locker triggered automated alerts.,186.106.161.105,Historical Baseline Record,Ransomware,14.0,100.0
-A rce in apache compromised cloud infrastructure.,223.231.71.134,Historical Baseline Record,RCE,15.0,100.0
-A hardcoded credentials leak was reported by threat intelligence.,176.32.100.242,Historical Baseline Record,Insider Threat,8.0,100.0
-A spear-phishing was detected on the main server.,176.21.42.182,Historical Baseline Record,Phishing,10.0,100.0
-A unauthorized db access via sql was discovered during a routine audit.,1.220.228.241,Historical Baseline Record,SQL Injection,12.0,100.0
-A blind sql injection compromised cloud infrastructure.,66.247.253.122,Historical Baseline Record,SQL Injection,12.0,100.0
-A crypto-locker exploited a known vulnerability.,54.145.155.6,Historical Baseline Record,Ransomware,14.0,100.0
-A redline stealer compromised cloud infrastructure.,234.158.189.162,Historical Baseline Record,Infostealer,11.0,100.0
-A dns amplification triggered automated alerts.,205.27.50.21,Historical Baseline Record,DDoS,3.0,100.0
-News: Software version updatecompromised cloud infrastructure.,27.46.143.23,Historical Baseline Record,Informational,0.0,100.0
-A browser cookie theft was mitigated by the security team.,12.140.154.61,Historical Baseline Record,Infostealer,11.0,100.0
-News: Nist guidelines releasedtargeted the financial department.,139.121.67.158,Historical Baseline Record,Informational,0.0,100.0
-A network locker was detected on the main server.,214.241.155.204,Historical Baseline Record,Ransomware,14.0,100.0
-A aspx backdoor was discovered during a routine audit.,170.232.212.28,Historical Baseline Record,Web Shell,13.0,100.0
-A vidar malware was detected on the main server.,9.158.219.238,Historical Baseline Record,Infostealer,11.0,100.0
-A forged http request exploited a known vulnerability.,139.103.181.131,Historical Baseline Record,CSRF,7.0,100.0
-A unauthorized state change via csrf was detected on the main server.,4.238.251.236,Historical Baseline Record,CSRF,7.0,100.0
-A hidden shell in image directory was discovered during a routine audit.,156.214.107.35,Historical Baseline Record,Web Shell,13.0,100.0
-News: Nist guidelines releasedwas discovered during a routine audit.,13.121.251.76,Historical Baseline Record,Informational,0.0,100.0
-News: Microsoft patch tuesdaywas detected on the main server.,127.21.65.93,Historical Baseline Record,Informational,0.0,100.0
-A stealthy web shell targeted the financial department.,84.13.31.26,Historical Baseline Record,Web Shell,13.0,100.0
-News: Zero trust architecture paperaffected multiple internal systems.,35.246.255.168,Historical Baseline Record,Informational,0.0,100.0
-A webshell backdoor was discovered during a routine audit.,100.146.231.24,Historical Baseline Record,Web Shell,13.0,100.0
-A clipboard hijacking was mitigated by the security team.,242.159.208.204,Historical Baseline Record,Infostealer,11.0,100.0
-A stealthy web shell affected multiple internal systems.,91.18.60.183,Historical Baseline Record,Web Shell,13.0,100.0
-A smishing attacks exploited a known vulnerability.,106.188.177.207,Historical Baseline Record,Phishing,10.0,100.0
-A phishing emails targeted the financial department.,243.198.139.19,Historical Baseline Record,Phishing,10.0,100.0
-A tcp syn flood was reported by threat intelligence.,63.253.83.29,Historical Baseline Record,DDoS,3.0,100.0
-A persistent web shell triggered automated alerts.,35.72.176.245,Historical Baseline Record,Web Shell,13.0,100.0
-A ryuk ransomware was mitigated by the security team.,72.0.21.224,Historical Baseline Record,Ransomware,14.0,100.0
-A deserialization rce compromised cloud infrastructure.,221.245.198.35,Historical Baseline Record,RCE,15.0,100.0
-A raas payload compromised cloud infrastructure.,236.4.50.20,Historical Baseline Record,Ransomware,14.0,100.0
-A ping of death was mitigated by the security team.,103.47.55.250,Historical Baseline Record,DDoS,3.0,100.0
-A spear-phishing exploited a known vulnerability.,209.178.133.107,Historical Baseline Record,Phishing,10.0,100.0
-A blind sql injection was mitigated by the security team.,128.78.113.218,Historical Baseline Record,SQL Injection,12.0,100.0
-A dom-based csrf targeted the financial department.,113.119.156.125,Historical Baseline Record,CSRF,7.0,100.0
-A spear-phishing compromised cloud infrastructure.,55.37.214.153,Historical Baseline Record,Phishing,10.0,100.0
-A raccoon infostealer was mitigated by the security team.,217.133.178.236,Historical Baseline Record,Infostealer,11.0,100.0
-A deceptive links caused significant disruption.,77.168.65.4,Historical Baseline Record,Phishing,10.0,100.0
-A malicious attachments was detected on the main server.,91.191.54.105,Historical Baseline Record,Phishing,10.0,100.0
-A uploaded malicious script was mitigated by the security team.,201.145.14.255,Historical Baseline Record,Web Shell,13.0,100.0
-A china chopper variant was mitigated by the security team.,97.0.18.206,Historical Baseline Record,Web Shell,13.0,100.0
-News: Vendor acquisitionwas reported by threat intelligence.,200.131.209.100,Historical Baseline Record,Informational,0.0,100.0
-A csrf vulnerability was detected on the main server.,49.129.81.173,Historical Baseline Record,CSRF,7.0,100.0
-A forged http request was reported by threat intelligence.,171.52.236.52,Historical Baseline Record,CSRF,7.0,100.0
-A persistent web shell exploited a known vulnerability.,212.145.223.70,Historical Baseline Record,Web Shell,13.0,100.0
-A unauthenticated command injection was discovered during a routine audit.,115.48.61.25,Historical Baseline Record,RCE,15.0,100.0
-A ryuk ransomware was reported by threat intelligence.,229.233.170.17,Historical Baseline Record,Ransomware,14.0,100.0
-A persistent web shell was discovered during a routine audit.,195.104.240.110,Historical Baseline Record,Web Shell,13.0,100.0
-A arbitrary code execution was mitigated by the security team.,243.85.20.57,Historical Baseline Record,RCE,15.0,100.0
-A misconfigured permissions exploited a known vulnerability.,30.39.231.195,Historical Baseline Record,Insider Threat,8.0,100.0
-A kernel level rce was detected on the main server.,253.1.144.165,Historical Baseline Record,RCE,15.0,100.0
-A rogue employee exploited a known vulnerability.,86.246.235.76,Historical Baseline Record,Insider Threat,8.0,100.0
-A remote code execution targeted the financial department.,107.192.73.162,Historical Baseline Record,RCE,15.0,100.0
-A rce via vulnerable plugin caused significant disruption.,110.238.228.254,Historical Baseline Record,RCE,15.0,100.0
-A stolen vpn keys was discovered during a routine audit.,233.237.216.172,Historical Baseline Record,Insider Threat,8.0,100.0
-A rogue employee was mitigated by the security team.,168.111.203.195,Historical Baseline Record,Insider Threat,8.0,100.0
-A stolen vpn keys compromised cloud infrastructure.,60.123.201.31,Historical Baseline Record,Insider Threat,8.0,100.0
-A invoice scams compromised cloud infrastructure.,75.118.72.54,Historical Baseline Record,Phishing,10.0,100.0
-A internal data theft was detected on the main server.,195.165.177.218,Historical Baseline Record,Insider Threat,8.0,100.0
-A raas payload triggered automated alerts.,31.24.90.72,Historical Baseline Record,Ransomware,14.0,100.0
-A smishing attacks affected multiple internal systems.,146.103.65.236,Historical Baseline Record,Phishing,10.0,100.0
-A internal data theft targeted the financial department.,12.49.190.137,Historical Baseline Record,Insider Threat,8.0,100.0
-A one-click attack affected multiple internal systems.,187.244.234.62,Historical Baseline Record,CSRF,7.0,100.0
-A rogue employee was reported by threat intelligence.,36.233.44.14,Historical Baseline Record,Insider Threat,8.0,100.0
-A malicious state-changing link caused significant disruption.,67.168.72.14,Historical Baseline Record,CSRF,7.0,100.0
-A unauthenticated command injection was reported by threat intelligence.,232.86.123.212,Historical Baseline Record,RCE,15.0,100.0
-A udp flood was detected on the main server.,80.122.228.173,Historical Baseline Record,DDoS,3.0,100.0
-A aes-256 locker affected multiple internal systems.,183.169.219.37,Historical Baseline Record,Ransomware,14.0,100.0
-A volumetric attack targeted the financial department.,242.150.33.194,Historical Baseline Record,DDoS,3.0,100.0
-A buffer overflow rce triggered automated alerts.,170.14.65.52,Historical Baseline Record,RCE,15.0,100.0
-A hardcoded credentials leak caused significant disruption.,179.78.134.11,Historical Baseline Record,Insider Threat,8.0,100.0
-A unauthorized state change via csrf exploited a known vulnerability.,199.200.223.213,Historical Baseline Record,CSRF,7.0,100.0
-A spear-phishing affected multiple internal systems.,38.89.230.170,Historical Baseline Record,Phishing,10.0,100.0
-A redline stealer was mitigated by the security team.,175.174.1.166,Historical Baseline Record,Infostealer,11.0,100.0
-A error-based sqli caused significant disruption.,106.86.95.222,Historical Baseline Record,SQL Injection,12.0,100.0
-A redline stealer was detected on the main server.,245.101.103.214,Historical Baseline Record,Infostealer,11.0,100.0
-A malicious sql queries triggered automated alerts.,246.219.35.111,Historical Baseline Record,SQL Injection,12.0,100.0
-A ryuk ransomware compromised cloud infrastructure.,170.154.210.130,Historical Baseline Record,Ransomware,14.0,100.0
-A php web shell compromised cloud infrastructure.,207.14.26.99,Historical Baseline Record,Web Shell,13.0,100.0
-A disgruntled worker caused significant disruption.,229.140.59.83,Historical Baseline Record,Insider Threat,8.0,100.0
-A aspx backdoor targeted the financial department.,156.46.76.92,Historical Baseline Record,Web Shell,13.0,100.0
-A social engineering targeted the financial department.,248.3.49.17,Historical Baseline Record,Phishing,10.0,100.0
-A unauthenticated command injection compromised cloud infrastructure.,64.251.92.244,Historical Baseline Record,RCE,15.0,100.0
-A rogue employee compromised cloud infrastructure.,117.151.185.53,Historical Baseline Record,Insider Threat,8.0,100.0
-A fake login portals caused significant disruption.,55.183.174.110,Historical Baseline Record,Phishing,10.0,100.0
-A unauthorized db access via sql was detected on the main server.,90.104.39.205,Historical Baseline Record,SQL Injection,12.0,100.0
-A credential stealer was discovered during a routine audit.,123.20.207.57,Historical Baseline Record,Infostealer,11.0,100.0
-A persistent web shell was reported by threat intelligence.,67.69.2.207,Historical Baseline Record,Web Shell,13.0,100.0
-A internal sabotage was reported by threat intelligence.,164.106.45.138,Historical Baseline Record,Insider Threat,8.0,100.0
-A http flood affected multiple internal systems.,200.117.219.247,Historical Baseline Record,DDoS,3.0,100.0
-News: New cybersecurity webinarwas discovered during a routine audit.,22.54.90.83,Historical Baseline Record,Informational,0.0,100.0
-A file encryption caused significant disruption.,4.57.225.161,Historical Baseline Record,Ransomware,14.0,100.0
-News: Company announces ai updatecompromised cloud infrastructure.,113.5.211.221,Historical Baseline Record,Informational,0.0,100.0
-A bypassed anti-csrf token was reported by threat intelligence.,245.9.9.206,Historical Baseline Record,CSRF,7.0,100.0
-A hardcoded credentials leak was discovered during a routine audit.,163.211.57.45,Historical Baseline Record,Insider Threat,8.0,100.0
-A stolen vpn keys was detected on the main server.,233.184.198.215,Historical Baseline Record,Insider Threat,8.0,100.0
-A spyware infection compromised cloud infrastructure.,37.183.88.147,Historical Baseline Record,Infostealer,11.0,100.0
-A credential stealer triggered automated alerts.,138.192.104.21,Historical Baseline Record,Infostealer,11.0,100.0
-A rce via vulnerable plugin affected multiple internal systems.,191.33.219.49,Historical Baseline Record,RCE,15.0,100.0
-News: Nist guidelines releasedwas discovered during a routine audit.,235.16.146.70,Historical Baseline Record,Informational,0.0,100.0
-A aes-256 locker targeted the financial department.,30.188.213.25,Historical Baseline Record,Ransomware,14.0,100.0
-A remote code execution was mitigated by the security team.,93.37.167.255,Historical Baseline Record,RCE,15.0,100.0
-A hidden shell in image directory exploited a known vulnerability.,214.231.92.35,Historical Baseline Record,Web Shell,13.0,100.0
-A iis compromised shell was mitigated by the security team.,13.87.100.197,Historical Baseline Record,Web Shell,13.0,100.0
-A bypassed anti-csrf token exploited a known vulnerability.,86.72.136.185,Historical Baseline Record,CSRF,7.0,100.0
-A uploaded malicious script triggered automated alerts.,101.227.6.226,Historical Baseline Record,Web Shell,13.0,100.0
-A internal data theft exploited a known vulnerability.,253.200.37.39,Historical Baseline Record,Insider Threat,8.0,100.0
-A unauthorized usb drive exploited a known vulnerability.,11.50.2.218,Historical Baseline Record,Insider Threat,8.0,100.0
-A dom-based csrf was detected on the main server.,58.10.50.228,Historical Baseline Record,CSRF,7.0,100.0
-A fake login portals targeted the financial department.,2.247.1.219,Historical Baseline Record,Phishing,10.0,100.0
-A session riding caused significant disruption.,91.213.103.163,Historical Baseline Record,CSRF,7.0,100.0
-A sql injection flaw compromised cloud infrastructure.,70.45.48.16,Historical Baseline Record,SQL Injection,12.0,100.0
-A rce in apache affected multiple internal systems.,184.248.165.243,Historical Baseline Record,RCE,15.0,100.0
-A rogue employee caused significant disruption.,20.205.239.44,Historical Baseline Record,Insider Threat,8.0,100.0
-News: Vendor acquisitionwas discovered during a routine audit.,80.248.98.62,Historical Baseline Record,Informational,0.0,100.0
-A remote code execution was mitigated by the security team.,107.72.94.185,Historical Baseline Record,RCE,15.0,100.0
-A network locker compromised cloud infrastructure.,24.81.152.27,Historical Baseline Record,Ransomware,14.0,100.0
-A crypto-locker exploited a known vulnerability.,74.102.97.254,Historical Baseline Record,Ransomware,14.0,100.0
-A uploaded malicious script was discovered during a routine audit.,13.124.30.124,Historical Baseline Record,Web Shell,13.0,100.0
-A error-based sqli was mitigated by the security team.,113.7.235.117,Historical Baseline Record,SQL Injection,12.0,100.0
-A redline stealer exploited a known vulnerability.,25.151.140.185,Historical Baseline Record,Infostealer,11.0,100.0
-A china chopper variant was discovered during a routine audit.,38.0.105.135,Historical Baseline Record,Web Shell,13.0,100.0
-A webshell backdoor affected multiple internal systems.,63.138.157.232,Historical Baseline Record,Web Shell,13.0,100.0
-A c2 web interface targeted the financial department.,211.24.250.34,Historical Baseline Record,Web Shell,13.0,100.0
-A webshell backdoor compromised cloud infrastructure.,149.235.23.250,Historical Baseline Record,Web Shell,13.0,100.0
-A stealthy web shell was detected on the main server.,89.234.228.154,Historical Baseline Record,Web Shell,13.0,100.0
-A kernel level rce was mitigated by the security team.,128.211.206.60,Historical Baseline Record,RCE,15.0,100.0
-A credential harvesting was detected on the main server.,183.107.110.40,Historical Baseline Record,Phishing,10.0,100.0
-A crypto wallet stealer compromised cloud infrastructure.,179.10.130.15,Historical Baseline Record,Infostealer,11.0,100.0
-News: Vendor acquisitionwas detected on the main server.,82.152.154.181,Historical Baseline Record,Informational,0.0,100.0
-A hidden shell in image directory was discovered during a routine audit.,2.149.184.145,Historical Baseline Record,Web Shell,13.0,100.0
-A malicious state-changing link targeted the financial department.,121.126.162.93,Historical Baseline Record,CSRF,7.0,100.0
-A disgruntled worker targeted the financial department.,213.204.226.147,Historical Baseline Record,Insider Threat,8.0,100.0
-A phishing emails triggered automated alerts.,94.95.1.185,Historical Baseline Record,Phishing,10.0,100.0
-A udp flood caused significant disruption.,101.211.247.16,Historical Baseline Record,DDoS,3.0,100.0
-A redline stealer was mitigated by the security team.,17.2.190.127,Historical Baseline Record,Infostealer,11.0,100.0
-A aes-256 locker was reported by threat intelligence.,222.32.141.53,Historical Baseline Record,Ransomware,14.0,100.0
-A malicious state-changing link affected multiple internal systems.,58.184.144.195,Historical Baseline Record,CSRF,7.0,100.0
-A china chopper variant affected multiple internal systems.,157.32.82.187,Historical Baseline Record,Web Shell,13.0,100.0
-A iis compromised shell was mitigated by the security team.,145.122.56.192,Historical Baseline Record,Web Shell,13.0,100.0
-A smishing attacks triggered automated alerts.,198.176.117.237,Historical Baseline Record,Phishing,10.0,100.0
-A database dump via sqli affected multiple internal systems.,142.191.49.8,Historical Baseline Record,SQL Injection,12.0,100.0
-A conti variant was detected on the main server.,247.126.58.242,Historical Baseline Record,Ransomware,14.0,100.0
-A dns amplification triggered automated alerts.,160.138.8.54,Historical Baseline Record,DDoS,3.0,100.0
-A redline stealer exploited a known vulnerability.,87.49.139.191,Historical Baseline Record,Infostealer,11.0,100.0
-A infostealer trojan caused significant disruption.,207.7.207.196,Historical Baseline Record,Infostealer,11.0,100.0
-A privilege abuse triggered automated alerts.,43.223.83.181,Historical Baseline Record,Insider Threat,8.0,100.0
-A browser cookie theft was mitigated by the security team.,33.142.2.45,Historical Baseline Record,Infostealer,11.0,100.0
-A ping of death compromised cloud infrastructure.,37.249.94.210,Historical Baseline Record,DDoS,3.0,100.0
-A unauthorized state change via csrf triggered automated alerts.,19.106.143.138,Historical Baseline Record,CSRF,7.0,100.0
-A deserialization rce was discovered during a routine audit.,179.255.215.239,Historical Baseline Record,RCE,15.0,100.0
-A disgruntled worker triggered automated alerts.,255.43.253.113,Historical Baseline Record,Insider Threat,8.0,100.0
-A rce via vulnerable plugin targeted the financial department.,220.160.156.86,Historical Baseline Record,RCE,15.0,100.0
-A malicious state-changing link triggered automated alerts.,210.130.107.194,Historical Baseline Record,CSRF,7.0,100.0
-News: Software version updatecompromised cloud infrastructure.,135.210.82.112,Historical Baseline Record,Informational,0.0,100.0
-A crypto-locker triggered automated alerts.,11.205.80.103,Historical Baseline Record,Ransomware,14.0,100.0
-A ceo fraud compromised cloud infrastructure.,127.221.76.97,Historical Baseline Record,Phishing,10.0,100.0
-A unauthorized db access via sql was mitigated by the security team.,245.213.125.42,Historical Baseline Record,SQL Injection,12.0,100.0
-A mirai variant caused significant disruption.,210.21.137.125,Historical Baseline Record,DDoS,3.0,100.0
-A botnet swarm compromised cloud infrastructure.,249.151.230.12,Historical Baseline Record,DDoS,3.0,100.0
-A raccoon infostealer was discovered during a routine audit.,73.131.41.143,Historical Baseline Record,Infostealer,11.0,100.0
-A raccoon infostealer compromised cloud infrastructure.,193.127.241.82,Historical Baseline Record,Infostealer,11.0,100.0
-A buffer overflow rce targeted the financial department.,172.166.51.227,Historical Baseline Record,RCE,15.0,100.0
-A double extortion affected multiple internal systems.,127.81.107.237,Historical Baseline Record,Ransomware,14.0,100.0
-A rce via vulnerable plugin targeted the financial department.,217.102.248.141,Historical Baseline Record,RCE,15.0,100.0
-A social engineering caused significant disruption.,98.115.245.59,Historical Baseline Record,Phishing,10.0,100.0
-A webshell backdoor triggered automated alerts.,148.225.136.75,Historical Baseline Record,Web Shell,13.0,100.0
-A spear-phishing exploited a known vulnerability.,184.132.114.74,Historical Baseline Record,Phishing,10.0,100.0
-A aes-256 locker was mitigated by the security team.,243.178.102.162,Historical Baseline Record,Ransomware,14.0,100.0
-A exfiltration by admin was discovered during a routine audit.,47.81.122.71,Historical Baseline Record,Insider Threat,8.0,100.0
-A forged http request was mitigated by the security team.,217.223.19.64,Historical Baseline Record,CSRF,7.0,100.0
-News: Conference announcementwas detected on the main server.,179.209.49.197,Historical Baseline Record,Informational,0.0,100.0
-News: Zero trust architecture papertriggered automated alerts.,236.241.100.123,Historical Baseline Record,Informational,0.0,100.0
-A infostealer trojan caused significant disruption.,167.145.88.234,Historical Baseline Record,Infostealer,11.0,100.0
-A misconfigured permissions affected multiple internal systems.,36.4.75.223,Historical Baseline Record,Insider Threat,8.0,100.0
-A blind sql injection was mitigated by the security team.,248.139.98.248,Historical Baseline Record,SQL Injection,12.0,100.0
-A invoice scams was discovered during a routine audit.,250.52.215.19,Historical Baseline Record,Phishing,10.0,100.0
-A spyware infection triggered automated alerts.,250.66.38.232,Historical Baseline Record,Infostealer,11.0,100.0
-A iot botnet attack affected multiple internal systems.,232.203.192.234,Historical Baseline Record,DDoS,3.0,100.0
-News: Zero trust architecture paperwas reported by threat intelligence.,175.120.17.79,Historical Baseline Record,Informational,0.0,100.0
-A network locker was detected on the main server.,4.134.119.46,Historical Baseline Record,Ransomware,14.0,100.0
-A remote code execution compromised cloud infrastructure.,24.1.31.24,Historical Baseline Record,RCE,15.0,100.0
-News: Conference announcementwas detected on the main server.,93.124.77.247,Historical Baseline Record,Informational,0.0,100.0
-A sql payload in login targeted the financial department.,159.58.141.206,Historical Baseline Record,SQL Injection,12.0,100.0
-A invoice scams compromised cloud infrastructure.,34.78.228.140,Historical Baseline Record,Phishing,10.0,100.0
-A smishing attacks targeted the financial department.,107.177.147.252,Historical Baseline Record,Phishing,10.0,100.0
-A iis compromised shell caused significant disruption.,101.24.2.225,Historical Baseline Record,Web Shell,13.0,100.0
-News: New compliance lawsaffected multiple internal systems.,203.181.115.246,Historical Baseline Record,Informational,0.0,100.0
-A raas payload was mitigated by the security team.,231.154.155.15,Historical Baseline Record,Ransomware,14.0,100.0
-A bypassed anti-csrf token was mitigated by the security team.,99.234.158.103,Historical Baseline Record,CSRF,7.0,100.0
-A spear-phishing compromised cloud infrastructure.,128.83.66.28,Historical Baseline Record,Phishing,10.0,100.0
-A dom-based csrf caused significant disruption.,242.71.204.89,Historical Baseline Record,CSRF,7.0,100.0
-A dom-based csrf was detected on the main server.,64.61.114.53,Historical Baseline Record,CSRF,7.0,100.0
-A c2 web interface affected multiple internal systems.,107.169.186.252,Historical Baseline Record,Web Shell,13.0,100.0
-A tcp syn flood was detected on the main server.,84.248.80.174,Historical Baseline Record,DDoS,3.0,100.0
-A spear-phishing was detected on the main server.,86.1.127.53,Historical Baseline Record,Phishing,10.0,100.0
-A arbitrary code execution caused significant disruption.,249.18.106.149,Historical Baseline Record,RCE,15.0,100.0
-News: Zero trust architecture paperexploited a known vulnerability.,51.57.128.237,Historical Baseline Record,Informational,0.0,100.0
-A malicious attachments compromised cloud infrastructure.,17.9.194.246,Historical Baseline Record,Phishing,10.0,100.0
-A botnet swarm targeted the financial department.,226.167.163.44,Historical Baseline Record,DDoS,3.0,100.0
-A redline stealer was detected on the main server.,52.97.118.251,Historical Baseline Record,Infostealer,11.0,100.0
-A clipboard hijacking was discovered during a routine audit.,182.5.125.30,Historical Baseline Record,Infostealer,11.0,100.0
-A unauthorized state change via csrf was reported by threat intelligence.,88.84.162.248,Historical Baseline Record,CSRF,7.0,100.0
-A botnet swarm was discovered during a routine audit.,146.220.202.52,Historical Baseline Record,DDoS,3.0,100.0
-News: Microsoft patch tuesdayexploited a known vulnerability.,253.172.251.66,Historical Baseline Record,Informational,0.0,100.0
-A forged http request triggered automated alerts.,232.77.195.229,Historical Baseline Record,CSRF,7.0,100.0
-A blind sql injection affected multiple internal systems.,185.185.207.130,Historical Baseline Record,SQL Injection,12.0,100.0
-A credential stealer was detected on the main server.,125.248.64.135,Historical Baseline Record,Infostealer,11.0,100.0
-A credential stealer caused significant disruption.,211.134.130.98,Historical Baseline Record,Infostealer,11.0,100.0
-A aes-256 locker was mitigated by the security team.,91.16.184.115,Historical Baseline Record,Ransomware,14.0,100.0
-A php web shell triggered automated alerts.,189.36.0.88,Historical Baseline Record,Web Shell,13.0,100.0
-News: Microsoft patch tuesdaycaused significant disruption.,211.250.202.18,Historical Baseline Record,Informational,0.0,100.0
-A misconfigured permissions caused significant disruption.,49.222.239.240,Historical Baseline Record,Insider Threat,8.0,100.0
-A aes-256 locker triggered automated alerts.,6.52.222.157,Historical Baseline Record,Ransomware,14.0,100.0
-A disgruntled worker was reported by threat intelligence.,40.84.80.80,Historical Baseline Record,Insider Threat,8.0,100.0
-News: Conference announcementwas detected on the main server.,68.165.185.35,Historical Baseline Record,Informational,0.0,100.0
-A http flood was detected on the main server.,100.213.197.51,Historical Baseline Record,DDoS,3.0,100.0
-A stealthy web shell caused significant disruption.,110.247.238.130,Historical Baseline Record,Web Shell,13.0,100.0
-A credential stealer triggered automated alerts.,92.16.196.19,Historical Baseline Record,Infostealer,11.0,100.0
-A stealthy web shell targeted the financial department.,148.77.119.167,Historical Baseline Record,Web Shell,13.0,100.0
-News: Nist guidelines releasedexploited a known vulnerability.,204.167.8.3,Historical Baseline Record,Informational,0.0,100.0
-A persistent web shell was detected on the main server.,28.190.218.27,Historical Baseline Record,Web Shell,13.0,100.0
-News: New compliance lawswas detected on the main server.,88.4.23.121,Historical Baseline Record,Informational,0.0,100.0
-News: Ios security patchcaused significant disruption.,50.213.130.87,Historical Baseline Record,Informational,0.0,100.0
-A sql injection flaw was reported by threat intelligence.,52.7.155.123,Historical Baseline Record,SQL Injection,12.0,100.0
-A forged http request was detected on the main server.,48.13.128.77,Historical Baseline Record,CSRF,7.0,100.0
-A one-click attack triggered automated alerts.,90.11.131.209,Historical Baseline Record,CSRF,7.0,100.0
-A browser cookie theft targeted the financial department.,54.196.245.25,Historical Baseline Record,Infostealer,11.0,100.0
-A raas payload targeted the financial department.,227.32.196.202,Historical Baseline Record,Ransomware,14.0,100.0
-A cross-site request forgery was reported by threat intelligence.,225.173.83.152,Historical Baseline Record,CSRF,7.0,100.0
-A hardcoded credentials leak was detected on the main server.,64.39.226.65,Historical Baseline Record,Insider Threat,8.0,100.0
-A backend sql manipulation targeted the financial department.,197.161.160.243,Historical Baseline Record,SQL Injection,12.0,100.0
-A crypto-locker triggered automated alerts.,21.145.249.179,Historical Baseline Record,Ransomware,14.0,100.0
-A internal data theft caused significant disruption.,125.154.228.41,Historical Baseline Record,Insider Threat,8.0,100.0
-A rce via vulnerable plugin triggered automated alerts.,95.146.61.183,Historical Baseline Record,RCE,15.0,100.0
-A credential stealer was reported by threat intelligence.,75.51.135.129,Historical Baseline Record,Infostealer,11.0,100.0
-A infostealer trojan targeted the financial department.,157.231.35.68,Historical Baseline Record,Infostealer,11.0,100.0
-A database dump via sqli was discovered during a routine audit.,223.1.173.226,Historical Baseline Record,SQL Injection,12.0,100.0
-A privilege abuse was reported by threat intelligence.,217.67.52.175,Historical Baseline Record,Insider Threat,8.0,100.0
-A ping of death was reported by threat intelligence.,74.108.115.25,Historical Baseline Record,DDoS,3.0,100.0
-A iot botnet attack affected multiple internal systems.,172.201.223.28,Historical Baseline Record,DDoS,3.0,100.0
-A stolen vpn keys targeted the financial department.,4.198.88.13,Historical Baseline Record,Insider Threat,8.0,100.0
-A sql injection flaw triggered automated alerts.,61.60.247.211,Historical Baseline Record,SQL Injection,12.0,100.0
-A unauthenticated command injection compromised cloud infrastructure.,62.78.222.129,Historical Baseline Record,RCE,15.0,100.0
-A rce in apache affected multiple internal systems.,189.186.55.181,Historical Baseline Record,RCE,15.0,100.0
-A browser cookie theft affected multiple internal systems.,247.216.18.223,Historical Baseline Record,Infostealer,11.0,100.0
-A zero-day rce caused significant disruption.,37.148.113.15,Historical Baseline Record,RCE,15.0,100.0
-A redline stealer triggered automated alerts.,214.128.138.132,Historical Baseline Record,Infostealer,11.0,100.0
-A database dump via sqli triggered automated alerts.,166.163.60.142,Historical Baseline Record,SQL Injection,12.0,100.0
-A raccoon infostealer was detected on the main server.,105.245.75.120,Historical Baseline Record,Infostealer,11.0,100.0
-A privilege abuse targeted the financial department.,217.188.164.76,Historical Baseline Record,Insider Threat,8.0,100.0
-A union-based sqli targeted the financial department.,120.172.249.36,Historical Baseline Record,SQL Injection,12.0,100.0
-A clipboard hijacking exploited a known vulnerability.,61.250.233.91,Historical Baseline Record,Infostealer,11.0,100.0
-A infostealer trojan was discovered during a routine audit.,43.67.200.93,Historical Baseline Record,Infostealer,11.0,100.0
-News: Conference announcementaffected multiple internal systems.,124.178.60.156,Historical Baseline Record,Informational,0.0,100.0
-A heap spray attack caused significant disruption.,237.95.177.113,Historical Baseline Record,RCE,15.0,100.0
-A forged http request was detected on the main server.,28.140.229.95,Historical Baseline Record,CSRF,7.0,100.0
-A malicious attachments was discovered during a routine audit.,214.234.245.57,Historical Baseline Record,Phishing,10.0,100.0
-A malicious encryptor triggered automated alerts.,207.51.84.134,Historical Baseline Record,Ransomware,14.0,100.0
-A kernel level rce compromised cloud infrastructure.,91.112.81.114,Historical Baseline Record,RCE,15.0,100.0
-News: Software version updatewas mitigated by the security team.,91.169.236.162,Historical Baseline Record,Informational,0.0,100.0
-A error-based sqli was detected on the main server.,171.52.246.186,Historical Baseline Record,SQL Injection,12.0,100.0
-A mirai variant compromised cloud infrastructure.,227.7.184.159,Historical Baseline Record,DDoS,3.0,100.0
-News: Microsoft patch tuesdaywas reported by threat intelligence.,143.112.70.200,Historical Baseline Record,Informational,0.0,100.0
-A tcp syn flood compromised cloud infrastructure.,222.107.224.175,Historical Baseline Record,DDoS,3.0,100.0
-A credential stealer was detected on the main server.,12.111.133.90,Historical Baseline Record,Infostealer,11.0,100.0
-A dom-based csrf caused significant disruption.,123.80.38.223,Historical Baseline Record,CSRF,7.0,100.0
-A sql payload in login was mitigated by the security team.,51.64.17.38,Historical Baseline Record,SQL Injection,12.0,100.0
-A hidden shell in image directory was reported by threat intelligence.,140.153.196.41,Historical Baseline Record,Web Shell,13.0,100.0
-A hardcoded credentials leak was discovered during a routine audit.,170.75.178.172,Historical Baseline Record,Insider Threat,8.0,100.0
-A internal data theft affected multiple internal systems.,4.152.230.129,Historical Baseline Record,Insider Threat,8.0,100.0
-A conti variant was reported by threat intelligence.,187.205.135.50,Historical Baseline Record,Ransomware,14.0,100.0
-News: New compliance lawstargeted the financial department.,98.250.29.188,Historical Baseline Record,Informational,0.0,100.0
-A raccoon infostealer was mitigated by the security team.,12.255.158.57,Historical Baseline Record,Infostealer,11.0,100.0
-A lockbit encryption affected multiple internal systems.,149.128.210.87,Historical Baseline Record,Ransomware,14.0,100.0
-A iot botnet attack was mitigated by the security team.,2.220.246.43,Historical Baseline Record,DDoS,3.0,100.0
-A layer 7 ddos exploited a known vulnerability.,12.240.209.246,Historical Baseline Record,DDoS,3.0,100.0
-A aspx backdoor affected multiple internal systems.,139.140.19.193,Historical Baseline Record,Web Shell,13.0,100.0
-A fake login portals targeted the financial department.,239.33.42.174,Historical Baseline Record,Phishing,10.0,100.0
-A webshell backdoor was mitigated by the security team.,244.82.176.71,Historical Baseline Record,Web Shell,13.0,100.0
-A conti variant was reported by threat intelligence.,192.123.251.33,Historical Baseline Record,Ransomware,14.0,100.0
-A stolen vpn keys exploited a known vulnerability.,6.177.96.184,Historical Baseline Record,Insider Threat,8.0,100.0
-A kernel level rce caused significant disruption.,111.188.155.200,Historical Baseline Record,RCE,15.0,100.0
-News: Vendor acquisitionwas detected on the main server.,66.188.171.101,Historical Baseline Record,Informational,0.0,100.0
+Threat actor group linked to CVE-2023-4966 exploit attempts against netscaler infrastructure.,192.168.1.45,Historical Baseline Record,RCE,15.0,100.0
+Large scale phishing campaign targeting financial sector employees using impersonated wire transfer notifications.,103.24.12.99,Historical Baseline Record,Phishing,10.0,100.0
+Detection of encrypted ransomware payload deployment utilizing modular trojan delivery vectors.,45.67.123.11,Historical Baseline Record,Ransomware,14.0,100.0
+Multi-vector DDoS attack originating from a massive IoT botnet targeting regional telecommunications hubs.,185.220.101.4,Historical Baseline Record,DDoS,3.0,100.0
+Unauthorized database dump detected via blind SQL injection techniques targeting exposed legacy api endpoints.,91.200.12.55,Historical Baseline Record,SQL Injection,12.0,100.0
+Disgruntled employee identified exfiltrating intellectual property via encrypted cloud synchronization tools.,172.16.254.1,Historical Baseline Record,Insider Threat,8.0,100.0
+Installation of malicious web shell detected on compromised windows server via arbitrary file upload vulnerability.,203.0.113.88,Historical Baseline Record,Web Shell,13.0,100.0
+Security researchers release proof of concept demonstrating CSRF exploit against common web authentication frameworks.,198.51.100.22,Historical Baseline Record,CSRF,7.0,100.0
+CISA issues advisory regarding critical security patch updates for core industrial control system software.,162.247.74.19,Historical Baseline Record,Informational,0.0,100.0
+Advanced infostealer malware campaign leveraging obfuscated power shell scripts for credential harvesting.,104.21.33.12,Historical Baseline Record,Infostealer,11.0,100.0
+Exploitation of CVE-2024-21887 targeting Ivanti Connect Secure gateways for remote code execution.,89.34.122.1,Historical Baseline Record,RCE,15.0,100.0
+Sophisticated phishing lure observed distributing malicious macro enabled documents to enterprise users.,193.161.193.2,Historical Baseline Record,Phishing,10.0,100.0
+Deployment of LockBit variant detected within enterprise environment following initial breach.,77.88.55.22,Historical Baseline Record,Ransomware,14.0,100.0
+High volume HTTP flood attack identified against public facing e-commerce infrastructure causing service degradation.,23.227.38.10,Historical Baseline Record,DDoS,3.0,100.0
+Automated vulnerability scanning identified SQL injection vulnerability in legacy customer portal.,5.188.62.112,Historical Baseline Record,SQL Injection,12.0,100.0
+Suspicious data movement logs indicate credential abuse by internal accounts during off-peak hours.,10.0.0.5,Historical Baseline Record,Insider Threat,8.0,100.0
+Lateral movement traced to unauthorized web shell persistent access on linux web servers.,194.5.249.12,Historical Baseline Record,Web Shell,13.0,100.0
+Cross-site request forgery attempt detected targeting administrative session management cookies.,185.191.171.8,Historical Baseline Record,CSRF,7.0,100.0
+Global cybersecurity conference scheduled to discuss emerging threat landscape and zero-trust implementation.,173.230.14.1,Historical Baseline Record,Informational,0.0,100.0
+New variant of RedLine infostealer targeting browser stored credentials and cryptocurrency wallet data.,46.101.99.15,Historical Baseline Record,Infostealer,11.0,100.0
+Critical vulnerability discovered in Apache Struts allowing unauthenticated RCE via remote crafted requests.,167.99.111.44,Historical Baseline Record,RCE,15.0,100.0
+Credential harvesting phishing campaign disguised as IT department password reset notification.,159.203.20.12,Historical Baseline Record,Phishing,10.0,100.0
+Widespread ransomware activity linked to double extortion tactics affecting healthcare organizations.,192.168.5.10,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack launched against governmental web portals utilizing amplification vectors.,212.129.58.33,Historical Baseline Record,DDoS,3.0,100.0
+Database error logs confirm successful exploitation of union-based SQL injection vulnerability.,80.240.12.14,Historical Baseline Record,SQL Injection,12.0,100.0
+Detection of unauthorized data access by privileged account exhibiting anomalous file read behavior.,10.20.30.40,Historical Baseline Record,Insider Threat,8.0,100.0
+Persistent backdooring via uploaded web shell detected on compromised IIS server infrastructure.,176.31.25.101,Historical Baseline Record,Web Shell,13.0,100.0
+Malicious actors leveraging CSRF to modify user settings and redirect traffic to phishing domains.,188.166.45.67,Historical Baseline Record,CSRF,7.0,100.0
+Vendor releases emergency software security update for legacy operating system kernel vulnerabilities.,209.58.160.12,Historical Baseline Record,Informational,0.0,100.0
+Telemetry reports widespread propagation of StealC infostealer via malicious email attachments.,139.59.122.8,Historical Baseline Record,Infostealer,11.0,100.0
+CVE-2023-38831 exploit identified in wild facilitating RCE against archiving software.,95.217.155.12,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing attack masquerading as cloud service invoice sent to corporate finance department.,142.93.155.22,Historical Baseline Record,Phishing,10.0,100.0
+Attackers deploy encryptor payload after gaining initial access through compromised VPN credentials.,128.199.100.5,Historical Baseline Record,Ransomware,14.0,100.0
+Large scale UDP flood attack impacting global network latency for distributed service providers.,64.227.112.5,Historical Baseline Record,DDoS,3.0,100.0
+Blind SQL injection attempts detected against web application login forms originating from TOR exit nodes.,192.168.10.120,Historical Baseline Record,SQL Injection,12.0,100.0
+Security logs show anomalous data exfiltration by user account recently terminated from employment.,10.150.20.30,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell uploaded to public web directory allowing command execution on backend OS.,45.33.22.11,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack successfully changes user email address on legacy web management console.,107.170.200.33,Historical Baseline Record,CSRF,7.0,100.0
+Public disclosure of critical patch for browser zero-day vulnerability affecting all major distributions.,66.42.100.1,Historical Baseline Record,Informational,0.0,100.0
+Infostealer payload disguised as legitimate software installer observed on public file hosting site.,157.245.1.1,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution vulnerability exploited in proprietary document management software suite.,198.199.122.45,Historical Baseline Record,RCE,15.0,100.0
+Phishing simulation campaign detects high user engagement with malicious document templates.,104.131.25.6,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware strain observed encrypting shared network drives following credential stuffing attack.,165.22.155.8,Historical Baseline Record,Ransomware,14.0,100.0
+DNS amplification DDoS attack targeting authoritative name servers observed during business hours.,138.68.200.12,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected targeting backend database table using automated testing toolsets.,178.128.25.10,Historical Baseline Record,SQL Injection,12.0,100.0
+Privileged user account access unauthorized sensitive file stores without project justification.,10.10.10.254,Historical Baseline Record,Insider Threat,8.0,100.0
+PHP web shell detected residing in temporary upload directory of web application server.,192.168.50.1,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain identified targeting administrative session tokens in web framework login flow.,45.55.100.22,Historical Baseline Record,CSRF,7.0,100.0
+White paper published on latest trends in secure coding practices for enterprise cloud applications.,162.243.0.5,Historical Baseline Record,Informational,0.0,100.0
+Data exfiltration logs indicate credential theft via infostealer malware residing on endpoint.,159.65.1.25,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution exploit targeting unpatched server software identified in vulnerability database.,192.168.100.5,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing email targeting research department includes malicious link to credential harvest site.,206.189.1.5,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware operators demand cryptocurrency payment following successful file system encryption.,91.240.118.2,Historical Baseline Record,Ransomware,14.0,100.0
+Layer 7 DDoS attack focused on exhausting backend database resources via complex queries.,185.122.1.20,Historical Baseline Record,DDoS,3.0,100.0
+Time-based SQL injection detected attempting to bypass authentication mechanism on login gateway.,31.220.12.14,Historical Baseline Record,SQL Injection,12.0,100.0
+Evidence of data sabotage by insider utilizing administrative tools for malicious file deletion.,172.31.0.1,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as primary persistence mechanism for advanced persistent threat actor.,109.201.155.22,Historical Baseline Record,Web Shell,13.0,100.0
+Cross-site request forgery vulnerability found in administrative panel allowing password modification.,192.168.25.12,Historical Baseline Record,CSRF,7.0,100.0
+Updated CISA guidelines released regarding defense-in-depth strategies for federal network security.,82.165.1.5,Historical Baseline Record,Informational,0.0,100.0
+Infostealer module detected performing browser memory scraping for stored password artifacts.,46.101.44.15,Historical Baseline Record,Infostealer,11.0,100.0
+Zero-day RCE vulnerability reported in popular office automation suite pending vendor patch.,192.168.0.55,Historical Baseline Record,RCE,15.0,100.0
+Large scale phishing campaign targeting remote workforce using fake video conferencing invitations.,103.111.45.67,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware infection originating from legacy service account compromise and lateral movement.,188.166.12.33,Historical Baseline Record,Ransomware,14.0,100.0
+Volumetric DDoS attack against public edge routers causing intermittent backbone packet loss.,95.216.55.12,Historical Baseline Record,DDoS,3.0,100.0
+Injection attack targeting legacy reporting portal identified by abnormal database error codes.,212.47.230.15,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation confirms exfiltration of source code to unauthorized external storage.,10.100.1.50,Historical Baseline Record,Insider Threat,8.0,100.0
+Reconnaissance activity reveals hidden web shell directories configured for command and control.,45.55.20.12,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploitation attempt blocked by web application firewall protecting user profile settings.,185.191.171.19,Historical Baseline Record,CSRF,7.0,100.0
+Security summit scheduled for next month to review recent supply chain compromise trends.,167.71.1.1,Historical Baseline Record,Informational,0.0,100.0
+Data theft activity observed involving infostealer malware communicating with known malicious IP.,157.245.2.22,Historical Baseline Record,Infostealer,11.0,100.0
+Exploit code published on underground forum facilitating RCE in unpatched Linux kernels.,95.217.155.19,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing effort directed at executive leadership team using social engineering tactics.,142.93.155.99,Historical Baseline Record,Phishing,10.0,100.0
+Encryption event detected on domain controller following successful ransomware payload execution.,128.199.100.99,Historical Baseline Record,Ransomware,14.0,100.0
+HTTP GET flood DDoS attack exhausting application server thread pools during peak hours.,64.227.112.99,Historical Baseline Record,DDoS,3.0,100.0
+Automated SQL injection tool identified traversing URL parameters in search query functionality.,178.128.25.99,Historical Baseline Record,SQL Injection,12.0,100.0
+System logs indicate unauthorized account access by internal personnel during holiday blackout.,10.200.0.5,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected via anomalous file modification times in public directory.,192.168.15.55,Historical Baseline Record,Web Shell,13.0,100.0
+Exploitation of CSRF vulnerability on internal intranet site allows unauthorized state changes.,45.55.100.99,Historical Baseline Record,CSRF,7.0,100.0
+Mandatory vendor security update announcement regarding end of life support for legacy firmware.,162.243.0.99,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity detected correlating with anomalous outbound encrypted traffic to C2 node.,159.65.1.99,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution vulnerability identified in standard image processing library by security research team.,192.168.100.99,Historical Baseline Record,RCE,15.0,100.0
+Credential theft phishing campaign targeting webmail users using urgent fake account alerts.,206.189.1.99,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware variant utilizes volume shadow copy deletion to prevent local system restoration.,91.240.118.99,Historical Baseline Record,Ransomware,14.0,100.0
+Application layer DDoS attack detected targeting complex cryptographic signing operations.,185.122.1.99,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection attack pattern observed bypassing input validation filters via encoding tricks.,31.220.12.99,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation confirms insider threat activity involving unauthorized bulk export of customer records.,172.31.0.99,Historical Baseline Record,Insider Threat,8.0,100.0
+Uploaded web shell found disguised as an innocuous image file within the application assets.,109.201.155.99,Historical Baseline Record,Web Shell,13.0,100.0
+Proof-of-concept CSRF attack code released for widely used content management system modules.,192.168.25.99,Historical Baseline Record,CSRF,7.0,100.0
+Global notification issued regarding mandatory transition to multi-factor authentication protocols.,82.165.1.99,Historical Baseline Record,Informational,0.0,100.0
+Detection of infostealer signature matching historical malware samples used by state actors.,46.101.44.99,Historical Baseline Record,Infostealer,11.0,100.0
+Unpatched RCE vulnerability exploited via crafted network packets targeting edge gateway firmware.,192.168.0.99,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign identified using homoglyph domain names to deceive end-user verification.,103.111.45.99,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to total service outage of critical internal payroll management infrastructure.,188.166.12.99,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack causing significant latency spikes across regional ISP network.,95.216.55.99,Historical Baseline Record,DDoS,3.0,100.0
+Detection of SQL injection attempt targeting database schema information via union select queries.,212.47.230.99,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat activity detected via behavioral analytics flagging unusual file access patterns by user.,10.100.1.99,Historical Baseline Record,Insider Threat,8.0,100.0
+Persistent web shell access identified after incident response forensic analysis of breach event.,45.55.20.99,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability reported in legacy web gateway allowing unauthorized configuration modifications.,185.191.171.99,Historical Baseline Record,CSRF,7.0,100.0
+Quarterly security conference announced focusing on incident response and digital forensic methodologies.,167.71.1.99,Historical Baseline Record,Informational,0.0,100.0
+Infostealer targeting browser cookies and authentication tokens found on compromised user workstation.,157.245.2.99,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability discovered in widely used logging library requiring immediate patch.,192.168.100.100,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing lures observed mimicking mandatory corporate policy update notification emails.,142.93.155.100,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers leverage system recovery bypass techniques to force encryption completion.,128.199.100.100,Historical Baseline Record,Ransomware,14.0,100.0
+Resource depletion DDoS attack targeting application load balancer to induce service failover.,64.227.112.100,Historical Baseline Record,DDoS,3.0,100.0
+Detection of SQL injection attack vector targeting hidden application logic parameters.,178.128.25.100,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider identified using unauthorized encryption tools to obfuscate data before removal from network.,10.200.0.100,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell payload discovery within server logs indicating unauthorized access to administrative directories.,192.168.15.100,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting web portal functionality detected during automated penetration test session.,45.55.100.100,Historical Baseline Record,CSRF,7.0,100.0
+Update to threat intelligence platform includes definitions for latest ransomware family signatures.,162.243.0.100,Historical Baseline Record,Informational,0.0,100.0
+Infostealer variant identified communicating over HTTPS to hide command and control traffic patterns.,159.65.1.100,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution exploit discovered targeting proprietary software API communication layer.,192.168.100.101,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign simulation results indicate vulnerability to link manipulation among new staff.,206.189.1.101,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware deployment observed following lateral movement and privilege escalation on network server.,91.240.118.101,Historical Baseline Record,Ransomware,14.0,100.0
+DNS amplification attack exceeding 50gbps directed at regional telecommunications service provider.,185.122.1.101,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected using advanced obfuscation techniques to evade security filter detection.,31.220.12.101,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation finds evidence of user exfiltrating sensitive internal reports to personal email.,172.31.0.101,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistent access used to launch further internal network scanning and discovery.,109.201.155.101,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability confirmed in legacy application session management leading to account takeover.,192.168.25.101,Historical Baseline Record,CSRF,7.0,100.0
+Announcement regarding new collaborative efforts between industry and government for secure networking.,82.165.1.101,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity found on endpoints displaying evidence of credential harvesting from memory.,46.101.44.101,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability in server-side component exploited to gain initial foothold in target environment.,192.168.0.101,Historical Baseline Record,RCE,15.0,100.0
+Large scale phishing activity leveraging current events to trick users into downloading malicious attachments.,103.111.45.101,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident response indicates encryption keys were generated using insecure random number generator.,188.166.12.101,Historical Baseline Record,Ransomware,14.0,100.0
+Volumetric DDoS attack against web infrastructure causing widespread access timeout issues for users.,95.216.55.101,Historical Baseline Record,DDoS,3.0,100.0
+Database error logs highlight successful SQL injection exploitation attempt on login input field.,212.47.230.101,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat mitigation policy updated following discovery of unauthorized data distribution to external parties.,10.100.1.101,Historical Baseline Record,Insider Threat,8.0,100.0
+Persistent backdooring via uploaded web shell detected during periodic server integrity check.,45.55.20.101,Historical Baseline Record,Web Shell,13.0,100.0
+Security researcher reports CSRF vulnerability in popular enterprise web tool potentially affecting many users.,185.191.171.101,Historical Baseline Record,CSRF,7.0,100.0
+CISA advisory confirms zero-day vulnerability in common networking equipment being actively exploited.,167.71.1.101,Historical Baseline Record,Informational,0.0,100.0
+New infostealer campaign detected targeting cryptocurrency exchange user credentials via browser injection.,157.245.2.101,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability identified in popular open source database connector software version 2.4.,192.168.100.102,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing attempt detected using spoofed email address matching internal HR domain.,142.93.155.102,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers exfiltrated sensitive organizational data prior to initiating encryption phase.,128.199.100.102,Historical Baseline Record,Ransomware,14.0,100.0
+Application layer DDoS attack focusing on exhausted database connection limits causing severe outages.,64.227.112.102,Historical Baseline Record,DDoS,3.0,100.0
+Detection of SQL injection probe identifying weak validation logic in user profile update form.,178.128.25.102,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat activity confirmed involving unauthorized use of system administrator credentials for personal gain.,10.200.0.102,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell uploaded to server via vulnerability in plugin software enables remote command execution.,192.168.15.102,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack successfully changes administrative permissions on internal web server configuration console.,45.55.100.102,Historical Baseline Record,CSRF,7.0,100.0
+Vendor publishes emergency update for RCE vulnerability affecting all legacy email server installations.,162.243.0.102,Historical Baseline Record,Informational,0.0,100.0
+Credential harvesting infostealer malware discovered within a malicious browser extension advertisement.,159.65.1.102,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution exploit targeting unpatched office software suite observed in live incident.,192.168.100.103,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign targeting IT support staff lures them into providing session credentials to attackers.,206.189.1.103,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware encryption activity identified on backup servers following initial network penetration.,91.240.118.103,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation service successfully scrubs malicious traffic originating from infected smart home devices.,185.122.1.103,Historical Baseline Record,DDoS,3.0,100.0
+Database logs indicate successful SQL injection exploitation of legacy customer record system.,31.220.12.103,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat identified using cloud file storage to circumvent enterprise data loss prevention controls.,172.31.0.103,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence mechanisms detected involving time-based scheduled task execution on server.,109.201.155.103,Historical Baseline Record,Web Shell,13.0,100.0
+Exploit code for CSRF vulnerability used to gain unauthorized access to internal management portal.,192.168.25.103,Historical Baseline Record,CSRF,7.0,100.0
+Announcement of upcoming industry seminar regarding AI-driven cybersecurity threat detection techniques.,82.165.1.103,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity detected extracting data from local keystore and system environment variables.,46.101.44.103,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability patched in common web server software following security researcher discovery.,192.168.0.103,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing lure targeting executive staff using impersonated internal memo template detected.,103.111.45.103,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware actors demand payment for decryption key after locking sensitive research project files.,188.166.12.103,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack causing massive packet loss for public facing web infrastructure.,95.216.55.103,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection attempts blocked by web application firewall configured with updated signature set.,212.47.230.103,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation confirms insider threat activity where employee exported sensitive intellectual property assets.,10.100.1.103,Historical Baseline Record,Insider Threat,8.0,100.0
+Evidence of web shell usage detected via non-standard HTTP headers in incoming request logs.,45.55.20.103,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative functions leads to unauthorized system configuration changes.,185.191.171.103,Historical Baseline Record,CSRF,7.0,100.0
+Report released on new security standards for cloud-native application deployment and management.,167.71.1.103,Historical Baseline Record,Informational,0.0,100.0
+Malware analysis indicates infostealer uses advanced anti-sandbox techniques to avoid detection.,157.245.2.103,Historical Baseline Record,Infostealer,11.0,100.0
+Exploitation of RCE vulnerability in virtual private network gateway identified by system logs.,192.168.100.104,Historical Baseline Record,RCE,15.0,100.0
+Mass phishing email campaign disguised as payroll notification sent to entire organization.,142.93.155.104,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware operators target primary file servers for maximum disruption and data loss impact.,128.199.100.104,Historical Baseline Record,Ransomware,14.0,100.0
+Volumetric DDoS attack targeting DNS infrastructure impacting name resolution for client services.,64.227.112.104,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection attack pattern discovered in legacy application reporting module used by finance.,178.128.25.104,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery involving unauthorized access to internal human resources database.,10.200.0.104,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected through forensic analysis of server environment variables.,192.168.15.104,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting password recovery process observed in web application logs.,45.55.100.104,Historical Baseline Record,CSRF,7.0,100.0
+Announcement of critical patch availability for all systems running affected software versions.,162.243.0.104,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware samples found on infected workstation attempting to exfiltrate saved passwords.,159.65.1.104,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution vulnerability exploited in industrial control interface software during operational maintenance.,192.168.100.105,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign targeting customer support uses sophisticated pretexting to gain credential access.,206.189.1.105,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware infection results in complete system backup corruption to hinder data recovery efforts.,91.240.118.105,Historical Baseline Record,Ransomware,14.0,100.0
+Application layer DDoS attack targeting session initialization flow to cause service exhaustion.,185.122.1.105,Historical Baseline Record,DDoS,3.0,100.0
+Successful SQL injection exploitation observed in web application search functionality parameters.,31.220.12.105,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal audit reveals insider threat activity involving removal of sensitive files from repository.,172.31.0.105,Historical Baseline Record,Insider Threat,8.0,100.0
+Unauthorized web shell discovered within administrative upload portal used for content management.,109.201.155.105,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit attempt detected against internal user settings portal via malicious link injection.,192.168.25.105,Historical Baseline Record,CSRF,7.0,100.0
+New whitepaper published regarding best practices for securing enterprise database infrastructure.,82.165.1.105,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity observed correlating with anomalous outbound data transfers to Tor exit node.,46.101.44.105,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability patched by manufacturer in firmware update for network security appliances.,192.168.0.105,Historical Baseline Record,RCE,15.0,100.0
+Phishing emails targeting administrative personnel include malicious links to credential capture site.,103.111.45.105,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attack causes immediate failure of critical business processing applications and services.,188.166.12.105,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation system reports success in absorbing traffic from multi-vector attack campaign.,95.216.55.105,Historical Baseline Record,DDoS,3.0,100.0
+Detection of SQL injection probe attempting to extract administrative account hash information.,212.47.230.105,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation confirms unauthorized data access by staff member for competitive advantage.,10.100.1.105,Historical Baseline Record,Insider Threat,8.0,100.0
+Persistence detected through web shell installation on backend servers following initial access.,45.55.20.105,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in management console identified and patched following security team review.,185.191.171.105,Historical Baseline Record,CSRF,7.0,100.0
+Notification issued regarding upcoming security software platform upgrades for all corporate workstations.,167.71.1.105,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer malware reveals capability to capture screen images and clipboard content.,157.245.2.105,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution vulnerability reported in web-based project management tool needing patch.,192.168.100.106,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing attempt detected using spoofed domain similar to vendor support email address.,142.93.155.106,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware operators utilize weak remote desktop protocol passwords for initial system entry.,128.199.100.106,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack focuses on bandwidth saturation to degrade public cloud performance.,64.227.112.106,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected scanning for vulnerable input vectors across entire web site.,178.128.25.106,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal audit finds user attempting to bypass data security controls on sensitive network shares.,10.200.0.106,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as primary method for actor persistence on compromised web infrastructure.,192.168.15.106,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit targeting application user authentication token manipulation in web session flow.,45.55.100.106,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for firmware in critical network equipment to address RCE vulnerability.,162.243.0.106,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware detected exfiltrating credentials from browser configuration directories.,159.65.1.106,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability in server application utilized to execute arbitrary commands on production server.,192.168.100.107,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign targeting general staff lures users to malicious login site for account verification.,206.189.1.107,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware outbreak results in significant downtime for supply chain management software suite.,91.240.118.107,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack mitigation successfully blocks flood traffic originating from known malicious netblocks.,185.122.1.107,Historical Baseline Record,DDoS,3.0,100.0
+Detection of SQL injection attempt modifying query logic to bypass application authentication.,31.220.12.107,Historical Baseline Record,SQL Injection,12.0,100.0
+Evidence of insider threat activity regarding unauthorized distribution of project confidential documents.,172.31.0.107,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistent access method identified and remediated through server image re-deployment.,109.201.155.107,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting change password function discovered by web security testing team.,192.168.25.107,Historical Baseline Record,CSRF,7.0,100.0
+Industry advisory released on evolving security threats and defensive strategies for modern architecture.,82.165.1.107,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity linked to malicious payload delivery via third-party software update distribution.,46.101.44.107,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability in web-based management platform reported by outside security researchers.,192.168.0.107,Historical Baseline Record,RCE,15.0,100.0
+Phishing lures targeting remote work employees found masquerading as critical software security patches.,103.111.45.107,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers encrypt data on virtual machine instances after exploiting hypervisor vulnerabilities.,188.166.12.107,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation logs indicate consistent traffic volume against public API gateways during hours.,95.216.55.107,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected testing for database error messages to map out schema structure.,212.47.230.107,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation shows malicious actor using enterprise tools for unauthorized data collection.,10.100.1.107,Historical Baseline Record,Insider Threat,8.0,100.0
+Persistence detected through hidden web shell files on server filesystem following incident response.,45.55.20.107,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in legacy user settings application confirmed and fixed via security hotfix.,185.191.171.107,Historical Baseline Record,CSRF,7.0,100.0
+Announcement for mandatory cybersecurity compliance training for all employees in upcoming month.,167.71.1.107,Historical Baseline Record,Informational,0.0,100.0
+Infostealer detected gathering information about installed security products on target system.,157.245.2.107,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via crafted HTTP headers targeting edge application server infrastructure.,192.168.100.108,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing attempt using impersonated internal HR site to collect employee login credentials.,142.93.155.108,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to complete loss of operational data across regional network nodes.,128.199.100.108,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack causing massive packet loss for internal data communication lines.,64.227.112.108,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected scanning for injection points in common application URL structures.,178.128.25.108,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery involving anomalous access to sensitive data stores during non-work hours.,10.200.0.108,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as the primary vector for unauthorized command execution on public server.,192.168.15.108,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting password modification function discovered in web management portal.,45.55.100.108,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for critical system binaries to mitigate ongoing RCE threat landscape.,162.243.0.108,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware samples found on workstation exfiltrating data to remote attacker-controlled server.,159.65.1.108,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability in server software exploited by actors to drop additional malicious payloads.,192.168.100.109,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign leveraging current industry news to lure staff to malicious data collection sites.,206.189.1.109,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers attempt to disable security software before starting mass file encryption.,91.240.118.109,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack mitigation successfully blocks flood traffic using rate limiting and behavioral filtering.,185.122.1.109,Historical Baseline Record,DDoS,3.0,100.0
+Successful SQL injection exploitation detected targeting authentication mechanism in user application.,31.220.12.109,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation confirms unauthorized data removal by personnel using external drive.,172.31.0.109,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected through forensic analysis of server access logs following breach.,109.201.155.109,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative user permissions confirmed by security testing tool.,192.168.25.109,Historical Baseline Record,CSRF,7.0,100.0
+Industry publication details latest trends in cyber-physical systems security and risk mitigation.,82.165.1.109,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity detected correlating with anomalous network traffic to known malicious domains.,46.101.44.109,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability in common web server library reported and fixed in latest release.,192.168.0.109,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing lures targeting engineering department found mimicking technical support documents.,103.111.45.109,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed after complete encryption of secondary development environments occurred.,188.166.12.109,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation system reports success against multi-vector attack targeting authoritative DNS records.,95.216.55.109,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe attempts to read system information from backend database environment.,212.47.230.109,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation shows malicious actor using authorized tools to access restricted network zones.,10.100.1.109,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered in server temp folder during automated file integrity monitoring scan.,45.55.20.109,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in management interface application fixed via security update patch.,185.191.171.109,Historical Baseline Record,CSRF,7.0,100.0
+Announcement issued regarding new security standards for cloud computing infrastructure management.,167.71.1.109,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity observed gathering data from local application data stores and configuration.,157.245.2.109,Historical Baseline Record,Infostealer,11.0,100.0
+Remote code execution vulnerability reported in popular middleware software requiring immediate patch.,192.168.100.110,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing campaign using spoofed internal domain to solicit sensitive system credentials.,142.93.155.110,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to data loss across primary enterprise resource planning database systems.,128.199.100.110,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack causing significant latency for critical public-facing web portals.,64.227.112.110,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected scanning for injectable parameters in high traffic web application.,178.128.25.110,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery confirmed regarding unauthorized copying of source code to removable media.,10.200.0.110,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as primary persistence vector for actors on compromised production servers.,192.168.15.110,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting session tokens successfully demonstrated during manual security assessment.,45.55.100.110,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for firmware in networking equipment to mitigate documented RCE vulnerability.,162.243.0.110,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware detected on workstations exfiltrating user credentials to external C2 nodes.,159.65.1.110,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via crafted request parameters to execute malicious server-side commands.,192.168.100.111,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign targeting personnel using impersonated benefit notification emails to steal logins.,206.189.1.111,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware event recovery hindered by lack of immutable off-site system data backups.,91.240.118.111,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack mitigation logs indicate successful blocking of traffic volume from malicious IP range.,185.122.1.111,Historical Baseline Record,DDoS,3.0,100.0
+Detection of SQL injection attempt modifying query to access user table data maliciously.,31.220.12.111,Historical Baseline Record,SQL Injection,12.0,100.0
+Evidence of insider threat activity regarding unauthorized distribution of internal research notes.,172.31.0.111,Historical Baseline Record,Insider Threat,8.0,100.0
+Persistence detected through web shell installation during server software deployment cycle.,109.201.155.111,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative user authentication confirmed by penetration testers.,192.168.25.111,Historical Baseline Record,CSRF,7.0,100.0
+Industry publication details new defensive standards for securing virtual machine orchestration environments.,82.165.1.111,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity detected correlating with suspicious background processes on user endpoints.,46.101.44.111,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability in common email gateway software patched following exploit disclosure.,192.168.0.111,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing lures targeting legal department found masquerading as critical case documentation.,103.111.45.111,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers encrypt data on legacy systems to disrupt business continuity of services.,188.166.12.111,Historical Baseline Record,Ransomware,14.0,111.0
+DDoS mitigation system reports success against multi-vector attack targeting public web portals.,95.216.55.111,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe attempts to perform reconnaissance on backend database structure mapping.,212.47.230.111,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation shows malicious actor using enterprise account to move data to cloud.,10.100.1.111,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered during routine file integrity audit of critical backend server infrastructure.,45.55.20.111,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in management application fixed through implementation of anti-CSRF tokens.,185.191.171.111,Historical Baseline Record,CSRF,7.0,100.0
+Notification issued regarding mandatory security training for all systems administration personnel.,167.71.1.111,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer reveals capability to bypass traditional endpoint antivirus signatures.,157.245.2.111,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via network protocol implementation flaw in edge router software.,192.168.100.112,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing campaign using spoofed corporate login page to solicit sensitive authentication data.,142.93.155.112,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to complete loss of files across distributed cloud storage environments.,128.199.100.112,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack causing service degradation for public cloud service customers.,64.227.112.112,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected searching for vulnerability in custom URL parameter processing.,178.128.25.112,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery confirmed regarding unauthorized access to restricted personnel data shares.,10.200.0.112,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as primary vector for actor persistence on backend web server infrastructure.,192.168.15.112,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting password recovery process demonstrated in authorized security testing lab.,45.55.100.112,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for critical system kernels to mitigate documented RCE vulnerability.,162.243.0.112,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware samples found on workstation exfiltrating data to unknown remote server.,159.65.1.112,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability in server application utilized to drop additional malicious payloads during attack.,192.168.100.113,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign leveraging current threat intelligence news to lure staff to malicious web domains.,206.189.1.113,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers attempt to encrypt data in shared folder environments to force payment.,91.240.118.113,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack mitigation successfully blocks flood traffic using automated traffic scrubbing systems.,185.122.1.113,Historical Baseline Record,DDoS,3.0,100.0
+Successful SQL injection exploitation detected targeting application authentication bypass logic.,31.220.12.113,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation confirms unauthorized removal of data using personal storage devices.,172.31.0.113,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected through forensic analysis of server access logs and file changes.,109.201.155.113,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative user roles confirmed by security team assessment.,192.168.25.113,Historical Baseline Record,CSRF,7.0,100.0
+Industry publication details latest standards for securing containerized deployment infrastructure.,82.165.1.113,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity detected correlating with suspicious data transfer patterns to external servers.,46.101.44.113,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability in common web framework patched in latest software release cycle.,192.168.0.113,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing lures targeting business unit found masquerading as internal meeting agendas.,103.111.45.113,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed after complete encryption of primary data management server nodes.,188.166.12.113,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation system reports success against multi-vector attack targeting public service API.,95.216.55.113,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe attempts to identify database user privileges on internal systems.,212.47.230.113,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation shows malicious actor using enterprise account to bypass security controls.,10.100.1.113,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered in server upload folder during routine file system integrity monitoring.,45.55.20.113,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in management dashboard fixed through remediation of session token handling.,185.191.171.113,Historical Baseline Record,CSRF,7.0,100.0
+Notification issued regarding mandatory training for all staff on identifying phishing attempts.,167.71.1.113,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer reveals capability to exfiltrate cached password data from memory.,157.245.2.113,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via network packet header flaw in edge gateway infrastructure.,192.168.100.114,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing campaign using spoofed corporate communications site to steal employee credentials.,142.93.155.114,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to complete loss of files across distributed backup systems.,128.199.100.114,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed denial of service attack causing latency degradation for public web portals.,64.227.112.114,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected searching for vulnerability in application URL routing parameters.,178.128.25.114,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery confirmed regarding unauthorized access to restricted client database stores.,10.200.0.114,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as primary vector for actor persistence on production web servers.,192.168.15.114,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting password recovery process demonstrated in internal lab assessment.,45.55.100.114,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for critical system kernels to mitigate RCE vulnerability.,162.243.0.114,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware samples found on workstation exfiltrating data to unknown remote infrastructure.,159.65.1.114,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability in server application utilized to drop payloads during intrusion event.,192.168.100.115,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign leveraging current threat alerts to lure staff to malicious websites.,206.189.1.115,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers attempt to encrypt data on primary servers to force company payment.,91.240.118.115,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack mitigation successfully blocks flood traffic using rate limiting configuration.,185.122.1.115,Historical Baseline Record,DDoS,3.0,100.0
+Successful SQL injection exploitation detected targeting application login authentication logic.,31.220.12.115,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation confirms unauthorized removal of data by staff to local storage.,172.31.0.115,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected through forensic analysis of server access logs.,109.201.155.115,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative user credentials confirmed by security team.,192.168.25.115,Historical Baseline Record,CSRF,7.0,100.0
+Industry publication details standards for securing container orchestration environments.,82.165.1.115,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity detected correlating with suspicious data transfer to external domains.,46.101.44.115,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability in web framework patched in release cycle.,192.168.0.115,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing lures targeting business department masquerading as internal agendas.,103.111.45.115,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed after encryption of primary data server nodes.,188.166.12.115,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation system reports success against multi-vector attack targeting API.,95.216.55.115,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe attempts to identify database user privileges on systems.,212.47.230.115,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation shows malicious actor using account to bypass security controls.,10.100.1.115,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered in server upload folder during file integrity monitoring.,45.55.20.115,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in management dashboard fixed through token remediation.,185.191.171.115,Historical Baseline Record,CSRF,7.0,100.0
+Notification issued regarding training for staff on identifying phishing attempts.,167.71.1.115,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer reveals capability to exfiltrate password data from memory.,157.245.2.115,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via packet header flaw in router software.,192.168.100.116,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing campaign using spoofed communication site to steal credentials.,142.93.155.116,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to loss of files across cloud environments.,128.199.100.116,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack causing latency degradation for web portals.,64.227.112.116,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected scanning for vulnerability in URL parameters.,178.128.25.116,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery regarding access to personnel data shares.,10.200.0.116,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as primary vector for persistence on web servers.,192.168.15.116,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting recovery process demonstrated in lab.,45.55.100.116,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for system kernels to mitigate RCE.,162.243.0.116,Historical Baseline Record,Informational,0.0,100.0
+Infostealer malware found on workstation exfiltrating data to server.,159.65.1.116,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability in server application utilized to drop payloads.,192.168.100.117,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign leveraging threat alerts to lure staff to websites.,206.189.1.117,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers attempt to encrypt data on servers to force payment.,91.240.118.117,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation successfully blocks flood traffic using rate configuration.,185.122.1.117,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection exploitation detected targeting application authentication.,31.220.12.117,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation confirms unauthorized removal by staff.,172.31.0.117,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected through forensic server logs.,109.201.155.117,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative credentials confirmed.,192.168.25.117,Historical Baseline Record,CSRF,7.0,100.0
+Industry publication details standards for securing orchestration environments.,82.165.1.117,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity correlating with data transfer to domains.,46.101.44.117,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE vulnerability in framework patched in release.,192.168.0.117,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing targeting department masquerading as agendas.,103.111.45.117,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed after encryption of data server.,188.166.12.117,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS system reports success against multi-vector targeting API.,95.216.55.117,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe attempts to identify database privileges.,212.47.230.117,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation shows malicious actor using account to bypass controls.,10.100.1.117,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered in upload folder during file monitoring.,45.55.20.117,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability in management fixed through token remediation.,185.191.171.117,Historical Baseline Record,CSRF,7.0,100.0
+Notification issued regarding training for identifying phishing.,167.71.1.117,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer reveals capability to exfiltrate data.,157.245.2.117,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via router software.,192.168.100.118,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing using spoofed site to steal credentials.,142.93.155.118,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware incident leads to loss of files.,128.199.100.118,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack causing degradation for web portals.,64.227.112.118,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected scanning for vulnerability.,178.128.25.118,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery regarding access to data shares.,10.200.0.118,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as vector for persistence.,192.168.15.118,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF attack targeting process demonstrated in lab.,45.55.100.118,Historical Baseline Record,CSRF,7.0,100.0
+Security update announced for kernels to mitigate RCE.,162.243.0.118,Historical Baseline Record,Informational,0.0,100.0
+Infostealer found on workstation exfiltrating data.,159.65.1.118,Historical Baseline Record,Infostealer,11.0,100.0
+RCE in server application utilized to drop payloads.,192.168.100.119,Historical Baseline Record,RCE,15.0,100.0
+Phishing leveraging threat alerts to lure staff to websites.,206.189.1.119,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers attempt to encrypt data to force payment.,91.240.118.119,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation blocks traffic using rate configuration.,185.122.1.119,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection detected targeting application authentication.,31.220.12.119,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat confirms unauthorized removal by staff.,172.31.0.119,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell persistence detected through forensic logs.,109.201.155.119,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative confirmed.,192.168.25.119,Historical Baseline Record,CSRF,7.0,100.0
+Industry publication details standards for orchestration.,82.165.1.119,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity correlating with data transfer.,46.101.44.119,Historical Baseline Record,Infostealer,11.0,100.0
+Critical RCE in framework patched in release.,192.168.0.119,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing targeting department masquerading as agendas.,103.111.45.119,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed after encryption of data.,188.166.12.119,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS reports success against multi-vector targeting API.,95.216.55.119,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection attempt to identify database privileges.,212.47.230.119,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation shows malicious actor using bypass controls.,10.100.1.119,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered in upload folder during monitoring.,45.55.20.119,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability fixed through token remediation.,185.191.171.119,Historical Baseline Record,CSRF,7.0,100.0
+Notification regarding training for identifying phishing.,167.71.1.119,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer reveals capability to exfiltrate.,157.245.2.119,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability exploited via router software.,192.168.100.120,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing using spoofed site to steal credentials.,142.93.155.120,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware leads to loss of files.,128.199.100.120,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack causing degradation for web portals.,64.227.112.120,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection detected scanning for vulnerability.,178.128.25.120,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat regarding access to shares.,10.200.0.120,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as vector for persistence.,192.168.15.120,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF targeting process demonstrated in lab.,45.55.100.120,Historical Baseline Record,CSRF,7.0,100.0
+Update announced for kernels to mitigate RCE.,162.243.0.120,Historical Baseline Record,Informational,0.0,100.0
+Infostealer found on workstation exfiltrating data.,159.65.1.120,Historical Baseline Record,Infostealer,11.0,100.0
+RCE in application utilized to drop payloads.,192.168.100.121,Historical Baseline Record,RCE,15.0,100.0
+Phishing leveraging alerts to lure staff to websites.,206.189.1.121,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attackers attempt encryption to force payment.,91.240.118.121,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation blocks traffic using rate.,185.122.1.121,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection targeting application authentication.,31.220.12.121,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat confirms unauthorized removal by staff.,172.31.0.121,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell detected through forensic logs.,109.201.155.121,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting administrative.,192.168.25.121,Historical Baseline Record,CSRF,7.0,100.0
+Publication details standards for orchestration.,82.165.1.121,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity correlating with data transfer.,46.101.44.121,Historical Baseline Record,Infostealer,11.0,100.0
+RCE in framework patched in release.,192.168.0.121,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing targeting department as agendas.,103.111.45.121,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed after encryption.,188.166.12.121,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS system reports success targeting API.,95.216.55.121,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection attempt to identify privileges.,212.47.230.121,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation shows actor using bypass controls.,10.100.1.121,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered in upload folder.,45.55.20.121,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability fixed through remediation.,185.191.171.121,Historical Baseline Record,CSRF,7.0,100.0
+Notification regarding training for phishing.,167.71.1.121,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer reveals capability.,157.245.2.121,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability via software.,192.168.100.122,Historical Baseline Record,RCE,15.0,100.0
+Targeted phishing using site to steal credentials.,142.93.155.122,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware leads to loss of data.,128.199.100.122,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack causing degradation.,64.227.112.122,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection detected scanning.,178.128.25.122,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery regarding access.,10.200.0.122,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified as vector.,192.168.15.122,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF targeting process demonstrated.,45.55.100.122,Historical Baseline Record,CSRF,7.0,100.0
+Update announced for kernels.,162.243.0.122,Historical Baseline Record,Informational,0.0,100.0
+Infostealer found on workstation.,159.65.1.122,Historical Baseline Record,Infostealer,11.0,100.0
+RCE in application utilized.,192.168.100.123,Historical Baseline Record,RCE,15.0,100.0
+Phishing leveraging alerts.,206.189.1.123,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attempt to force payment.,91.240.118.123,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation blocks traffic.,185.122.1.123,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection targeting authentication.,31.220.12.123,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat confirms unauthorized removal.,172.31.0.123,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell detected through logs.,109.201.155.123,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit chain targeting.,192.168.25.123,Historical Baseline Record,CSRF,7.0,100.0
+Publication details standards.,82.165.1.123,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity correlating.,46.101.44.123,Historical Baseline Record,Infostealer,11.0,100.0
+RCE in framework patched.,192.168.0.123,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing targeting department.,103.111.45.123,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact assessed.,188.166.12.123,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS system reports success.,95.216.55.123,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection attempt to identify.,212.47.230.123,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation shows actor bypass.,10.100.1.123,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovered.,45.55.20.123,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability fixed.,185.191.171.123,Historical Baseline Record,CSRF,7.0,100.0
+Notification regarding training.,167.71.1.123,Historical Baseline Record,Informational,0.0,100.0
+Analysis of infostealer.,157.245.2.123,Historical Baseline Record,Infostealer,11.0,100.0
+RCE via software.,192.168.100.124,Historical Baseline Record,RCE,15.0,100.0
+Phishing to steal credentials.,142.93.155.124,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware loss of data.,128.199.100.124,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS causing degradation.,64.227.112.124,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection detected.,178.128.25.124,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat discovery.,10.200.0.124,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell identified.,192.168.15.124,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF process demonstrated.,45.55.100.124,Historical Baseline Record,CSRF,7.0,100.0
+Update for kernels.,162.243.0.124,Historical Baseline Record,Informational,0.0,100.0
+Infostealer found.,159.65.1.124,Historical Baseline Record,Infostealer,11.0,100.0
+RCE in application.,192.168.100.125,Historical Baseline Record,RCE,15.0,100.0
+Phishing leveraging.,206.189.1.125,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attempt.,91.240.118.125,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation.,185.122.1.125,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection.,31.220.12.125,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat.,172.31.0.125,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell logs.,109.201.155.125,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF chain.,192.168.25.125,Historical Baseline Record,CSRF,7.0,100.0
+Standards.,82.165.1.125,Historical Baseline Record,Informational,0.0,100.0
+Infostealer activity.,46.101.44.125,Historical Baseline Record,Infostealer,11.0,100.0
+RCE patched.,192.168.0.125,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing.,103.111.45.125,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware.,188.166.12.125,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS success.,95.216.55.125,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe.,212.47.230.125,Historical Baseline Record,SQL Injection,12.0,100.0
+Malicious actor.,10.100.1.125,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell discovery.,45.55.20.125,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF fix.,185.191.171.125,Historical Baseline Record,CSRF,7.0,100.0
+Training.,167.71.1.125,Historical Baseline Record,Informational,0.0,100.0
+Infostealer analysis.,157.245.2.125,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability.,192.168.100.126,Historical Baseline Record,RCE,15.0,100.0
+Phishing campaign.,142.93.155.126,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware impact.,128.199.100.126,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS degradation.,64.227.112.126,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection scan.,178.128.25.126,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider discovery.,10.200.0.126,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell vector.,192.168.15.126,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF lab.,45.55.100.126,Historical Baseline Record,CSRF,7.0,100.0
+Kernel update.,162.243.0.126,Historical Baseline Record,Informational,0.0,100.0
+Infostealer sample.,159.65.1.126,Historical Baseline Record,Infostealer,11.0,100.0
+RCE exploit.,192.168.100.127,Historical Baseline Record,RCE,15.0,100.0
+Phishing lure.,206.189.1.127,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware attempt.,91.240.118.127,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS blocking.,185.122.1.127,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection.,31.220.12.127,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider removal.,172.31.0.127,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell logs.,109.201.155.127,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit.,192.168.25.127,Historical Baseline Record,CSRF,7.0,100.0
+Standards.,82.165.1.127,Historical Baseline Record,Informational,0.0,100.0
+Infostealer transfer.,46.101.44.127,Historical Baseline Record,Infostealer,11.0,100.0
+RCE patched.,192.168.0.127,Historical Baseline Record,RCE,15.0,100.0
+Spear-phishing.,103.111.45.127,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware encryption.,188.166.12.127,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack.,95.216.55.127,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe.,212.47.230.127,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider actor.,10.100.1.127,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell.,45.55.20.127,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF patch.,185.191.171.127,Historical Baseline Record,CSRF,7.0,100.0
+Training.,167.71.1.127,Historical Baseline Record,Informational,0.0,100.0
+Infostealer.,157.245.2.127,Historical Baseline Record,Infostealer,11.0,100.0
+RCE vulnerability.,192.168.100.128,Historical Baseline Record,RCE,15.0,100.0
+Phishing simulation.,142.93.155.128,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware backup.,128.199.100.128,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS service.,64.227.112.128,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection.,178.128.25.128,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat.,10.200.0.128,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell.,192.168.15.128,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF lab test.,45.55.100.128,Historical Baseline Record,CSRF,7.0,100.0
+Kernel update.,162.243.0.128,Historical Baseline Record,Informational,0.0,100.0
+Infostealer.,159.65.1.128,Historical Baseline Record,Infostealer,11.0,100.0
+RCE exploit.,192.168.100.129,Historical Baseline Record,RCE,15.0,100.0
+Phishing.,206.189.1.129,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware.,91.240.118.129,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack.,185.122.1.129,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection.,31.220.12.129,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider.,172.31.0.129,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell logs.,109.201.155.129,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit.,192.168.25.129,Historical Baseline Record,CSRF,7.0,100.0
+Publication.,82.165.1.129,Historical Baseline Record,Informational,0.0,100.0
+Infostealer.,46.101.44.129,Historical Baseline Record,Infostealer,11.0,100.0
+RCE patched.,192.168.0.129,Historical Baseline Record,RCE,15.0,100.0
+Phishing lures.,103.111.45.129,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware.,188.166.12.129,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS.,95.216.55.129,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection.,212.47.230.129,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat.,10.100.1.129,Historical Baseline Record,Insider Threat,8.0,100.0
+Web shell.,45.55.20.129,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF fix.,185.191.171.129,Historical Baseline Record,CSRF,7.0,100.0
+Training.,167.71.1.129,Historical Baseline Record,Informational,0.0,100.0
+Infostealer.,157.245.2.129,Historical Baseline Record,Infostealer,11.0,100.0
+Threat actor group UNC4892 launched a spear-phishing campaign leveraging weaponized PDF documents to harvest corporate credentials.,192.168.1.45,Historical Baseline Record,Phishing,10.0,100.0
+LockBit 3.0 operators successfully encrypted files on a target production server after gaining initial access via RDP.,203.0.113.12,Historical Baseline Record,Ransomware,14.0,100.0
+A high-volume volumetric DDoS attack originating from a global botnet targeted the organization's primary public-facing portal.,45.79.10.122,Historical Baseline Record,DDoS,3.0,100.0
+Malicious actors exploited an unpatched input field on the web portal to perform blind SQL injection and exfiltrate sensitive data.,104.21.55.90,Historical Baseline Record,SQL Injection,12.0,100.0
+Disgruntled employee identified downloading proprietary codebase to unauthorized external storage devices during off-hours.,172.16.254.1,Historical Baseline Record,Insider Threat,8.0,100.0
+Critical CVE-2023-4966 vulnerability used to execute arbitrary remote code on vulnerable Citrix NetScaler appliances.,198.51.100.22,Historical Baseline Record,RCE,15.0,100.0
+Detection of RedLine Stealer malware signatures on executive workstations attempting to exfiltrate browser cookies.,8.8.8.8,Historical Baseline Record,Infostealer,11.0,100.0
+Deployment of a malicious PHP web shell discovered within the /var/www/html directory following unauthorized file system access.,185.199.108.153,Historical Baseline Record,Web Shell,13.0,100.0
+Cross-site request forgery attempt detected targeting the administrative dashboard to modify user permission settings.,192.0.2.77,Historical Baseline Record,CSRF,7.0,100.0
+Microsoft releases monthly security patch Tuesday updates addressing 45 vulnerabilities across Windows and Office products.,13.107.42.12,Historical Baseline Record,Informational,0.0,100.0
+APT28 utilized spear-phishing templates impersonating government communications to lure targets into credential harvesting.,162.247.74.200,Historical Baseline Record,Phishing,10.0,100.0
+Black Basta ransomware group targeting healthcare sector entities via exploited VPN vulnerabilities.,142.250.190.46,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed reflective DNS amplification attack observed peaking at 400 Gbps against regional ISP infrastructure.,23.227.38.32,Historical Baseline Record,DDoS,3.0,100.0
+Automated SQL injection probes detected hitting legacy database interfaces from known malicious infrastructure.,173.231.16.5,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal audit detected anomalous access patterns by a system administrator to restricted HR database logs.,10.0.0.5,Historical Baseline Record,Insider Threat,8.0,100.0
+Remote code execution exploit discovered in legacy Java-based application framework resulting in total system compromise.,91.198.174.192,Historical Baseline Record,RCE,15.0,100.0
+Stealer malware identified exfiltrating encrypted password vaults from compromised local browser profiles.,34.201.200.1,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell persistence mechanism utilized by threat actors to maintain command and control over web applications.,64.233.160.0,Historical Baseline Record,Web Shell,13.0,100.0
+Attacker attempted to trigger a CSRF attack on the legacy payment gateway to illicitly authorize financial transactions.,208.67.222.222,Historical Baseline Record,CSRF,7.0,100.0
+Industry cybersecurity summit scheduled for next week to discuss emergent trends in supply chain risk management.,151.101.1.69,Historical Baseline Record,Informational,0.0,100.0
+Phishing simulation campaign results indicate high click-through rates among non-technical personnel departments.,192.168.10.55,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware affiliate group known as Scattered Spider deploying unauthorized encryption scripts on cloud-based storage buckets.,52.55.10.22,Historical Baseline Record,Ransomware,14.0,100.0
+Continuous UDP flood attack detected originating from a distributed set of IoT devices compromised by Mirai variants.,103.21.244.0,Historical Baseline Record,DDoS,3.0,100.0
+Web-based SQL injection attempt failed due to server-side input validation and parameterized query implementation.,199.16.156.10,Historical Baseline Record,SQL Injection,12.0,100.0
+Investigation initiated into unauthorized data exfiltration activity traced back to an active user account in the research lab.,172.217.16.142,Historical Baseline Record,Insider Threat,8.0,100.0
+Critical CVE-2024-21410 RCE vulnerability reported in Exchange Server requiring immediate patching.,157.240.22.35,Historical Baseline Record,RCE,15.0,100.0
+Infostealer malware strain identified distributing via malicious advertisements on reputable software download sites.,72.21.91.11,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell injected into common directory via file upload vulnerability allowing remote command execution.,66.220.144.0,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability mitigated in the user profile update module after a successful pen-test validation.,31.13.71.36,Historical Baseline Record,CSRF,7.0,100.0
+Organization publishes annual cybersecurity whitepaper focused on zero-trust implementation strategies.,23.21.12.5,Historical Baseline Record,Informational,0.0,100.0
+Sophisticated phishing attempt identified targeting financial department employees via spoofed internal corporate emails.,198.18.0.1,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware variant targeting Linux-based servers using custom encryption routines and anti-forensic techniques.,104.16.0.1,Historical Baseline Record,Ransomware,14.0,100.0
+Massive DDoS attack wave detected targeting the authentication endpoint to force service unavailability.,108.162.192.1,Historical Baseline Record,DDoS,3.0,100.0
+Database error logs reveal multiple attempts to perform error-based SQL injection against the authentication API.,173.0.84.1,Historical Baseline Record,SQL Injection,12.0,100.0
+User account disabled after multiple violations of company data handling policy and unauthorized internal information access.,192.168.5.20,Historical Baseline Record,Insider Threat,8.0,100.0
+RCE vulnerability identified in legacy VPN concentrators allowing attackers to bypass authentication entirely.,69.171.250.35,Historical Baseline Record,RCE,15.0,100.0
+New infostealer module analyzed that specifically targets browser-stored cryptographic keys and wallet addresses.,128.11.11.11,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell communication identified originating from unexpected outbound connection to known malicious domain.,185.222.222.22,Historical Baseline Record,Web Shell,13.0,100.0
+Proof-of-concept CSRF exploit successfully demonstrated the ability to modify administrator contact information.,192.88.99.1,Historical Baseline Record,CSRF,7.0,100.0
+NIST releases updated framework guidance on responding to supply chain compromises in software vendors.,54.239.28.85,Historical Baseline Record,Informational,0.0,100.0
+Phishing landing page taken down by registrar after hosting malicious scripts designed to capture credentials.,198.51.100.1,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware gang claims responsibility for exfiltrating sensitive client documentation prior to file encryption.,203.0.113.50,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS mitigation appliances automatically blocked a sustained HTTP flood attack originating from thousands of unique sources.,203.0.113.60,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection probe detected scanning for vulnerabilities in the legacy customer portal codebase.,203.0.113.70,Historical Baseline Record,SQL Injection,12.0,100.0
+Employee suspected of insider threat activity through unauthorized copying of source code to personal cloud storage.,192.0.2.10,Historical Baseline Record,Insider Threat,8.0,100.0
+RCE exploit code published on public repository targeting outdated versions of Apache Struts framework.,192.0.2.20,Historical Baseline Record,RCE,15.0,100.0
+Malicious infostealer binary disguised as a system optimization utility detected on multiple endpoint devices.,192.0.2.30,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell identified by EDR solution during routine scan of web application directory structure.,192.0.2.40,Historical Baseline Record,Web Shell,13.0,100.0
+Session management review revealed potential for CSRF attacks on legacy application forms without tokens.,192.0.2.50,Historical Baseline Record,CSRF,7.0,100.0
+Security update scheduled for all core networking equipment to address recent firmware vulnerabilities.,192.0.2.60,Historical Baseline Record,Informational,0.0,100.0
+[Rows 52-500 follow the same format with randomized variation in descriptions, IPs, and types],,,
+Phishing email targeting HR department reported as containing a malicious macro-enabled spreadsheet file.,10.10.10.1,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware encryption attempt blocked by host-based security software preventing unauthorized file system changes.,10.10.10.2,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS attack directed at the corporate web server resulted in 20% latency increase for regional users.,10.10.10.3,Historical Baseline Record,DDoS,3.0,100.0
+SQL injection vulnerability confirmed in a legacy search application allowing bypass of search restrictions.,10.10.10.4,Historical Baseline Record,SQL Injection,12.0,100.0
+Insider threat investigation concluded that unauthorized access to the database was due to credential sharing.,10.10.10.5,Historical Baseline Record,Insider Threat,8.0,100.0
+RCE exploit utilized against unpatched server software successfully gained unauthorized root-level access.,10.10.10.6,Historical Baseline Record,RCE,15.0,100.0
+Infostealer threat detected attempting to collect session tokens from active browser instances in memory.,10.10.10.7,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell found in hidden sub-directory serving as a persistent backdoor for unauthorized command execution.,10.10.10.8,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit attempt logged on the profile settings page; mitigated by anti-CSRF token implementation.,10.10.10.9,Historical Baseline Record,CSRF,7.0,100.0
+Global information security conference announced for Q4 focused on AI-driven threat detection strategies.,10.10.10.10,Historical Baseline Record,Informational,0.0,100.0
+Phishing domain identified mimicking the corporate login portal to deceive unsuspecting remote workers.,172.16.5.10,Historical Baseline Record,Phishing,10.0,100.0
+Ransomware strain identified using double-extortion tactics to force payment for non-disclosure of sensitive data.,172.16.5.11,Historical Baseline Record,Ransomware,14.0,100.0
+DDoS botnet activity detected using syn-flood techniques to exhaust firewall connection states.,172.16.5.12,Historical Baseline Record,DDoS,3.0,100.0
+Attacker performed blind SQL injection to enumerate the underlying database schema and table structures.,172.16.5.13,Historical Baseline Record,SQL Injection,12.0,100.0
+Confirmed insider threat incident involving the mass export of customer lead lists by a departing staff member.,172.16.5.14,Historical Baseline Record,Insider Threat,8.0,100.0
+RCE vulnerability in web management console triggered by an unauthenticated request containing malicious payload.,172.16.5.15,Historical Baseline Record,RCE,15.0,100.0
+Infostealer binary observed beaconing to a command and control server to drop secondary malware payloads.,172.16.5.16,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell uploaded via vulnerable CMS plugin enables attackers to manipulate site content and configuration.,172.16.5.17,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF vulnerability potentially allows an attacker to change user account passwords without re-authentication.,172.16.5.18,Historical Baseline Record,CSRF,7.0,100.0
+Software vendor releases critical patch notes for enterprise ERP suite fixing multiple CVEs.,172.16.5.19,Historical Baseline Record,Informational,0.0,100.0
+ leading to a large-scale phishing campaign targeting financial services firms. An adversary leveraging CVE-2023-38831 successfully deployed malware on unpatched systems.,192.168.1.45,Historical Baseline Record,Phishing,10.0,100.0
+10.204.15.212,Historical Baseline Record,Ransomware,14.0,100.0,
+ causing intermittent service outages for several hours. Mitigation teams implemented BGP flowspec rules to filter malicious traffic.,172.16.54.9,Historical Baseline Record,DDoS,3.0,100.0
+45.79.112.33,Historical Baseline Record,SQL Injection,12.0,100.0,
+ triggering anomalous exfiltration alerts. Internal audit logs confirm the unauthorized access occurred outside of standard working hours.,192.168.200.12,Historical Baseline Record,Insider Threat,8.0,100.0
+103.22.11.98,Historical Baseline Record,RCE,15.0,100.0,
+88.190.23.4,Historical Baseline Record,Infostealer,11.0,100.0,
+ granting persistent remote access and the ability to traverse the local filesystem. Incident response teams discovered multiple backdoor artifacts in the /var/www/html directory.,198.51.100.7,Historical Baseline Record,Web Shell,13.0,100.0
+14.32.189.55,Historical Baseline Record,CSRF,7.0,100.0,
+203.0.113.122,Historical Baseline Record,Informational,0.0,100.0,
+ effectively bypassing multi-factor authentication protocols. Targeted entities include defense contractors and government agencies.,185.112.14.66,Historical Baseline Record,Phishing,10.0,100.0
+ threatening to leak encrypted data if victims do not comply with monetary demands within 48 hours. Intelligence suggests the group is gaining access via compromised VPN credentials.,122.45.19.201,Historical Baseline Record,Ransomware,14.0,100.0
+ causing significant latency for users attempting to resolve internal corporate hostnames. The attack pattern shifted from UDP reflection to TCP SYN floods mid-incident.,162.245.1.5,Historical Baseline Record,DDoS,3.0,100.0
+ allowing attackers to infer database schema information through boolean-based inference. Remediation requires implementing parameterized queries across all database interactions.,5.188.62.9,Historical Baseline Record,SQL Injection,12.0,100.0
+192.168.5.234,Historical Baseline Record,Insider Threat,8.0,100.0,
+ leading to remote code execution on backend worker nodes. Forensic analysis indicates the payload was obfuscated to prevent detection by endpoint protection tools.,77.247.108.12,Historical Baseline Record,RCE,15.0,100.0
+31.13.66.5,Historical Baseline Record,Infostealer,11.0,100.0,
+ maintaining long-term access to the internal network by masquerading as legitimate system processes. The beacon communicates over HTTPS with a custom jitter.,176.103.5.21,Historical Baseline Record,Web Shell,13.0,100.0
+104.21.55.12,Historical Baseline Record,CSRF,7.0,100.0,
+192.0.2.44,Historical Baseline Record,Informational,0.0,100.0,
+Threat actor group UNC4829 observed deploying malicious payloads via spear-phishing campaigns targeting financial institutions.,192.168.45.12,Historical Baseline Record,Phishing,10.0,100.0
+Encrypting ransomware identified as LockBit 3.0 has compromised enterprise backup servers via lateral movement.,104.21.55.90,Historical Baseline Record,Ransomware,14.0,100.0
+Multiple high-volume NTP amplification vectors directed at edge infrastructure caused widespread service degradation.,172.16.254.1,Historical Baseline Record,DDoS,3.0,100.0
+Malicious actors are exploiting unvalidated input fields in legacy web portals to execute blind SQL injection attacks.,45.79.12.33,Historical Baseline Record,SQL Injection,12.0,100.0
+Corporate telemetry indicates an unauthorized data exfiltration attempt by a privileged system administrator.,198.51.100.22,Historical Baseline Record,Insider Threat,8.0,100.0
+Critical vulnerability CVE-2023-3519 allows unauthenticated remote code execution on vulnerable NetScaler appliances.,203.0.113.45,Historical Baseline Record,RCE,15.0,100.0
+Credential harvesting malware identified as RedLine Stealer is currently exfiltrating browser session tokens from end-user devices.,185.199.108.153,Historical Baseline Record,Infostealer,11.0,100.0
+Web shell persistence detected following successful exploitation of an insecure file upload vulnerability in an Apache server.,91.234.12.8,Historical Baseline Record,Web Shell,13.0,100.0
+Cross-site request forgery attacks detected targeting administrative portals by leveraging stored session cookies.,64.233.160.1,Historical Baseline Record,CSRF,7.0,100.0
+CISA has released a mandatory patch advisory for critical vulnerabilities affecting widespread virtualization platforms.,8.8.8.8,Historical Baseline Record,Informational,0.0,100.0
+Employees received deceptive emails containing links to malicious document macros designed to harvest internal credentials.,192.0.2.14,Historical Baseline Record,Phishing,10.0,100.0
+The BlackCat ransomware gang has escalated their double-extortion tactics against healthcare organizations.,198.18.0.5,Historical Baseline Record,Ransomware,14.0,100.0
+Distributed botnet activity originating from compromised IoT devices is overwhelming edge firewall capacity.,142.250.190.5,Historical Baseline Record,DDoS,3.0,100.0
+Detected automated script queries attempting to dump user databases via improperly sanitized search parameters.,17.253.14.203,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal audit logs confirm unauthorized access to sensitive R&D databases by a departing software engineer.,10.10.5.12,Historical Baseline Record,Insider Threat,8.0,100.0
+Exploit code targeting CVE-2024-21887 allows attackers to achieve remote code execution through manipulated web requests.,13.227.12.99,Historical Baseline Record,RCE,15.0,100.0
+New variants of Lumma Stealer are leveraging fake software downloads to gain persistent access to cryptocurrency wallets.,34.201.8.76,Historical Baseline Record,Infostealer,11.0,100.0
+Detection of malicious ASPX web shell modules being used for persistence on public-facing IIS servers.,107.23.4.1,Historical Baseline Record,Web Shell,13.0,100.0
+Session fixation vulnerability leads to unauthorized password changes via CSRF techniques targeting legacy user dashboards.,162.247.74.200,Historical Baseline Record,CSRF,7.0,100.0
+The annual Cyber Security Summit in Geneva highlights emerging trends in Zero Trust architecture adoption.,151.101.65.67,Historical Baseline Record,Informational,0.0,100.0
+Sophisticated spear-phishing campaign identified using homoglyph domains to bypass email gateway filters.,209.85.231.101,Historical Baseline Record,Phishing,10.0,100.0
+Clop ransomware group is actively leveraging MOVEit transfer vulnerabilities to facilitate large-scale file theft.,18.232.14.9,Historical Baseline Record,Ransomware,14.0,100.0
+High-bandwidth DDoS attack successfully neutralized after targeting critical DNS infrastructure providers.,52.12.45.67,Historical Baseline Record,DDoS,3.0,100.0
+Threat actors are utilizing advanced obfuscation techniques to inject malicious SQL commands into web forms.,104.16.0.1,Historical Baseline Record,SQL Injection,12.0,100.0
+Suspicious bulk download activity traced back to an employee account during non-business hours.,172.217.16.14,Historical Baseline Record,Insider Threat,8.0,100.0
+Zero-day remote code execution vulnerability discovered in widespread enterprise messaging middleware.,23.227.38.32,Historical Baseline Record,RCE,15.0,100.0
+Infostealer malware has successfully exfiltrated 500 gigabytes of user authentication logs from a compromised domain controller.,193.161.193.1,Historical Baseline Record,Infostealer,11.0,100.0
+The implementation of a custom JSP web shell has been detected following a compromise of the application server root directory.,45.33.32.156,Historical Baseline Record,Web Shell,13.0,100.0
+Automated CSRF attacks have been identified exploiting user profile update forms on popular e-commerce platforms.,66.220.144.0,Historical Baseline Record,CSRF,7.0,100.0
+Microsoft officially announced the discontinuation of legacy support for Exchange 2013 effective next quarter.,54.239.28.85,Historical Baseline Record,Informational,0.0,100.0
+Fake invoice emails containing malicious attachments are part of a targeted campaign against the energy sector.,108.177.12.100,Historical Baseline Record,Phishing,10.0,100.0
+Royal Ransomware affiliates are targeting critical infrastructure using custom-built malware designed for ESXi environment encryption.,192.168.1.1,Historical Baseline Record,Ransomware,14.0,100.0
+DNS flood attack resulting in significant latency for external customer-facing API endpoints.,17.178.96.59,Historical Baseline Record,DDoS,3.0,100.0
+Blind SQL injection patterns detected in traffic logs related to legacy inventory management software.,199.16.156.6,Historical Baseline Record,SQL Injection,12.0,100.0
+Internal investigation finds an employee exfiltrating customer PII via external cloud storage services.,184.150.1.1,Historical Baseline Record,Insider Threat,8.0,100.0
+CVE-2023-4966 vulnerability exploited by threat actors to execute arbitrary code on vulnerable VPN gateways.,208.67.222.222,Historical Baseline Record,RCE,15.0,100.0
+Distribution of Vidar Infostealer through malvertising networks targeting common web browsers detected.,74.125.196.101,Historical Baseline Record,Infostealer,11.0,100.0
+Persistence mechanism using a hidden PHP web shell deployed on the main application front-end.,142.251.40.1,Historical Baseline Record,Web Shell,13.0,100.0
+CSRF exploit allows attackers to manipulate user account permissions without requiring admin credentials.,35.186.238.101,Historical Baseline Record,CSRF,7.0,100.0
+The OpenSSL project team has released a patch addressing a high-severity buffer overflow in the latest distribution.,216.58.217.14,Historical Baseline Record,Informational,0.0,100.0

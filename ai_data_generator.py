@@ -12,40 +12,12 @@ api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("[-] CRITICAL: GEMINI_API_KEY is missing in .env file.")
 
-# Autodetection of gemini model
-print("[*] Discovering avaliable models for your API key...")
-models_url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
-try:
-    models_response = requests.get(models_url)
-    if models_response.status_code != 200:
-        print(f"[-] Failed to fetch models. Check your API key. Error: {models_response.text}")
-        exit(1)
-    avaliable_models = models_response.json().get('models', [])
-    valid_models = [
-        m['name'] for m in avaliable_models
-        if 'generateContent' in m.get('supportedGenerationMethods', []) and 'gemini' in m.get('name', '').lower()
-    ]
-    if not valid_models:
-        print("[-] Vo compftible Gemini models found for this key.")
-        exit(1)
-        
-    print(f"[+] Found {len(valid_models)} compatible models.")
-    
-    #Searching Flash or taking first appropriate
-    chosen_model = valid_models[0]
-    for vm in valid_models:
-        if 'flash' in vm.lower():
-            chosen_model = vm
-            break
-    print(f"[*] Automatically selected model: {chosen_model}")
-except Exception as e:
-    print(f"[-] Error during auto-discovery: {e}")
-    exit(1)
-    
-    
-#Generation of data
-URL = f"https://generativelanguage.googleapis.com/v1beta/{chosen_model}:generateContent?key={api_key}"
-HEADERS = {'Content-Type': 'application/json'}
+MODELS_TO_TRY = [
+    "gemini-3.1-flash-lite", 
+    "gemini-3.1-flash",
+    "gemini-3.8-flash",
+    "gemini-1.5-flash-8b"
+]
 base_prompt = """You are a Senior Cyber Threat Intelligence (CTI) Analyst.
 Generate 500 rows of realistic synthetic data for a RAG system in CSV format.
 
@@ -68,24 +40,32 @@ for batch in range(1, 6):
         "contents": [{"parts": [{"text": base_prompt}]}]
     }
     success = False
-    try:
-        response = requests.post(URL, headers=HEADERS, json=payload)
-        response_data = response.json()
-        if response.status_code == 200:
-            raw_csv = response_data['candidates'][0]['content']['parts'][0]['text'].strip()
-        
-            #Cleaning possible markdown presence
-            if raw_csv.startswith("```csv"): raw_csv = raw_csv[6:]
-            if raw_csv.startswith("```"): raw_csv = raw_csv[3:]
-            if raw_csv.endswith("```"): raw_csv = raw_csv[:-3]
-        
-            df_batch = pd.read_csv(io.StringIO(raw_csv.strip()))
-            all_dataframes.append(df_batch)
-            print(f" [+] Model {model_name} generated Batch {batch} successfuly, ({len(df_batch)} rows).")
-        else:
-            print(f"[!] API Error: {response_data}")
-    except Exception as e:
-        print(f"[-] Error in batch {batch}: {e}")
+    for model_name in MODELS_TO_TRY:
+        URL = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+        HEADERS = {'Content-Type': 'application/json'}
+        try:
+            response = requests.post(URL, headers=HEADERS, json=payload)
+            response_data = response.json()
+            if response.status_code == 200:
+                raw_csv = response_data['candidates'][0]['content']['parts'][0]['text'].strip()
+            
+                #Cleaning possible markdown presence
+                if raw_csv.startswith("```csv"): raw_csv = raw_csv[6:]
+                if raw_csv.startswith("```"): raw_csv = raw_csv[3:]
+                if raw_csv.endswith("```"): raw_csv = raw_csv[:-3]
+            
+                df_batch = pd.read_csv(io.StringIO(raw_csv.strip()))
+                all_dataframes.append(df_batch)
+                print(f" [+] Model {model_name} generated Batch {batch} successfuly, ({len(df_batch)} rows).")
+                success = True
+                break
+            else:
+                error_code = response_data.get('error', {}).get('code', 'Unknown')
+                print(f"[!] Model '{model_name}' unavaliable (HTTP {error_code}). Trying next...")
+        except Exception as e:
+            print(f"[-] Error with '{model_name}': {e}")
+    if not success:
+        print(f"[!] All models failed for batch {batch}")
     time.sleep(3)
         
 if all_dataframes:

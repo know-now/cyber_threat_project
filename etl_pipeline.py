@@ -14,8 +14,8 @@ try:
     #Block Extract(E): creation of raw test data about threats
 
     df = pd.read_csv("baseline.csv")
-    #delete space lines
-    df = df.dropna(how='all')
+    #delete NaN lines
+    df = df.dropna()
     #convert to text, neutralise NaN
     df['threat_summary'] = df['threat_summary'].fillna("").astype(str)
     df['attack_type'] = df['attack_type'].fillna("Unknown").astype(str)
