@@ -18,7 +18,7 @@ while True:
     try:
         #Downloading of raw data
         df = pd.read_sql("SELECT * FROM threat_logs WHERE source_ip = 'OSINT (Web RSS)'", con=engine)
-        if df.enpty:
+        if df.empty:
             print("[*] Waiting for real OSINT data...")
             time.sleep(30)
             continue
