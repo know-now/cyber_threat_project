@@ -1,7 +1,7 @@
 import os
 import time
 import pandas as pd 
-from sqalchemy import create_engine
+from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
 print("=== Tableau BI Analytics Engine Started ===")
@@ -43,5 +43,5 @@ while True:
     except Exception as e:
         print(f"[-] BI Engine Error: {e}")
         
-    time.sleep(3600)
+    time.sleep(300)
     

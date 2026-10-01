@@ -98,3 +98,13 @@ services:
         condition: service_healthy
       etl_app:
         condition: service_completed_successfully
+  tableau_app:
+    build: .
+    container_name: cyber_tableau_app
+    command: python tableau_engine.py
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - postgres_db
