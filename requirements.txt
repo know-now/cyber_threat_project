@@ -12,3 +12,5 @@ feedparser
 apscheduler
 reportlab
 google-genai
+matplotlib
+seaborn
