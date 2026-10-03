@@ -35,40 +35,72 @@ def generate_charts(df):
     plt.close()
     
     #2. Dynamic Risk Matrix (Priorities)
-    plt.figure(figsize=(8,5))
+    plt.figure(figsize=(8, 5))
     scatter = sns.scatterplot(
         data=df, x='confidence', y='severity',
-        size='dynfmic_risk_score', hur='attack_type', 
-        sizes
+        size='dynamic_risk_score', hue='attack_type', 
+        size=(20, 400), alpha=0.7, palette='tab10'
     )
-
+    plt.title('Dynamic Risk Matrix (Severity vs AI Confidence)', fontsize=14)
+    plt.xlabel('AI Confidence (%)')
+    plt.ylabel('Base Severity (1-15)')
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout() 
+    plt.savefig('reports/images/risk_matrix.png', dpi=300)
+    plt.close()
+    
+    #3 Theat Velocity
+    plt.figure(figsize=(10, 4))
+    df_sorted=df.sort_values('timestamp')
+    sns.lineplot(data=df_sorted, x='timestamp', y='threat_velocity_24h', color='darkred', linewidth=2)
+    plt.title('Threat Velocity (Cumulative Incidents 24h)', fontsize=14)
+    plt.xlabel('Time')
+    plt.ylabel('Velocity (Count)')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig('reports/images/threat_velocity.png', dpi=300)
+    plt.close()
+    
 def generate_pdf_report():
     print(f"\n ===[REPORTER] Begining of a report generation: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}===")
     
     try:
-        # Extracting top-15 most critical incidents
-        query = "SELECT timestamp, source_ip, threat_title, attack_type, severity, confidence FROM threat_logs ORDER BY timestamp DESC LIMIT 15"
-        df = pd.read_sql(query, engine)
+        # Analytics
+        query_mart = "SELECT * FROM tableau_mart ORDER BY dynamic_risk_score DESC LIMIT 50"
+        df_mart = pd.read_sql(query_mart, engine)
         
-        if df.empty:
-            print('[-] Database is empty. Document is not generated.')
+        #Request 2: raw logs
+        query_raw = "SELECT timestamp, source_ip, threat_title, attack_type, severity, confidence FROM threat_logs ORDER BY timestamp DESC LIMIT 15"
+        df_raw = pd.read_sql(query_raw, engine)
+        
+        if df_mart.empty or df_raw.empty:
+            print('[-] Database is missing data. Document is not generated.')
             return
-        # Creating folder for documents, if it does not exist
-        os.makedirs("reports", exist_ok=True)
-        report_filename = f"reports/Executive_CTI_Report_{datetime.now().strftime('%Y%m%d_%H%M')}.pdf"
         
-        #Setting the style of PDF
+        os.makedirs("reports", exist_ok=True)
+        generate_charts(df_mart)
+        
+        report_filename = f"reports/Executive_CTI_Report_{datetime.now().strftime('%Y%m%d_%H%m')}.pdf"
+        
         pdf = SimpleDocTemplate(report_filename, pagesize=landscape(letter))
-        styles = getSampleStyleSheet()
+        styles = getSanmleStyleSheet()
         elements = []
-
+        
         #Titles
         title_style = styles['Heading1']
         title_style.alignment = 1
         elements.append(Paragraph("Executive Cyber Threat Intelligence Report", title_style))
-        elements.append(Spacer(1,12))
         elements.append(Paragraph(f"<b>Generated on: </b> {datetime.now().strftime('%Y-%m-%d %H:%M')}", styles['Normal']))
-        elements.append(Spacer(1, 24))
+        elements.append(Spacer(1, 10))
+        
+        elements.append(Image('reports/images/risk_matrix.png', width=450, height=280))
+        elements.append(Spacer(1, 10))
+        elements.append(Image('reports/images/threat_landscape.png', width=450, height=280))
+        
+        elements.append(PageBreak())
+        
+        # Page 2: Top critical threats
+        elements.append(Paragraph("Top Critical Action Items (Dynamic Risk Analytics)", title_style))
         
         # Setting of the style for a long text in a table
         cell_style=styles['Normal']
