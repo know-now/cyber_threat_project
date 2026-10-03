@@ -3,11 +3,15 @@ import time
 from datetime import datetime
 import pandas as pd
 from sqlalchemy import create_engine
+import matplotlib.pyplot as plt 
+import seaborn as sns
 from reportlab.lib.pagesizes import letter, landscape
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib import colors 
 from apscheduler.schedulers.background import BackgroundScheduler
+import warnings
+warnings.filterwarnings('ignore')
 
 DB_USER=os.getenv("POSTGRES_USER")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
@@ -16,6 +20,27 @@ DB_PORT = "5432"
 DB_NAME = os.getenv("POSTGRES_DB") or "cyber_threat_db"
 
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
+
+def generate_charts(df):
+    os.makedirs("reports/images", exist_ok=True)
+    
+    # Threat Landscape
+    plt.figure(figsize=(8, 5))
+    sns.countplot(data=df, y='attack_type', order=df['attack_type'].value_counts().index, palette='viridis')
+    plt.title('Current Threat Landscape (OSINT)', fontsize=14)
+    plt.xlabel('Number of Incidents')
+    plt.ylabel('Attack Type')
+    plt.tight_layout()
+    plt.savefig('reports/images/threat_landscape.png', dpi=300)
+    plt.close()
+    
+    #2. Dynamic Risk Matrix (Priorities)
+    plt.figure(figsize=(8,5))
+    scatter = sns.scatterplot(
+        data=df, x='confidence', y='severity',
+        size='dynfmic_risk_score', hur='attack_type', 
+        sizes
+    )
 
 def generate_pdf_report():
     print(f"\n ===[REPORTER] Begining of a report generation: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}===")
