@@ -101,17 +101,52 @@ def generate_pdf_report():
         
         # Page 2: Top critical threats
         elements.append(Paragraph("Top Critical Action Items (Dynamic Risk Analytics)", title_style))
+        elements.append(Image('reports/images/threat_velocity.png', width=600, height=200))
+        elements.append(Spacer(1, 15))
         
         # Setting of the style for a long text in a table
         cell_style=styles['Normal']
-        cell_style.fontSize = 9
-        cell_style.leading = 11
-
+        cell_style.fontSize = 8
+        cell_style.leading = 10
+        
+        mart_table_data = [["Timestamp", "Threat Details (Title)", "Classification", "Base Severity", "AI Confidence", "Dynamic Risk"]]
+        for index, row in df_mart.head(10).iterrows():
+            short_time = str(row['timestamp']).split('.')[0]
+            accuracy_str = f"{row['confidence']}%"
+            mart_table_data.append([
+                short_time, Paragraph(str(row['threat_title']), cell_style), Paragraph(str(row['attack_type']), cell_style), 
+                str(row['severity']), accuracy_str, str(row['dynamic_risk_score'])
+            ])
+        t_mart = Table(mart_table_data, colWidth=[90, 300, 80, 70, 70, 70])
+        t_mart.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.darkred),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), 
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.aliceblue),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)
+        ]))
+        
+        elements.append(t_mart)
+        elements.append(PageBreak())
+        
+        # Page 3.
+        elements.append(Paragraph("System Raw Threat Logs (Last 15 Events)", title_style))
+        elements.append(Spacer(1, 15))
+        
+        
         #Preparing data for the table
-        table_data = [["Timestamp", "Source IP", "Threat Details (Title)", "Classification", "Severity", "Accuracy"]]
+        raw_table_data = [["Timestamp", "Source IP", "Threat Details (Title)", "Classification", "Severity", "Accuracy"]]
         for index, row in df.iterrows():
             short_time = str(row['timestamp']).split('.')[0]
             accuracy_str = f"{row['confidence']}%" if 'confidence' in row and pd.notnull(row['confidence']) else "N/A"
+            raw_table_data.append([
+                short_time, str(row['source_ip']),  Paragraph(str(row['threat_title']), cell_style),
+                Paragraph(str(row['attack_type']), cell_style), str(row['severity']), accuracy_str
+            ])
+            
+            
             title_text = str(row['threat_title'])
             title_paragraph = Paragraph(title_text, cell_style)
             class_paragraph = Paragraph(str(row['attack_type']), cell_style)
@@ -119,8 +154,8 @@ def generate_pdf_report():
             table_data.append([short_time, str(row['source_ip']), title_paragraph, class_paragraph, str(row['severity']), accuracy_str])
             
         #Format table
-        t = Table(table_data, colWidths=[100, 90, 300, 80, 50, 60])
-        t.setStyle(TableStyle([
+        t_raw = Table(table_data, colWidths=[100, 90, 300, 80, 50, 60])
+        t_raw.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
             ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), 
@@ -130,9 +165,9 @@ def generate_pdf_report():
             ('GRID', (0, 0), (-1, -1), 1, colors.black)
         ]))
 
-        elements.append(t)
+        elements.append(t_raw)
         pdf.build(elements)
-        print(f"[+] Report is successfully generated and saved: {report_filename}")
+        print(f"[+] Advanced Visual Report successfully generated: {report_filename}")
     except Exception as e:
         print(f"[-] Error while generating PDF: {e}")
 
