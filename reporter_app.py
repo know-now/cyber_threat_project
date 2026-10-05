@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 import matplotlib.pyplot as plt 
 import seaborn as sns
 from reportlab.lib.pagesizes import letter, landscape
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image, PageBreak
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib import colors 
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -39,7 +39,7 @@ def generate_charts(df):
     scatter = sns.scatterplot(
         data=df, x='confidence', y='severity',
         size='dynamic_risk_score', hue='attack_type', 
-        size=(20, 400), alpha=0.7, palette='tab10'
+        sizes=(20, 400), alpha=0.7, palette='tab10'
     )
     plt.title('Dynamic Risk Matrix (Severity vs AI Confidence)', fontsize=14)
     plt.xlabel('AI Confidence (%)')
@@ -83,7 +83,7 @@ def generate_pdf_report():
         report_filename = f"reports/Executive_CTI_Report_{datetime.now().strftime('%Y%m%d_%H%m')}.pdf"
         
         pdf = SimpleDocTemplate(report_filename, pagesize=landscape(letter))
-        styles = getSanmleStyleSheet()
+        styles = getSampleStyleSheet()
         elements = []
         
         #Titles
@@ -117,7 +117,7 @@ def generate_pdf_report():
                 short_time, Paragraph(str(row['threat_title']), cell_style), Paragraph(str(row['attack_type']), cell_style), 
                 str(row['severity']), accuracy_str, str(row['dynamic_risk_score'])
             ])
-        t_mart = Table(mart_table_data, colWidth=[90, 300, 80, 70, 70, 70])
+        t_mart = Table(mart_table_data, colWidths=[100, 300, 80, 70, 70, 70])
         t_mart.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.darkred),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
@@ -138,7 +138,7 @@ def generate_pdf_report():
         
         #Preparing data for the table
         raw_table_data = [["Timestamp", "Source IP", "Threat Details (Title)", "Classification", "Severity", "Accuracy"]]
-        for index, row in df.iterrows():
+        for index, row in df_raw.iterrows():
             short_time = str(row['timestamp']).split('.')[0]
             accuracy_str = f"{row['confidence']}%" if 'confidence' in row and pd.notnull(row['confidence']) else "N/A"
             raw_table_data.append([
@@ -151,10 +151,10 @@ def generate_pdf_report():
             title_paragraph = Paragraph(title_text, cell_style)
             class_paragraph = Paragraph(str(row['attack_type']), cell_style)
             
-            table_data.append([short_time, str(row['source_ip']), title_paragraph, class_paragraph, str(row['severity']), accuracy_str])
+            raw_table_data.append([short_time, str(row['source_ip']), title_paragraph, class_paragraph, str(row['severity']), accuracy_str])
             
         #Format table
-        t_raw = Table(table_data, colWidths=[100, 90, 300, 80, 50, 60])
+        t_raw = Table(raw_table_data, colWidths=[100, 90, 300, 80, 50, 60])
         t_raw.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
