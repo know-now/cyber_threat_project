@@ -15,4 +15,5 @@ config.yaml
 # Databases
 chroma_data/
 postgres_data/
+reports/
 
